@@ -7,20 +7,16 @@ const Header = () => {
 
   return (
     <Flex justify="space-between" w="100%" mt="20px">
-      <Box>
+      <Box w="100%">
         <HStack spacing={4}>
-          <Box>
-            <Text
-              fontSize="xl"
-              onClick={() => history.push("/")}
-              cursor="pointer"
-            >
-              NiftyWatcher
-            </Text>
-          </Box>
-          <Box>
-            <Input placeholder="Search for collection" maxW="800px" w="100%" />
-          </Box>
+          <Text
+            fontSize="xl"
+            onClick={() => history.push("/")}
+            cursor="pointer"
+          >
+            NiftyWatcher
+          </Text>
+          <Input placeholder="Search for collection" maxW="400px" w="100%" />
         </HStack>
       </Box>
       <Box>
