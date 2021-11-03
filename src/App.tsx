@@ -1,10 +1,21 @@
 import React from "react";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+
+const theme = extendTheme({
+  styles: {
+    global: {
+      "html, body": {
+        boxSizing: "border-box",
+      },
+    },
+  },
+});
 
 function App() {
   return (
-    <div>
+    <ChakraProvider theme={theme}>
       <div>hello world</div>
-    </div>
+    </ChakraProvider>
   );
 }
 
