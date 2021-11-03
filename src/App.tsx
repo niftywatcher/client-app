@@ -1,8 +1,17 @@
 import React from "react";
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import {
+  ChakraProvider,
+  Container,
+  extendTheme,
+  VStack,
+} from "@chakra-ui/react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Collections from "./routes/collections/index";
 import Home from "./routes";
+import Owned from "./routes/owned/index";
+import WatchList from "./routes/watchList/index";
+import Header from "./components/Header";
+import Navigation from "./components/Navigation";
 
 const theme = extendTheme({
   styles: {
@@ -16,26 +25,30 @@ const theme = extendTheme({
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
-      <BrowserRouter>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/collections">Collections</Link>
-          </li>
-        </ul>
-        <Switch>
-          <Route path="/collections">
-            <Collections />
-          </Route>
-          <Route exact path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </BrowserRouter>
-    </ChakraProvider>
+    <BrowserRouter>
+      <ChakraProvider theme={theme}>
+        <Container maxW="container.xl">
+          <VStack spacing="24px">
+            <Header />
+            <Navigation />
+            <Switch>
+              <Route path="/collections">
+                <Collections />
+              </Route>
+              <Route path="/owned">
+                <Owned />
+              </Route>
+              <Route path="/watchList">
+                <WatchList />
+              </Route>
+              <Route exact path="/">
+                <Home />
+              </Route>
+            </Switch>
+          </VStack>
+        </Container>
+      </ChakraProvider>
+    </BrowserRouter>
   );
 }
 
