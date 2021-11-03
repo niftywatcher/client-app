@@ -2,6 +2,25 @@ import React from "react";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 import { Flex, HStack, Text } from "@chakra-ui/react";
 
+interface LinkProps {
+  name: String;
+  active: Boolean;
+}
+
+const Link = ({ name, active }: LinkProps) => {
+  return (
+    <Text
+      color={active ? "green.300" : "gray.900"}
+      fontWeight={active ? "bold" : "semibold"}
+      _hover={{
+        color: "gray.300",
+      }}
+    >
+      {name}
+    </Text>
+  );
+};
+
 const Navigation = () => {
   const { pathname } = useLocation();
 
@@ -11,19 +30,13 @@ const Navigation = () => {
     <Flex justify="flex-start" maxW="100%" w="100%">
       <HStack spacing="12px">
         <RouterLink to="/collections">
-          <Text color={path.includes("collections") ? "green.300" : "grey.900"}>
-            Collections
-          </Text>
+          <Link name="Collections" active={path.includes("collections")} />
         </RouterLink>
         <RouterLink to="/owned">
-          <Text color={path.includes("owned") ? "green.300" : "grey.900"}>
-            Owned
-          </Text>
+          <Link name="Owned" active={path.includes("owned")} />
         </RouterLink>
         <RouterLink to="/watchList">
-          <Text color={path.includes("watchList") ? "green.300" : "grey.900"}>
-            Watch List
-          </Text>
+          <Link name="Watch List" active={path.includes("watchList")} />
         </RouterLink>
       </HStack>
     </Flex>
