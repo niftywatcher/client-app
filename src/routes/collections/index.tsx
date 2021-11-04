@@ -1,49 +1,8 @@
 import React from "react";
 import { Flex, Text, VStack } from "@chakra-ui/react";
 import collections from "./collections.json";
-import Column from "../../Shared/Interfaces/column";
 import SummaryTable from "../../components/SummaryTable";
-
-const columnsMaker = (): Column[] => {
-  return [
-    {
-      title: "COLLECTION",
-      key: "collection",
-      dataIndex: "name",
-      render: (data, row) => data,
-    },
-    {
-      title: "FLOOR (SALES)",
-      key: "floor",
-      dataIndex: "minPriceInEth",
-      render: (data, row) => data,
-    },
-    {
-      title: "AVERAGE",
-      key: "average",
-      dataIndex: "averagePriceInEth",
-      render: (data, row) => data,
-    },
-    {
-      title: "VOLUME",
-      key: "volume",
-      dataIndex: "countVolume",
-      render: (data, row) => data,
-    },
-    {
-      title: "SALE VOLUME",
-      key: "saleVolume",
-      dataIndex: "volumeInEth",
-      render: (data, row) => data,
-    },
-    {
-      title: "7D VOLUME",
-      key: "sevenDVolume",
-      dataIndex: "sevenDayVolumes",
-      render: (data, row) => data?.join(", "),
-    },
-  ];
-};
+import { columnsMaker } from "../../Shared/utils";
 
 const Collections = () => {
   const now = new Date();
