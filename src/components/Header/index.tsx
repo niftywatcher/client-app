@@ -13,6 +13,7 @@ const Header = () => {
             fontSize="xl"
             onClick={() => history.push("/")}
             cursor="pointer"
+            fontWeight="extrabold"
           >
             NiftyWatcher
           </Text>
