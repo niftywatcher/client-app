@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Box,
   ChakraProvider,
   Container,
   extendTheme,
@@ -27,10 +28,14 @@ function App() {
   return (
     <BrowserRouter>
       <ChakraProvider theme={theme}>
-        <Container maxW="container.xl">
-          <VStack spacing="24px">
-            <Header />
-            <Navigation />
+        <VStack spacing="24px">
+          <Box width="100%" backgroundColor="gray.100" pb="4">
+            <VStack spacing="24px">
+              <Header />
+              <Navigation />
+            </VStack>
+          </Box>
+          <Container maxW="container.xl">
             <Switch>
               <Route path="/collections">
                 <Collections />
@@ -45,8 +50,8 @@ function App() {
                 <Home />
               </Route>
             </Switch>
-          </VStack>
-        </Container>
+          </Container>
+        </VStack>
       </ChakraProvider>
     </BrowserRouter>
   );
