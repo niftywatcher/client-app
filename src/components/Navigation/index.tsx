@@ -1,6 +1,6 @@
 import React from "react";
 import { Link as RouterLink, useLocation } from "react-router-dom";
-import { Container, Flex, HStack, Text } from "@chakra-ui/react";
+import { Container, VStack, Text } from "@chakra-ui/react";
 
 interface LinkProps {
   name: String;
@@ -28,19 +28,19 @@ const Navigation = () => {
 
   return (
     <Container maxW="container.xl">
-      <Flex justify="flex-start" maxW="100%" w="100%">
-        <HStack spacing="12px">
-          <RouterLink to="/collections">
-            <Link name="Collections" active={path.includes("collections")} />
-          </RouterLink>
-          <RouterLink to="/owned">
-            <Link name="Owned" active={path.includes("owned")} />
-          </RouterLink>
-          <RouterLink to="/watchList">
-            <Link name="Watch List" active={path.includes("watchList")} />
-          </RouterLink>
-        </HStack>
-      </Flex>
+      {/* <Flex justify="flex-start" maxW="100%" w="100%"> */}
+      <VStack spacing="12px" align="flex-start">
+        <RouterLink to="/collections">
+          <Link name="Collections" active={path.includes("collections")} />
+        </RouterLink>
+        <RouterLink to="/owned">
+          <Link name="Owned" active={path.includes("owned")} />
+        </RouterLink>
+        <RouterLink to="/watchList">
+          <Link name="Watch List" active={path.includes("watchList")} />
+        </RouterLink>
+      </VStack>
+      {/* </Flex> */}
     </Container>
   );
 };

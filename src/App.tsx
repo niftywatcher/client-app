@@ -13,6 +13,7 @@ import Owned from "./routes/owned/index";
 import WatchList from "./routes/watchList/index";
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
+import SplitView from "./components/SplitView";
 
 const theme = extendTheme({
   styles: {
@@ -32,6 +33,11 @@ function App() {
           {/* <Box width="100%" backgroundColor="gray.100" pb="4"> */}
           {/* <VStack spacing="24px"> */}
           <Header />
+          <SplitView
+            left={<Navigation />}
+            right={<Collections />}
+            align="flex-start"
+          />
           {/* <Navigation /> */}
           {/* </VStack> */}
           {/* </Box> */}

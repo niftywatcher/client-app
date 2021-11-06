@@ -18,7 +18,7 @@ const Header = () => {
   const history = useHistory();
 
   return (
-    <Container maxW="container.xl" m="4">
+    <Container maxW="container.xl" pt="8" pb="8">
       <SplitView
         left={
           <Text
