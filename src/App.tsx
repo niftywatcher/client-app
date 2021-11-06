@@ -29,13 +29,13 @@ function App() {
     <BrowserRouter>
       <ChakraProvider theme={theme}>
         <VStack spacing="24px">
-          <Box width="100%" backgroundColor="gray.100" pb="4">
-            <VStack spacing="24px">
-              <Header />
-              <Navigation />
-            </VStack>
-          </Box>
-          <Container maxW="container.xl">
+          {/* <Box width="100%" backgroundColor="gray.100" pb="4"> */}
+          {/* <VStack spacing="24px"> */}
+          <Header />
+          {/* <Navigation /> */}
+          {/* </VStack> */}
+          {/* </Box> */}
+          {/* <Container maxW="container.xl">
             <Switch>
               <Route path="/collections">
                 <Collections />
@@ -50,7 +50,7 @@ function App() {
                 <Home />
               </Route>
             </Switch>
-          </Container>
+          </Container> */}
         </VStack>
       </ChakraProvider>
     </BrowserRouter>
