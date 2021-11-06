@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Flex,
-  Box,
   Button,
   HStack,
   Text,
@@ -9,6 +8,7 @@ import {
   Container,
   InputGroup,
   InputLeftElement,
+  useColorMode,
 } from "@chakra-ui/react";
 import { Search2Icon } from "@chakra-ui/icons";
 import { useHistory } from "react-router-dom";
@@ -16,6 +16,7 @@ import SplitView from "../SplitView";
 
 const Header = () => {
   const history = useHistory();
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <Container maxW="container.xl" pt="8" pb="8">
@@ -45,7 +46,9 @@ const Header = () => {
               />
             </InputGroup>
             <HStack>
-              <Button>Dark mode</Button>
+              <Button onClick={toggleColorMode}>
+                Toggle {colorMode === "light" ? "Dark" : "Light"}
+              </Button>
               <Button colorScheme="green">Connect Wallet</Button>
             </HStack>
           </Flex>

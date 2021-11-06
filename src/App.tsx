@@ -1,29 +1,11 @@
 import React from "react";
-import {
-  Box,
-  ChakraProvider,
-  Container,
-  extendTheme,
-  VStack,
-} from "@chakra-ui/react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { ChakraProvider, VStack } from "@chakra-ui/react";
+import { BrowserRouter } from "react-router-dom";
 import Collections from "./routes/collections/index";
-import Home from "./routes";
-import Owned from "./routes/owned/index";
-import WatchList from "./routes/watchList/index";
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import SplitView from "./components/SplitView";
-
-const theme = extendTheme({
-  styles: {
-    global: {
-      "html, body": {
-        boxSizing: "border-box",
-      },
-    },
-  },
-});
+import theme from "./theme";
 
 function App() {
   return (
