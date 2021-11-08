@@ -1,6 +1,6 @@
 import React from "react";
 import { Link as RouterLink, useLocation } from "react-router-dom";
-import { Container, VStack, Text } from "@chakra-ui/react";
+import { VStack, Text } from "@chakra-ui/react";
 
 interface LinkProps {
   name: String;
