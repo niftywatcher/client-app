@@ -27,21 +27,17 @@ const Navigation = () => {
   const path = pathname.slice(1);
 
   return (
-    <Container maxW="container.xl">
-      {/* <Flex justify="flex-start" maxW="100%" w="100%"> */}
-      <VStack spacing="12px" align="flex-start">
-        <RouterLink to="/collections">
-          <Link name="Collections" active={path.includes("collections")} />
-        </RouterLink>
-        <RouterLink to="/owned">
-          <Link name="Owned" active={path.includes("owned")} />
-        </RouterLink>
-        <RouterLink to="/watchList">
-          <Link name="Watch List" active={path.includes("watchList")} />
-        </RouterLink>
-      </VStack>
-      {/* </Flex> */}
-    </Container>
+    <VStack spacing="12px" align="flex-start">
+      <RouterLink to="/collections">
+        <Link name="Collections" active={path.includes("collections")} />
+      </RouterLink>
+      <RouterLink to="/owned">
+        <Link name="Owned" active={path.includes("owned")} />
+      </RouterLink>
+      <RouterLink to="/watchList">
+        <Link name="Watch List" active={path.includes("watchList")} />
+      </RouterLink>
+    </VStack>
   );
 };
 
