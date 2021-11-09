@@ -23,17 +23,35 @@ const Card = ({ name, imageUrl }: CardProps) => {
   const options = {
     chart: {
       type: "spline",
-      height: 200,
+      height: 150,
       backgroundColor: "transparent",
     },
     title: null,
     series: [
       {
-        data: [1, 2, 1, 4, 3, 6],
+        showInLegend: false,
+        data: [0, 2, 1, 4, 3, 6],
       },
     ],
-    yXis: {
+    xAxis: {
       title: null,
+      labels: {
+        enabled: false,
+      },
+      lineWidth: 0,
+      minorGridLineWidth: 0,
+      minorTickLength: 0,
+      tickLength: 0,
+    },
+    yAxis: {
+      title: null,
+      labels: {
+        enabled: false,
+      },
+      gridLineColor: "transparent",
+    },
+    credits: {
+      enabled: false,
     },
   };
 
