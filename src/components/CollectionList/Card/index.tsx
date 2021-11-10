@@ -27,9 +27,10 @@ const Card = ({ name, imageUrl }: CardProps) => {
 
   const options = {
     chart: {
-      type: "areaspline",
-      height: 190,
       backgroundColor: "transparent",
+      height: 210,
+      margin: [0, 0, 10, 0],
+      type: "areaspline",
     },
     credits: {
       enabled: false,
@@ -85,6 +86,7 @@ const Card = ({ name, imageUrl }: CardProps) => {
       border="1px solid"
       borderColor={borderColor}
       backgroundColor={cardBgColor}
+      position="relative"
     >
       <HStack w="100%" padding="4" paddingBottom="0">
         <Image
@@ -106,7 +108,9 @@ const Card = ({ name, imageUrl }: CardProps) => {
           </Box>
         </Flex>
       </HStack>
-      <HighchartsReact highcharts={Highcharts} options={options} />
+      <Box w="100%" position="absolute" top="50px">
+        <HighchartsReact highcharts={Highcharts} options={options} />
+      </Box>
     </Box>
   );
 };
