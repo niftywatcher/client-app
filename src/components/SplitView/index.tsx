@@ -9,7 +9,7 @@ interface SplitViewProps {
 
 const SplitView = ({ left, right, align = "center" }: SplitViewProps) => {
   return (
-    <Flex align={align}>
+    <Flex align={align} w="100%">
       <Box w="322px">{left}</Box>
       <Box w="100%">{right}</Box>
     </Flex>

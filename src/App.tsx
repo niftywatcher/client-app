@@ -1,11 +1,11 @@
 import React from "react";
-import { ChakraProvider, VStack } from "@chakra-ui/react";
+import { ChakraProvider, Container, VStack } from "@chakra-ui/react";
 import { BrowserRouter } from "react-router-dom";
-import Collections from "./routes/collections/index";
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import SplitView from "./components/SplitView";
 import theme from "./theme";
+import CollectionList from "./components/CollectionList/index";
 
 function App() {
   return (
@@ -15,11 +15,13 @@ function App() {
           {/* <Box width="100%" backgroundColor="gray.100" pb="4"> */}
           {/* <VStack spacing="24px"> */}
           <Header />
-          <SplitView
-            left={<Navigation />}
-            right={<Collections />}
-            align="flex-start"
-          />
+          <Container maxW="container.xl">
+            <SplitView
+              left={<Navigation />}
+              right={<CollectionList />}
+              align="flex-start"
+            />
+          </Container>
           {/* <Navigation /> */}
           {/* </VStack> */}
           {/* </Box> */}
