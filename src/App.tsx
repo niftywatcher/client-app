@@ -1,5 +1,5 @@
 import React from "react";
-import { ChakraProvider, Container, VStack } from "@chakra-ui/react";
+import { Box, ChakraProvider, Container, Flex, VStack } from "@chakra-ui/react";
 import { BrowserRouter } from "react-router-dom";
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
@@ -11,17 +11,15 @@ function App() {
   return (
     <BrowserRouter>
       <ChakraProvider theme={theme}>
+        {/* <VStack spacing="24px"> */}
+        {/* <Box width="100%" backgroundColor="gray.100" pb="4"> */}
         <VStack spacing="24px">
-          {/* <Box width="100%" backgroundColor="gray.100" pb="4"> */}
-          {/* <VStack spacing="24px"> */}
           <Header />
-          <Container maxW="container.xl">
-            <SplitView
-              left={<Navigation />}
-              right={<CollectionList />}
-              align="flex-start"
-            />
-          </Container>
+          <SplitView
+            left={<Navigation />}
+            right={<CollectionList />}
+            align="flex-start"
+          />
           {/* <Navigation /> */}
           {/* </VStack> */}
           {/* </Box> */}

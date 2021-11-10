@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  chakra,
   Flex,
   Button,
   HStack,
@@ -9,6 +10,7 @@ import {
   InputGroup,
   InputLeftElement,
   useColorMode,
+  Box,
 } from "@chakra-ui/react";
 import { Search2Icon } from "@chakra-ui/icons";
 import { useHistory } from "react-router-dom";
@@ -19,42 +21,50 @@ const Header = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Container maxW="container.xl" pt="8" pb="8">
+    <chakra.header h="144px" w="100%">
       <SplitView
+        align="center"
         left={
-          <Text
-            fontSize="xl"
-            onClick={() => history.push("/")}
-            cursor="pointer"
-            fontWeight="extrabold"
-          >
-            nifty watcher
-          </Text>
+          <Box h="100%" w="100%" backgroundColor="black">
+            <Text
+              textAlign="center"
+              backgroundColor="black"
+              color="white"
+              fontSize="xl"
+              onClick={() => history.push("/")}
+              cursor="pointer"
+              fontWeight="extrabold"
+            >
+              nifty watcher
+            </Text>
+          </Box>
         }
         right={
-          <Flex justify="space-between">
-            <InputGroup>
-              <InputLeftElement
-                pointerEvents="none"
-                children={<Search2Icon color="gray.400" />}
-              />
-              <Input
-                placeholder="Search for collection"
-                maxW="400px"
-                w="100%"
-                borderColor="gray.400"
-              />
-            </InputGroup>
-            <HStack>
-              <Button onClick={toggleColorMode}>
-                Toggle {colorMode === "light" ? "Dark" : "Light"}
-              </Button>
-              <Button colorScheme="green">Connect Wallet</Button>
-            </HStack>
-          </Flex>
+          <Container maxW="container.xl">
+            <Flex justify="space-between">
+              <InputGroup>
+                <InputLeftElement
+                  pointerEvents="none"
+                  children={<Search2Icon color="gray.400" />}
+                />
+                <Input
+                  placeholder="Search for collection"
+                  maxW="400px"
+                  w="100%"
+                  borderColor="gray.400"
+                />
+              </InputGroup>
+              <HStack>
+                <Button onClick={toggleColorMode}>
+                  Toggle {colorMode === "light" ? "Dark" : "Light"}
+                </Button>
+                <Button colorScheme="green">Connect Wallet</Button>
+              </HStack>
+            </Flex>
+          </Container>
         }
       />
-    </Container>
+    </chakra.header>
   );
 };
 
