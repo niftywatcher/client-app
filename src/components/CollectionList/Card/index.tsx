@@ -31,33 +31,32 @@ const Card = ({ name, imageUrl }: CardProps) => {
       height: 190,
       backgroundColor: "transparent",
     },
-    title: null,
+    credits: {
+      enabled: false,
+    },
+    plotOptions: {
+      series: {
+        marker: {
+          enabled: false,
+        },
+      },
+    },
     series: [
       {
         showInLegend: false,
-        // color:
-        // "linear-gradient(180deg, rgba(130, 250, 193, 0.51) 0%, rgba(243, 248, 230, 0) 110.8%)",
+        color: "#34C096",
         fillColor: {
           linearGradient: { x1: 0, x2: 0, y1: 0, y2: 1 },
           stops: [
-            [0, "#ffffff00"], // start
-            [0.5, "#ffffff"], // middle
-            [1, "#3366AA"], // end
+            [0, "rgba(130, 250, 193, 0.8)"], // start
+            [0.5, "rgba(130, 250, 193, 0.50)"], // middle
+            [1, "#ffffff00"], // end
           ],
-          // linearGradient: [0, 0, 0, 300],
-          // stops: [
-          //   [0, stopColor],
-          //   [
-          //     1,
-          //     Highcharts.color(stopColor ? stopColor[0] : "")
-          //       ?.setOpacity(0)
-          //       .get("rgba"),
-          //   ],
-          // ],
         },
-        data: [0, 2, 1, 4, 3, 6],
+        data: [0, 2, 8, 5, 3, 6],
       },
     ],
+    title: null,
     xAxis: {
       title: null,
       labels: {
@@ -74,9 +73,6 @@ const Card = ({ name, imageUrl }: CardProps) => {
         enabled: false,
       },
       gridLineColor: "transparent",
-    },
-    credits: {
-      enabled: false,
     },
   };
 
