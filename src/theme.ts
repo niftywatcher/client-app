@@ -1,5 +1,6 @@
 import { extendTheme, ThemeConfig } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
+import colors from "./Shared/utils/colors";
 
 const config: ThemeConfig = {
   initialColorMode: "light",
@@ -14,7 +15,10 @@ const theme = extendTheme({
         boxSizing: "border-box",
       },
       body: {
-        backgroundColor: mode("gray.50", "gray.900")(props),
+        backgroundColor: mode(
+          colors.backgroundLight,
+          colors.backgroundDark
+        )(props),
       },
     }),
   },
