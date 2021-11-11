@@ -11,9 +11,9 @@ interface Collection {
 
 const CollectionList = () => {
   return (
-    <chakra.main h="100%" w="100%" paddingTop="50px">
+    <chakra.section h="100%" w="100%" paddingTop="50px" overflow="scroll">
       <Container maxW="container.xl" padding="0 50px" h="100%">
-        <VStack align="flex-start" spacing="8">
+        <VStack align="flex-start" spacing="8" paddingBottom="50px">
           {collections.map((collection: Collection) => (
             <Card
               key={collection.id}
@@ -23,7 +23,7 @@ const CollectionList = () => {
           ))}
         </VStack>
       </Container>
-    </chakra.main>
+    </chakra.section>
   );
 };
 

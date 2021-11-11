@@ -12,11 +12,13 @@ function App() {
     <BrowserRouter>
       <ChakraProvider theme={theme}>
         <Header />
-        <SplitView
-          left={<Navigation />}
-          right={<CollectionList />}
-          align="flex-start"
-        />
+        <chakra.main height="calc(100vh - 144px)" overflow="hidden">
+          <SplitView
+            left={<Navigation />}
+            right={<CollectionList />}
+            align="flex-start"
+          />
+        </chakra.main>
       </ChakraProvider>
     </BrowserRouter>
   );

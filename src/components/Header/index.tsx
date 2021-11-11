@@ -16,11 +16,20 @@ import {
 import { Search2Icon } from "@chakra-ui/icons";
 import { useHistory } from "react-router-dom";
 import SplitView from "../SplitView";
+import colors from "../../Shared/utils/colors";
 
 const Header = () => {
   const history = useHistory();
   const { colorMode, toggleColorMode } = useColorMode();
-  const backgroundColor = useColorModeValue("gray.50", "gray.900");
+  const backgroundColor = useColorModeValue(
+    colors.backgroundLight,
+    colors.backgroundDark
+  );
+
+  const inputBoxColor = useColorModeValue(
+    colors.componentBackgroundLight,
+    "gray.700"
+  );
 
   return (
     <chakra.header
@@ -38,8 +47,7 @@ const Header = () => {
             h="100%"
             w="100%"
             backgroundColor="black"
-            borderBottom="1px solid"
-            borderBottomColor="gray.300"
+            borderBottom={colors.headerBorderColor}
           >
             <Text
               textAlign="center"
@@ -55,12 +63,7 @@ const Header = () => {
           </Center>
         }
         right={
-          <Center
-            h="100%"
-            w="100%"
-            borderBottom="1px solid"
-            borderBottomColor="gray.300"
-          >
+          <Center h="100%" w="100%" borderBottom={colors.headerBorderColor}>
             <Container maxW="container.xl" padding="0 50px">
               <Flex justify="space-between">
                 <InputGroup>
@@ -72,7 +75,7 @@ const Header = () => {
                     placeholder="Search for collection"
                     maxW="400px"
                     w="100%"
-                    borderColor="gray.400"
+                    backgroundColor={inputBoxColor}
                   />
                 </InputGroup>
                 <HStack>
