@@ -10,7 +10,7 @@ import {
   InputGroup,
   InputLeftElement,
   useColorMode,
-  Box,
+  Center,
 } from "@chakra-ui/react";
 import { Search2Icon } from "@chakra-ui/icons";
 import { useHistory } from "react-router-dom";
@@ -25,7 +25,13 @@ const Header = () => {
       <SplitView
         align="center"
         left={
-          <Box h="100%" w="100%" backgroundColor="black">
+          <Center
+            h="100%"
+            w="100%"
+            backgroundColor="black"
+            borderBottom="1px solid"
+            borderBottomColor="gray.300"
+          >
             <Text
               textAlign="center"
               backgroundColor="black"
@@ -37,73 +43,42 @@ const Header = () => {
             >
               nifty watcher
             </Text>
-          </Box>
+          </Center>
         }
         right={
-          <Container maxW="container.xl">
-            <Flex justify="space-between">
-              <InputGroup>
-                <InputLeftElement
-                  pointerEvents="none"
-                  children={<Search2Icon color="gray.400" />}
-                />
-                <Input
-                  placeholder="Search for collection"
-                  maxW="400px"
-                  w="100%"
-                  borderColor="gray.400"
-                />
-              </InputGroup>
-              <HStack>
-                <Button onClick={toggleColorMode}>
-                  Toggle {colorMode === "light" ? "Dark" : "Light"}
-                </Button>
-                <Button colorScheme="green">Connect Wallet</Button>
-              </HStack>
-            </Flex>
-          </Container>
+          <Center
+            h="100%"
+            w="100%"
+            borderBottom="1px solid"
+            borderBottomColor="gray.300"
+          >
+            <Container maxW="container.xl" padding="0 50px">
+              <Flex justify="space-between">
+                <InputGroup>
+                  <InputLeftElement
+                    pointerEvents="none"
+                    children={<Search2Icon color="gray.400" />}
+                  />
+                  <Input
+                    placeholder="Search for collection"
+                    maxW="400px"
+                    w="100%"
+                    borderColor="gray.400"
+                  />
+                </InputGroup>
+                <HStack>
+                  <Button onClick={toggleColorMode}>
+                    Toggle {colorMode === "light" ? "Dark" : "Light"}
+                  </Button>
+                  <Button colorScheme="green">Connect Wallet</Button>
+                </HStack>
+              </Flex>
+            </Container>
+          </Center>
         }
       />
     </chakra.header>
   );
 };
-
-// const Header = () => {
-//   const history = useHistory();
-
-//   return (
-//     <Container maxW="container.xl">
-//       <Flex justify="space-between" w="100%" mt="20px">
-//         <Box w="100%">
-//           <HStack spacing={4}>
-//             <Text
-//               fontSize="xl"
-//               onClick={() => history.push("/")}
-//               cursor="pointer"
-//               fontWeight="extrabold"
-//             >
-//               NiftyWatcher
-//             </Text>
-// <InputGroup>
-//   <InputLeftElement
-//     pointerEvents="none"
-//     children={<Search2Icon color="gray.400" />}
-//   />
-//   <Input
-//     placeholder="Search for collection"
-//     maxW="400px"
-//     w="100%"
-//     borderColor="gray.400"
-//   />
-// </InputGroup>
-//           </HStack>
-//         </Box>
-//         <Box>
-//           <Button colorScheme="green">Get Premium</Button>
-//         </Box>
-//       </Flex>
-//     </Container>
-//   );
-// };
 
 export default Header;
