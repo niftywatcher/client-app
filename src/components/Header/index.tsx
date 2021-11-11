@@ -11,6 +11,7 @@ import {
   InputLeftElement,
   useColorMode,
   Center,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { Search2Icon } from "@chakra-ui/icons";
 import { useHistory } from "react-router-dom";
@@ -19,9 +20,17 @@ import SplitView from "../SplitView";
 const Header = () => {
   const history = useHistory();
   const { colorMode, toggleColorMode } = useColorMode();
+  const backgroundColor = useColorModeValue("gray.50", "gray.900");
 
   return (
-    <chakra.header h="144px" w="100%">
+    <chakra.header
+      h="144px"
+      w="100%"
+      position="sticky"
+      top="0"
+      zIndex="2"
+      backgroundColor={backgroundColor}
+    >
       <SplitView
         align="center"
         left={

@@ -11,13 +11,8 @@ interface Collection {
 
 const CollectionList = () => {
   return (
-    <chakra.main h="100vh" w="100%" paddingTop="50px">
-      <Container
-        maxW="container.xl"
-        maxH="100vh"
-        overflow="scroll"
-        padding="0 50px"
-      >
+    <chakra.main h="100%" w="100%" paddingTop="50px">
+      <Container maxW="container.xl" padding="0 50px" h="100%">
         <VStack align="flex-start" spacing="8">
           {collections.map((collection: Collection) => (
             <Card
