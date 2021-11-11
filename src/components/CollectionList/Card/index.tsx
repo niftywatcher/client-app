@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
+import colors from "../../../Shared/utils/colors";
 
 interface CardProps {
   name: string;
@@ -17,13 +18,10 @@ interface CardProps {
 }
 
 const Card = ({ name, imageUrl }: CardProps) => {
-  const borderColor = useColorModeValue("gray.300", "transparent");
-  const cardBgColor = useColorModeValue("white", "gray.700");
-
-  console.log({ Highcharts: Highcharts.getOptions().colors });
-
-  // const stopColor =
-  //   Highcharts && Highcharts.getOptions() && Highcharts.getOptions().colors;
+  const cardBgColor = useColorModeValue(
+    colors.componentBackgroundLight,
+    "gray.700"
+  );
 
   const options = {
     chart: {
@@ -50,7 +48,8 @@ const Card = ({ name, imageUrl }: CardProps) => {
           linearGradient: { x1: 0, x2: 0, y1: 0, y2: 1 },
           stops: [
             [0, "rgba(130, 250, 193, 0.8)"], // start
-            [0.5, "rgba(130, 250, 193, 0.50)"], // middle
+            [0.25, "rgba(130, 250, 193, 0.75)"], // middle
+            [0.6, "rgba(130, 250, 193, 0.50)"], // middle
             [1, "#ffffff00"], // end
           ],
         },
@@ -83,8 +82,6 @@ const Card = ({ name, imageUrl }: CardProps) => {
       w="100%"
       h="271px"
       borderRadius="16px"
-      border="1px solid"
-      borderColor={borderColor}
       backgroundColor={cardBgColor}
       position="relative"
     >
