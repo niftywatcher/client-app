@@ -6,13 +6,17 @@ import Navigation from "./components/Navigation";
 import SplitView from "./components/SplitView";
 import theme from "./theme";
 import CollectionList from "./components/CollectionList/index";
+import dimensions from "./Shared/utils/dimensions";
 
 function App() {
   return (
     <BrowserRouter>
       <ChakraProvider theme={theme}>
         <Header />
-        <chakra.main height="calc(100vh - 144px)" overflow="hidden">
+        <chakra.main
+          height={`calc(100vh - ${dimensions.headerHeight}px)`}
+          overflow="hidden"
+        >
           <SplitView
             left={<Navigation />}
             right={<CollectionList />}

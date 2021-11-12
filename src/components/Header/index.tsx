@@ -17,6 +17,7 @@ import { Search2Icon } from "@chakra-ui/icons";
 import { useHistory } from "react-router-dom";
 import SplitView from "../SplitView";
 import colors from "../../Shared/utils/colors";
+import dimensions from "../../Shared/utils/dimensions";
 
 const Header = () => {
   const history = useHistory();
@@ -33,7 +34,7 @@ const Header = () => {
 
   return (
     <chakra.header
-      h="144px"
+      h={`${dimensions.headerHeight}px`}
       w="100%"
       position="sticky"
       top="0"

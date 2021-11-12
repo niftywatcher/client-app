@@ -1,8 +1,5 @@
 import React from "react";
 import { Flex, Text, VStack } from "@chakra-ui/react";
-import collections from "./collections.json";
-import SummaryTable from "../components/SummaryTable";
-import { columnsMaker } from "../Shared/utils";
 
 const Home = () => {
   const now = new Date();
@@ -27,7 +24,6 @@ const Home = () => {
             <Text fontSize="sm">Last updated at {fiveMinutesAgo}</Text>
           </Flex>
         </VStack>
-        <SummaryTable data={collections} columns={columnsMaker()} />
       </VStack>
     </React.Fragment>
   );
