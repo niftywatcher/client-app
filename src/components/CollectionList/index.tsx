@@ -31,6 +31,7 @@ const CollectionList = () => {
               key={collection.id}
               name={collection.name}
               imageUrl={collection.imageUrl}
+              data={collection.floorData}
             />
           ))}
         </VStack>

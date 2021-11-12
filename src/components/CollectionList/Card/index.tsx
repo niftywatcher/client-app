@@ -15,9 +15,10 @@ import colors from "../../../Shared/utils/colors";
 interface CardProps {
   name: string;
   imageUrl: string;
+  data: number[];
 }
 
-const Card = ({ name, imageUrl }: CardProps) => {
+const Card = ({ name, imageUrl, data }: CardProps) => {
   const cardBgColor = useColorModeValue(
     colors.componentBackgroundLight,
     "gray.700"
@@ -53,7 +54,7 @@ const Card = ({ name, imageUrl }: CardProps) => {
             [1, "#ffffff00"], // end
           ],
         },
-        data: [0, 2, 8, 5, 3, 6],
+        data,
       },
     ],
     title: null,
