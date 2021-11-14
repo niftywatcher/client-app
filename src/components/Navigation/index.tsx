@@ -7,11 +7,13 @@ import WatchList from "../../Shared/Interfaces/WatchList";
 interface LinkProps {
   name: String;
   active: Boolean;
+  onClick: () => void;
 }
 
-const Link = ({ name, active }: LinkProps) => {
+const Link = ({ name, active, onClick }: LinkProps) => {
   return (
     <Text
+      onClick={onClick}
       color={active ? "green.300" : "white"}
       fontWeight={active ? "bold" : "semibold"}
       _hover={{
@@ -25,11 +27,18 @@ const Link = ({ name, active }: LinkProps) => {
 };
 
 type NavigationProps = {
+  activeWatchList: number;
   watchLists: WatchList[];
+  setActiveWatchList: React.Dispatch<React.SetStateAction<any>>;
   setWatchLists: React.Dispatch<React.SetStateAction<any[]>>;
 };
 
-const Navigation = ({ watchLists, setWatchLists }: NavigationProps) => {
+const Navigation = ({
+  activeWatchList,
+  setActiveWatchList,
+  watchLists,
+  setWatchLists,
+}: NavigationProps) => {
   const [watchListName, setWatchListName] = useState("");
 
   const handleSetWatchList = () => {
@@ -61,7 +70,14 @@ const Navigation = ({ watchLists, setWatchLists }: NavigationProps) => {
         paddingLeft="92px"
       >
         {watchLists.map((item) => {
-          return <Link name={item.name} active={true} key={item.id} />;
+          return (
+            <Link
+              name={item.name}
+              active={item.id === activeWatchList}
+              key={item.id}
+              onClick={() => setActiveWatchList(item.id)}
+            />
+          );
         })}
         <HStack>
           <Input

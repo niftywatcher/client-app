@@ -22,6 +22,16 @@ function App() {
     },
   ]);
 
+  const [activeWatchList, setActiveWatchList] = useState(watchLists[0].id);
+
+  const currentWatchList = watchLists.find((wl) => wl.id === activeWatchList);
+
+  const filteredCollections = collectionData.filter(
+    (col) =>
+      currentWatchList &&
+      currentWatchList.collections.find((wlId) => wlId === col.id)
+  );
+
   return (
     <BrowserRouter>
       <ChakraProvider theme={theme}>
@@ -33,13 +43,15 @@ function App() {
           <SplitView
             left={
               <Navigation
+                activeWatchList={activeWatchList}
+                setActiveWatchList={setActiveWatchList}
                 watchLists={watchLists}
                 setWatchLists={setWatchLists}
               />
             }
             right={
               <CollectionList
-                collections={collectionData}
+                collections={filteredCollections}
                 watchLists={watchLists}
                 setWatchLists={setWatchLists}
               />
