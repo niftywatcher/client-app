@@ -1,27 +1,13 @@
 import React from "react";
 import { chakra, Container, VStack } from "@chakra-ui/react";
-import collections from "./collections.json";
 import Card from "./Card";
+import Collection from "../../Shared/Interfaces/collection";
 
-interface Collection {
-  id: string;
-  floor: number;
-  address: string;
-  description: string | null;
-  discordUrl: string | null;
-  externalUrl: string | null;
-  imageUrl: string;
-  instagramUsername: string | null;
-  name: string;
-  symbol: string | null;
-  twitterUsername: string | null;
-  deltaStats: {
-    floor: number;
-  };
-  floorData: number[];
-}
+type CollectionListProps = {
+  collections: Collection[];
+};
 
-const CollectionList = () => {
+const CollectionList = ({ collections }: CollectionListProps) => {
   return (
     <chakra.section h="100%" w="100%" paddingTop="50px" overflow="scroll">
       <Container maxW="container.xl" padding="0 50px" h="100%">

@@ -1,6 +1,7 @@
-import React from "react";
-import { Link as RouterLink, useLocation } from "react-router-dom";
-import { VStack, Text, chakra } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { VStack, Text, chakra, HStack, Input } from "@chakra-ui/react";
+import { cloneDeep } from "lodash";
+import { AddIcon } from "@chakra-ui/icons";
 
 interface LinkProps {
   name: String;
@@ -14,6 +15,7 @@ const Link = ({ name, active }: LinkProps) => {
       fontWeight={active ? "bold" : "semibold"}
       _hover={{
         color: "gray.300",
+        cursor: "pointer",
       }}
     >
       {name}
@@ -21,10 +23,36 @@ const Link = ({ name, active }: LinkProps) => {
   );
 };
 
-const Navigation = () => {
-  const { pathname } = useLocation();
+type WatchList = {
+  id: number;
+  name: string;
+  collections: string[];
+};
 
-  const path = pathname.slice(1);
+type NavigationProps = {
+  watchLists: WatchList[];
+  setWatchLists: React.Dispatch<React.SetStateAction<any[]>>;
+};
+
+const Navigation = ({ watchLists, setWatchLists }: NavigationProps) => {
+  const [watchListName, setWatchListName] = useState("");
+
+  const handleSetWatchList = () => {
+    setWatchLists((prevState) => {
+      const newState = cloneDeep(prevState);
+
+      return [
+        ...newState,
+        {
+          id: newState.length++,
+          name: watchListName,
+          collections: [],
+        },
+      ];
+    });
+
+    setWatchListName("");
+  };
 
   return (
     <chakra.nav h="100vh" w="100%" backgroundColor="black" paddingTop="50px">
@@ -35,15 +63,27 @@ const Navigation = () => {
         w="100%"
         paddingLeft="92px"
       >
-        <RouterLink to="/collections">
-          <Link name="All Collections" active={path.includes("collections")} />
-        </RouterLink>
-        <RouterLink to="/blueChip">
-          <Link name="Blue Chip" active={path.includes("blueChip")} />
-        </RouterLink>
-        <RouterLink to="/upComing">
-          <Link name="Up Coming" active={path.includes("upComing")} />
-        </RouterLink>
+        {watchLists.map((item) => {
+          return <Link name={item.name} active={true} key={item.id} />;
+        })}
+        <HStack>
+          <Input
+            maxW="115px"
+            color="white"
+            variant="unstyled"
+            placeholder="New Watchlist"
+            value={watchListName}
+            onChange={(e) => setWatchListName(e.target.value)}
+            onKeyUp={(e) => {
+              if (e.key === "Enter") handleSetWatchList();
+            }}
+          />
+          <AddIcon
+            cursor="pointer"
+            color="green.300"
+            onClick={handleSetWatchList}
+          />
+        </HStack>
       </VStack>
     </chakra.nav>
   );
