@@ -8,11 +8,13 @@ import theme from "./theme";
 import CollectionList from "./components/CollectionList/index";
 import dimensions from "./Shared/utils/dimensions";
 import collections from "./collections.json";
+import Collection from "./Shared/Interfaces/collection";
+import WatchList from "./Shared/Interfaces/WatchList";
 
 function App() {
-  const collectionData = collections.slice(0, 25);
+  const collectionData: Collection[] = collections.slice(0, 25);
 
-  const [watchLists, setWatchLists] = useState([
+  const [watchLists, setWatchLists] = useState<WatchList[]>([
     {
       id: 0,
       name: "Trending Collections",
@@ -35,7 +37,13 @@ function App() {
                 setWatchLists={setWatchLists}
               />
             }
-            right={<CollectionList collections={collectionData} />}
+            right={
+              <CollectionList
+                collections={collectionData}
+                watchLists={watchLists}
+                setWatchLists={setWatchLists}
+              />
+            }
             align="flex-start"
           />
         </chakra.main>

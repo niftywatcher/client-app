@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { VStack, Text, chakra, HStack, Input } from "@chakra-ui/react";
 import { cloneDeep } from "lodash";
 import { AddIcon } from "@chakra-ui/icons";
+import WatchList from "../../Shared/Interfaces/WatchList";
 
 interface LinkProps {
   name: String;
@@ -23,12 +24,6 @@ const Link = ({ name, active }: LinkProps) => {
   );
 };
 
-type WatchList = {
-  id: number;
-  name: string;
-  collections: string[];
-};
-
 type NavigationProps = {
   watchLists: WatchList[];
   setWatchLists: React.Dispatch<React.SetStateAction<any[]>>;
@@ -38,20 +33,22 @@ const Navigation = ({ watchLists, setWatchLists }: NavigationProps) => {
   const [watchListName, setWatchListName] = useState("");
 
   const handleSetWatchList = () => {
-    setWatchLists((prevState) => {
-      const newState = cloneDeep(prevState);
+    if (watchListName !== "") {
+      setWatchLists((prevState) => {
+        const newState = cloneDeep(prevState);
 
-      return [
-        ...newState,
-        {
-          id: newState.length++,
-          name: watchListName,
-          collections: [],
-        },
-      ];
-    });
+        return [
+          ...newState,
+          {
+            id: newState.length++,
+            name: watchListName,
+            collections: [],
+          },
+        ];
+      });
 
-    setWatchListName("");
+      setWatchListName("");
+    }
   };
 
   return (

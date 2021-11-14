@@ -3,7 +3,12 @@ import {
   Box,
   Flex,
   HStack,
+  IconButton,
   Image,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
   Text,
   useColorModeValue,
   VStack,
@@ -11,14 +16,78 @@ import {
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import colors from "../../../Shared/utils/colors";
+import { cloneDeep } from "lodash";
+import WatchList from "../../../Shared/Interfaces/WatchList";
+import { AddIcon } from "@chakra-ui/icons";
+
+type AddWatchListButtonProps = {
+  collectionId: string;
+  watchLists: WatchList[];
+  setWatchLists: React.Dispatch<React.SetStateAction<any[]>>;
+};
+
+const AddWatchListButton = ({
+  collectionId,
+  watchLists,
+  setWatchLists,
+}: AddWatchListButtonProps) => {
+  const addToWatchList = (watchListId: number): void => {
+    setWatchLists((prevState) => {
+      const newState = cloneDeep(prevState);
+
+      return newState.map((item) => {
+        if (item.id === watchListId) {
+          item.collections.push(collectionId);
+        }
+
+        return item;
+      });
+    });
+  };
+  return (
+    <React.Fragment>
+      {watchLists.length ? (
+        <Menu>
+          <MenuButton
+            as={IconButton}
+            aria-label="Options"
+            icon={<AddIcon color="green.300" />}
+            variant="outline"
+          />
+          <MenuList>
+            {watchLists.map((wl) => (
+              <MenuItem
+                key={wl.id}
+                icon={<AddIcon />}
+                onClick={() => addToWatchList(wl.id)}
+              >
+                {wl.name}
+              </MenuItem>
+            ))}
+          </MenuList>
+        </Menu>
+      ) : null}
+    </React.Fragment>
+  );
+};
 
 interface CardProps {
+  collectionId: string;
   name: string;
   imageUrl: string;
   data: number[];
+  setWatchLists: React.Dispatch<React.SetStateAction<any[]>>;
+  watchLists: WatchList[];
 }
 
-const Card = ({ name, imageUrl, data }: CardProps) => {
+const Card = ({
+  collectionId,
+  name,
+  imageUrl,
+  data,
+  setWatchLists,
+  watchLists,
+}: CardProps) => {
   const cardBgColor = useColorModeValue(
     colors.componentBackgroundLight,
     "gray.700"
@@ -102,7 +171,11 @@ const Card = ({ name, imageUrl, data }: CardProps) => {
             <Text fontSize="medium">Floor E 0.02 + 2%</Text>
           </VStack>
           <Box borderRadius="50%" borderColor="gray.100">
-            +
+            <AddWatchListButton
+              collectionId={collectionId}
+              watchLists={watchLists.filter((wl) => wl.id !== 0)}
+              setWatchLists={setWatchLists}
+            />
           </Box>
         </Flex>
       </HStack>
