@@ -1,0 +1,1702 @@
+[
+  {
+    "id": "31dbafdc-4d0c-4880-878d-cde2615eb3f2",
+    "floor": 0.10500000000000001,
+    "address": "0x9546eeb89df8f010da4953c2ef456e282b3db25a",
+    "description": "Angry Apes United is a high utility NFT collection of 8,888 Angry Apes that allows holders to earn additional crypto assets through blockchain gaming.",
+    "discordUrl": "https://discord.gg/angryapesunited-nft",
+    "externalUrl": "https://www.angryapesunited.com/",
+    "imageUrl": "https://lh3.googleusercontent.com/sx-iJ0IM4aRpsk4outt2S7y0Ox94CUiiuas4BQlWOPZ1VPYqrjEs1oCv073t3pYrVObNUs9aSL4yLzjBByOLSwKXuqbdjMbK1ZlpLw=s120",
+    "instagramUsername": "https://www.instagram.com/angryapesunited/",
+    "name": "Angry Apes United",
+    "symbol": "AAU",
+    "twitterUsername": "https://twitter.com/angryapesunited",
+    "deltaStats": {
+      "floor": 0
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "d63f263a-4363-4c9a-bf9a-1d4c5c9bbaad",
+    "floor": 0.22,
+    "address": "0xc631164b6cb1340b5123c9162f8558c866de1926",
+    "description": "The Official Divine Anarchy Collection. 10,011 Children of Anarchy.",
+    "discordUrl": "https://discord.gg/divineanarchy",
+    "externalUrl": "https://www.divineanarchy.com",
+    "imageUrl": "https://lh3.googleusercontent.com/biG1zY7CZdt9yXuxr1diwn7YVWXyW6pQ0Ro5-E8dY7SDanAxna3AFP0j6RRLmwGIGRyh8jtV7gKw-luDYoVZ0y2__ck1HxESR-qUXQc=s120",
+    "instagramUsername": "divineanarchy",
+    "name": "Divine Anarchy",
+    "symbol": "DA",
+    "twitterUsername": "divineanarchy",
+    "deltaStats": {
+      "floor": 0.23
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "289c10e7-09a3-4f39-b46b-281be7f48c8f",
+    "floor": 0.1,
+    "address": "0x2f14f1b6c350c41801b2b7ba9445670d7e2ffc70",
+    "description": "THE GOAT SOCIETY IS A COLLECTION OF 10,000 UNIQUE NFTS MEANT TO UNITE DIFFERENT COMMUNITIES AND FANS OF THE REAL-LIFE GOATS—THE GREATEST OF ALL TIMES\nTHE COLLECTION INCLUDES 9,000 GENERATIVE GOATS AND 1,000 UNIQUE HAND-DRAWN GOATS. EACH GOAT IS STORED AS ERC-721 TOKENS ON THE ETHEREUM BLOCKCHAIN.\nEACH GOAT GRANTS A MEMBERSHIP TO THE HERD, OUR EXCLUSIVE GROUP OF INVESTORS THAT HAIL FROM A DIVERSE RANGE OF COMMUNITIES. HERD MEMBERS WILL RECEIVE BENEFITS LIKE ACCESS TO MAJOR EVENTS LIKE SPORTS GAMES, ACADEMY AWARDS, MUSIC FESTIVALS, CONFERENCES, AND CONCERTS.",
+    "discordUrl": "https://discord.gg/DTZfQ2A2",
+    "externalUrl": "https://goatsociety.io/",
+    "imageUrl": "https://lh3.googleusercontent.com/bDzTcaVCY2GxBBboP511VS27v9ljR93oZy-ZWdOOM1o8R0r5NuDZX0UqlfXiscoy627b--2g5cIVFbeR6tjuXTxfns4mSRGiluUohQk=s120",
+    "instagramUsername": "goatsocietynft",
+    "name": "THE REAL GOAT SOCIETY",
+    "symbol": "GS",
+    "twitterUsername": "goatsocietynft",
+    "deltaStats": {
+      "floor": 0.098
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "53ca25bd-40ae-462e-9d7c-6ebabfeca456",
+    "floor": 0.017,
+    "address": "0x97597002980134bea46250aa0510c9b90d87a587",
+    "description": "Chain Runners are Mega City renegades 100% stored and generated on chain.\n\nVisit http://chainrunners.xyz to find out more.",
+    "discordUrl": "https://discord.gg/f3sk2u4uKN",
+    "externalUrl": "http://chainrunners.xyz",
+    "imageUrl": "https://lh3.googleusercontent.com/3vScLGUcTB7yhItRYXuAFcPGFNJ3kgO0mXeUSUfEMBjGkGPKz__smtXyUlRxzZjr1Y5x8hz1QXoBQSEb8wm4oBByeQC_8WOCaDON4Go=s120",
+    "instagramUsername": null,
+    "name": "Chain Runners",
+    "symbol": "RUN",
+    "twitterUsername": "chain_runners",
+    "deltaStats": {
+      "floor": 0.04
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "29e2b104-bc25-42ed-8f03-5d00684a68ba",
+    "floor": 0.1,
+    "address": "0x09e0df4ae51111ca27d6b85708cfb3f1f7cae982",
+    "description": "10,000 Sipher Nekos, making up the \"Sipherian Flash\" collection and the 2nd Fleet. They are the second Genesis race, created by the Mad Scientist as surrogates to embark on amazing adventures. Each of these NFT represent a playable 3D character within the game called World of Sipheria.\n\nAll Neko characters belong to one of four special sub-races: \n\n### Felis\n### Synthetic\n### Phasewalker\n### Crystalis\n\nEach sub-race is constructed with different abilities that will suit a variety of play-style and enemy conditions.\n\nThe Sipherian Flash, like those before them, also come with a random mix of rare costumes and weapons, allowing each adventurer to assemble a uniquely rare costume set. Different costumes will grant different attribute buffs, while character with weapons will act as both rare cosmetic skin and early unlock of various tier of weapons. Character with a complete costume set will get special perks unique to that costume set.",
+    "discordUrl": "https://discord.gg/sipherxyz",
+    "externalUrl": "https://sipher.xyz/",
+    "imageUrl": "https://lh3.googleusercontent.com/05CzjTR4KwoX_qTY_U68CegfrCVTAYMmY3txcaauGpjJNZBac2-6hFMQtfcnMIx7g1B3BhBqWmta_mzNyunLLtDygyrW0U6n4nhc=s120",
+    "instagramUsername": null,
+    "name": "Sipherian Flash",
+    "symbol": "NEKO",
+    "twitterUsername": "SIPHERxyz",
+    "deltaStats": {
+      "floor": 0.138
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "c000fa2f-6f38-4dec-bc20-4decba3ddc59",
+    "floor": 0.09000000000000001,
+    "address": "0x96316355c44be69414756d6706c61e61aecbd5f3",
+    "description": "1,000 Legendary Animated Ducks  I  8,000 Uniquely Generated Cosmic Ducks\n",
+    "discordUrl": "https://discord.gg/cosmiclabs",
+    "externalUrl": "https://cosmic-labs.io/#/",
+    "imageUrl": "https://lh3.googleusercontent.com/gAaIagdJbMTjsh9skRwqWq_G1TQfPEMY-UNMJNnOqij6rl_EvNuEyv-B2w_dalr9smeOavXIA_DrSUa4vzFQwHBJOwLSU8hWvPS1-Q=s120",
+    "instagramUsername": null,
+    "name": "Cosmic Labs",
+    "symbol": "CLABS",
+    "twitterUsername": "cosmiclabsnft2",
+    "deltaStats": {
+      "floor": 0.030000000000000002
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "f4438f97-9d8b-4e83-be3b-992fbe30a5ad",
+    "floor": 0.02,
+    "address": "0x540cc373acfacd250a4250d7b26e9800b71f0484",
+    "description": null,
+    "discordUrl": "https://discord.gg/dirtydogsnft",
+    "externalUrl": "http://dirtydogsnft.com",
+    "imageUrl": "https://lh3.googleusercontent.com/C_U4OOWI9L4VI8yiFdk4VGkdI8dhMmWhFLy_WO7oUcdKvJOoraPKsFXB5T30m98GHY5Qh1u2jfBtWWFjniIRxD5btw9-avRHwxHJTLU=s120",
+    "instagramUsername": null,
+    "name": "DD by BUCKET",
+    "symbol": "DD",
+    "twitterUsername": "dirtydogsnft",
+    "deltaStats": {
+      "floor": 0
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "d6edf3bc-c568-4ae7-82d1-bbc94273d94a",
+    "floor": 0.007,
+    "address": "0x76be3b62873462d2142405439777e971754e8e77",
+    "description": "Sci-fi collectable card game with NFTs.",
+    "discordUrl": "https://discord.gg/parallelalpha",
+    "externalUrl": "http://www.parallel.life",
+    "imageUrl": "https://lh3.googleusercontent.com/nxaymgd9aJIzLXb0r3oLO0VCMFi0Zex1ubTmEYekEKwOVq1YijOULDeT1qCjk71OTsQW47zmvZ2ZuycXorgu6WA6Wosc6CiOuVnAXGk=s120",
+    "instagramUsername": "parallel_nft",
+    "name": "Parallel Alpha",
+    "symbol": "LL",
+    "twitterUsername": "parallelnft",
+    "deltaStats": {
+      "floor": 0.006
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "036ac106-6d6b-41e4-8272-ce2144c57c78",
+    "floor": 0.05,
+    "address": "0x36a52262a85bf8fe213267da4ed85e42e1efed82",
+    "description": "The Hor1zon project is a collection of 6,999 Troopers forged in the Metaverse and living on the Ethereum Blockchain. \nEach NFT has specific attributes and variables that makes it unique. Holding a trooper grants the owner access to members-only benefits as well as exclusive physical and virtual merch from the Hor1zon Project universe.\n\nVisit https://hor1zonproject.com website to see more. \n\n",
+    "discordUrl": "https://discord.gg/WvRT2t7j3P",
+    "externalUrl": "https://hor1zonproject.com",
+    "imageUrl": "https://lh3.googleusercontent.com/O-4gBG0Ef2F1sTd5dRS3E1xAvoFWzJnligfSITfSCp_1Lmr1T43FFze3DEiIR9E2OW2IZQNkdBvj3lWG1BHZ-3fqk_MBx3tr0ni48LI=s120",
+    "instagramUsername": "hor1zonproject",
+    "name": "Hor1zon Troopers",
+    "symbol": "H1Z",
+    "twitterUsername": "hor1zon_project",
+    "deltaStats": {
+      "floor": 0.15
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "303af08a-061a-41ed-af8c-7f23b026a3ac",
+    "floor": 0.11,
+    "address": "0xa98b29a8f5a247802149c268ecf860b8308b7291",
+    "description": "ThorGuards is a collection of 9,999 NFT characters on the Ethereum Blockchain, inspired by THORChain, Norse mythology, and cyberpunk aesthetics.\n\nEach ThorGuard is a completely original combination of hundreds of potential attributes. The collection features truly unique and powerful 3D artwork, and offers holders first-of-its-kind utility.",
+    "discordUrl": "https://discord.gg/thorguards",
+    "externalUrl": "http://thorguards.com",
+    "imageUrl": "https://lh3.googleusercontent.com/c4f92G3iKYUFQFPYC-Y6hlHRVuZvOrkIa-yTVHVKoW-I7T4QMwH5odbOJNk-ef0kse36msAfbEQnor85I5wy8YXlpzOsMd1lSr6A5g=s120",
+    "instagramUsername": null,
+    "name": "ThorGuards",
+    "symbol": "THORGUARDS",
+    "twitterUsername": "thorguards",
+    "deltaStats": {
+      "floor": 0.1
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "876fc25a-ab7f-49a9-af86-f914edb84f8a",
+    "floor": 0.07200000000000001,
+    "address": "0xa7d8d9ef8d8ce8992df33d8b8cf4aebabd5bd270",
+    "description": "Art Blocks are split out into three categories: Curated, Factory, and Playground. Curated is the most strictly curated offering, Factory allows artists who do not wish to wait for approval by the Curation Board a place to launch their generative art, and Playground is the place where artists who have previously been approved for curated drops are encouraged to play and innovative. More breakouts on individual projects coming soon!",
+    "discordUrl": "https://discord.gg/artblocks",
+    "externalUrl": "https://artblocks.io",
+    "imageUrl": "https://lh3.googleusercontent.com/GwnosrkaneKGEkWySxvTSzZ5bEUjWkRuQzLSNfrpgy2-gxYjoR3m5PohLT9Fzy0p1tohajZ1g-LFfF_ZLnS1GqlPNHPUaKUbDhbf=s120",
+    "instagramUsername": "artblocks_io",
+    "name": "Art Blocks",
+    "symbol": "BLOCKS",
+    "twitterUsername": "artblocks_io",
+    "deltaStats": {
+      "floor": 0.07
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "c1e0226f-cc43-4a5c-8936-2f37a6cb24d4",
+    "floor": 0.07,
+    "address": "0xd1146680ae5a4d71f68accb6610030ced7e7afe1",
+    "description": "MUTANT PUNKS CITY is a NFT collection of 11.111 unique Mutant Punks with hundreds of elements inspired by original Cryptopunks.",
+    "discordUrl": "https://discord.gg/invite/2F7rh2rTJe",
+    "externalUrl": "https://mutantpunkscity.com/",
+    "imageUrl": "https://lh3.googleusercontent.com/tCMJyD3SxWiMvU-AiYsHkMx5sdnWO4apM09wgBsDrtts6R9ARTln5tqSCYobPOpEV6V1phz0sDGAXZsZIJRhk79_9PdD1Srbj3tPvLQ=s120",
+    "instagramUsername": "mutantpunkscity",
+    "name": "MUTANT PUNKS CITY",
+    "symbol": "MPC",
+    "twitterUsername": "mutantpunks",
+    "deltaStats": {
+      "floor": 0
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "73954c08-e01b-4a56-ab55-715428d7080a",
+    "floor": 0.01,
+    "address": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85",
+    "description": "Ethereum Name Service (ENS) domains are secure domain names for the decentralized world. ENS domains provide a way for users to map human readable names to blockchain and non-blockchain resources, like Ethereum addresses, IPFS hashes, or website URLs. ENS domains can be bought and sold on secondary markets.",
+    "discordUrl": null,
+    "externalUrl": "https://ens.domains",
+    "imageUrl": "https://lh3.googleusercontent.com/0cOqWoYA7xL9CkUjGlxsjreSYBdrUBE0c6EO1COG4XE8UeP-Z30ckqUNiL872zHQHQU5MUNMNhfDpyXIP17hRSC5HQ=s60",
+    "instagramUsername": null,
+    "name": "ENS: Ethereum Name Service",
+    "symbol": null,
+    "twitterUsername": "ensdomains",
+    "deltaStats": {
+      "floor": 0.01
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "439fcb38-9cfb-47f9-971c-49b16bf35fbe",
+    "floor": 0.169,
+    "address": "0x4cd0ea8b1bdb5ab9249d96ccf3d8a0d3ada2bc76",
+    "description": "Boonji Project, launched on the Ethereum blockchain, is a collection of unique digital non-fungible tokens created by world-renowned artist Brendan Murphy. Your Boonji Avatar NFT not only serves as a piece of collectible digital artwork, but also as a passport that allows you to travel through an unexplored galaxy with the Boonji Spaceman.",
+    "discordUrl": "https://discord.gg/boonjiproject",
+    "externalUrl": "https://boonjiproject.com",
+    "imageUrl": "https://lh3.googleusercontent.com/M5eV3dgE01GIJbt7VZ-Vx4B2Xo42RaFXGT3R-ynrwmrqDEAoq1MacTZlRgYuSPHk6jD73X1l18H5CIg0ZPy7xUSA-p_1GsSWQT9cLuQ=s120",
+    "instagramUsername": "boonjiproject",
+    "name": "Boonji Project",
+    "symbol": "BOONJI",
+    "twitterUsername": "boonjiproject",
+    "deltaStats": {
+      "floor": 0.17
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "dcf5c593-62f1-475f-b0e4-2478ae27df9b",
+    "floor": 0.17400000000000002,
+    "address": "0x177ef8787ceb5d4596b6f011df08c86eb84380dc",
+    "description": "The Smilesss Collection consists of 8,888 generative full-body 3D characters, hand designed by artist Waheed Zai. This is more than just art, this is your ticket into the Smilesssvrs. One that’s focused on culture, fashion, hip-hop, and smilesss. By joining us you’re not investing into a project, you’re helping build the universe ::)",
+    "discordUrl": "https://discord.gg/smilesss",
+    "externalUrl": "https://www.smilesss.com",
+    "imageUrl": "https://lh3.googleusercontent.com/hbmc3V8YlN0_tslH9qjQRbj_dZpNzInzx-uY0t5LgQY-lrVBd9Rgv_KMnlxyAKE5ZTgoZhZYW3e3v2bZ2kOUYTKRdlFnfnErqs1EWHA=s120",
+    "instagramUsername": "smilesssvrs",
+    "name": "Smilesssvrs ::)",
+    "symbol": "SMLS",
+    "twitterUsername": "smilesssvrs",
+    "deltaStats": {
+      "floor": 0.18000000000000002
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "32be9425-9be4-44e2-8fa6-41ea942d5819",
+    "floor": 0.08700000000000001,
+    "address": "0xfd1076d80fff9dc702ae9fdfea0073467b9b3fb7",
+    "description": "In the depths of the Metaverse, nestled in the eloquent hills of the Ethereum blockchain lies a Country Club, defined by excellence, prestige, and respect. The Spooky Boys Country Club offers 13,000 unique, digital collectibles that represent community through ownership.\n\nThe Spooky Boys Country Club members obtain safety, integrity, and metaversal recognition. This project blends hypebeast fashion, country club mannerisms, and spooky vibes to create unique collectibles.\n\nSpooky Boys Country Club was developed by an experienced team and is curated by none other than the most OG Ghost in the game, The “Ghost of the Gram”,  [@HOLYGHOST](https://instagram.com/holyghost) on Instagram.",
+    "discordUrl": "https://discord.gg/countryclub",
+    "externalUrl": "https://www.spookyboys.io/",
+    "imageUrl": "https://lh3.googleusercontent.com/tzM3-e-GOFw5IyBwCxl4yhArHMSWQ8FPdiOBFFVo_6HNKSnr8q-wXzfOJ2MOHrB1s1NpG6V0s7qzr4pdNpMiZGY5AXZzceIJpDC5hQ=s120",
+    "instagramUsername": "spookyboyscountryclub",
+    "name": "Spooky Boys Country Club | by HolyGhost",
+    "symbol": "sbcc",
+    "twitterUsername": "spookyboyscc",
+    "deltaStats": {
+      "floor": 0
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "5cbbe200-e148-4e03-aab4-6734a795fe66",
+    "floor": 0.751,
+    "address": "0x3c76001c4d31c7f25a10235dda4ecddfe5e719f4",
+    "description": null,
+    "discordUrl": "https://discord.gg/artwars",
+    "externalUrl": "https://artwarsnft.com/",
+    "imageUrl": "https://lh3.googleusercontent.com/z5OoqqetYYyzYM2Fp36NDWf3HQ1pnvHo8egJ19Zfb_Hpa8MvBIHkiDOpdw6KKeRRU2WtzeOz2HBy3jhQZsYDP1YtzxT2G_OPr5FEkQ=s120",
+    "instagramUsername": null,
+    "name": "Art Wars | AW",
+    "symbol": "AW",
+    "twitterUsername": "ArtWarsNFT",
+    "deltaStats": {
+      "floor": 1.19
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "675d7f84-674c-42a1-8e19-885a2fe7e423",
+    "floor": 0.202,
+    "address": "0xf3114dd5c5b50a573e66596563d15a630ed359b4",
+    "description": "Welcome to the Fat Ape Club, a tribe of 9,999 obese apes that partied too much and didn’t exercise enough.\n\nApes, but fat.",
+    "discordUrl": "https://discord.gg/fatapeclub",
+    "externalUrl": "https://fatapeclub.io/",
+    "imageUrl": "https://lh3.googleusercontent.com/14KzHzk4hp-xIwmC2kQne5H6pGH8GMN8ZJMEMeXVB3FPpoq966d2Lyx8ozVbbebvzyZ6apJzpSk660GqEajzu-RH6cMeE2-O0gD4=s120",
+    "instagramUsername": "fatapeclub",
+    "name": "Fat Ape Club",
+    "symbol": "FAPE",
+    "twitterUsername": "fatapeclub",
+    "deltaStats": {
+      "floor": 0.28
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "e1d0c0e6-16e5-4554-8da9-33bc4831868a",
+    "floor": 0.16,
+    "address": "0x65c234d041f9ef96e2f126263727dfa582206d82",
+    "description": "The Playboy Rabbitars are a lagomorphic-themed civilization of 11,953 unique, non-fungible rabbits inspired by Playboy iconography, heritage and lore. In the context of the metaverse, the Rabbitars are NFTs that live on the Ethereum Blockchain as ERC-721 tokens. Each Rabbitar is generated from 175+ traits, including fur, ears, facial expressions, apparel, accessories, occupation-related characteristics and more. At its simplest, you can think of each Rabbitar as a key that unlocks membership to all the possibilities of Playboy on the blockchain: exclusive access to Playboy art and artist collaborations, IRL and metaverse experiences, and physical and virtual fashion. (And yes, you can tell your friends you officially belong to a Playboy Club!). Visit www.playboyrabbitars.com for all the NFT-ea.",
+    "discordUrl": "https://discord.gg/playboy-rabbit-hole",
+    "externalUrl": "http://playboyrabbitars.com",
+    "imageUrl": "https://lh3.googleusercontent.com/zAil_qoF9TK1Kv0rADui1JfWF4-H3AmAwDNWPJokn5Qhx3AeZ2s4k9bPgGDPxVyXAJZkRvrapw6aa_pdvsYZWKInUxP1x4Q0XABHsg=s120",
+    "instagramUsername": null,
+    "name": "Playboy Rabbitars Official",
+    "symbol": "PLAY",
+    "twitterUsername": "playboynfts",
+    "deltaStats": {
+      "floor": 0.195
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "8966ec4d-dfd0-492a-8e92-e73ef2b12d5b",
+    "floor": 0.139,
+    "address": "0xd8537b0ea5b21ca39af493525a3c54b6fa8f32b3",
+    "description": "The Billionaire Coyote Cartel public sale starts on Nov 9 at 1pm EST.\nJoin the discord for more information: discord.gg/bccnft\n",
+    "discordUrl": "https://discord.gg/bccnft",
+    "externalUrl": "https://billionairecoyotecartel.com/",
+    "imageUrl": "https://lh3.googleusercontent.com/MLvcC49tTVxPt-1rm6w-A-HVPpJBEHaShif59iAqIE_WpNMAKyj8Vt9XtTt017yCCVw5IhvTMxOkjg8l3hiUaMpGJVQKAGHkC-kIUA=s120",
+    "instagramUsername": "coyotecartelnft",
+    "name": "Billionaire Coyote Cartel",
+    "symbol": "BCC",
+    "twitterUsername": "coyotecartelnft",
+    "deltaStats": {
+      "floor": 0.13
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "7404a2e9-07d7-4567-9939-55c1b15ae545",
+    "floor": 0.030000000000000002,
+    "address": "0xea5f32ed4044c44c44ab833d8071e672aad142ff",
+    "description": "9000 gorillas mutated by a disease on the Ethereum blockchain. Each Mutant Gorilla allows staking to produce serum that can be used to cure the Mutant Cats.",
+    "discordUrl": "https://discord.gg/mutants",
+    "externalUrl": "https://mutantworld.com/",
+    "imageUrl": "https://lh3.googleusercontent.com/QnPLtIUhg3QOVqVK7LSsaZOSxLq-dr5dS9bQl0gSsA-4FjQomTxRcb-L5hHoVw3Am_cA5NpeFTx1zA1QyrOPq5DPUN3bc6J-Dfxv=s120",
+    "instagramUsername": null,
+    "name": "Mutant-Gorillas",
+    "symbol": "AMC",
+    "twitterUsername": "mutantcats",
+    "deltaStats": {
+      "floor": 0.060000000000000005
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "47d6f2a6-eafe-4a7e-9d30-f9f069ca3d1c",
+    "floor": 0.34,
+    "address": "0xaadba140ae5e4c8a9ef0cc86ea3124b446e3e46a",
+    "description": "9,999 cats mutated by a disease on the Ethereum blockchain. Earn $FISH passive income from staking and own part of a Cool Cats vault. \n",
+    "discordUrl": "https://discord.gg/mutants",
+    "externalUrl": "https://mutantcats.io/",
+    "imageUrl": "https://lh3.googleusercontent.com/Cg3lUE2P3X7MhSKMROVOjvHkeNw_IWvH8aEyyK3hi9Rxh9d4eyxR6u7KEwRcpBKYq00WPjyYRdyyIdal8TOvsAZfYbeH8IfoZRUw=s120",
+    "instagramUsername": null,
+    "name": "MutantCats",
+    "symbol": "MUTCATS",
+    "twitterUsername": "mutantcats",
+    "deltaStats": {
+      "floor": 0.42000000000000004
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "80d4f294-4cf3-46dc-9db3-83897a146a2a",
+    "floor": 0.194,
+    "address": "0xf62c6a8e7bcdc96cda11bd765b40afa9ffc19ab9",
+    "description": "10,000 nouns needing head on the Ethereum blockchain. Each Head grants access to the exclusive DAO community and voting rights over the DAO's assets.",
+    "discordUrl": "https://discord.gg/V7RUErG5",
+    "externalUrl": "https://headdao.com/",
+    "imageUrl": "https://lh3.googleusercontent.com/JRXwsJJ0RexPHPd1jQf88efrIsepmn6URx9GyTGd9pba6S-7xJj3fXh5uIdeKjbi2AkBS-8Gsp1gU-LKIOhfi8Z3zYH894bN0yofxhk=s120",
+    "instagramUsername": null,
+    "name": "HeadDAO",
+    "symbol": "HEAD",
+    "twitterUsername": "HeadDaoNFT",
+    "deltaStats": {
+      "floor": 0.2
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "eaef8ff8-f76c-46a5-9738-9e7c7b1719b0",
+    "floor": 0.267,
+    "address": "0xf1268733c6fb05ef6be9cf23d24436dcd6e0b35e",
+    "description": "Inspired by the award winning television series “The Desperate Housewives”, DAW is a collection of 10,000 Desperate ApeWives NFTs. With signature red lips each Ape Wife is not only an awesome fine art JPEG, it’s also an exclusive DAW membership card that allows access to members-only benefits which will be revealed over time. \n\nEach Desperate Ape Wife is unique and algorithmically generated from over 218 traits. All apewives are hot but some are supermodels is our tagline. As part of our roadmap development, our vision is to bridge the NFT space with the physical world, one of the many pros is that ownership and commercial usage rights are given to the owner, over their NFT.",
+    "discordUrl": "https://discord.gg/nXCbs99BfG",
+    "externalUrl": "https://desperateapewives.com",
+    "imageUrl": "https://lh3.googleusercontent.com/6yDCMzPIcptR38LjsP-QyMvan-6rO8RSy_tHtwzXVpppTEuFXbgxTIjt5TzlP94Ql30bUeStPSrJQx0Ca1xd48K5PCiK3v-CvFLsBg=s120",
+    "instagramUsername": "desperateapewives",
+    "name": "Desperate ApeWives",
+    "symbol": "DAW",
+    "twitterUsername": "DApeWives",
+    "deltaStats": {
+      "floor": 0.42500000000000004
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "029a6382-b547-4b87-87a9-0ccb749505cd",
+    "floor": 0.14,
+    "address": "0x0816c41b87200fc5c6176b38af608faeb8d62bb5",
+    "description": "The Non-Fungible Fungi collective is a kingdom of 10,100 unique 3D animated (and enchanted) Mushroom NFTs strolling through the Ethereum blockchain. Each Mushroom falls into 1 of 3 species, Magic, Mire-able and Bog standard with Magic being the rarest and Bog being the most common.\n\nThe 100 Genesis Mushroom provide us with the grandfather traits, from there we have a multitude of different traits ranging in both rarity and looks which make up the 10,000 generative collection.\n\nhttp://discord.gg/fungiblefungi",
+    "discordUrl": "https://discord.gg/fungiblefungi",
+    "externalUrl": "https://www.thefungi.app/",
+    "imageUrl": "https://lh3.googleusercontent.com/9fCTuUfwLsCNdyq7fHFV7DcSR79vKgqPUxyBN3_yv_40D-cUIJYSHXXFHefYxDc4FcnMvARpFIOvkmrjjCrI3ErZ6ejmOrJG65vsiQ=s120",
+    "instagramUsername": "fungiblefungi",
+    "name": "NonFungibleFungiMintPass",
+    "symbol": "NFFMINT",
+    "twitterUsername": "FungibleFungi",
+    "deltaStats": {
+      "floor": 0.14600000000000002
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "d07388df-9cfa-4862-bcc0-699212e81775",
+    "floor": 3.6900000000000004,
+    "address": "0x60e4d786628fea6478f785a6d7e704777c86a7c6",
+    "description": "The MUTANT APE YACHT CLUB is a collection of up to 20,000 Mutant Apes that can only be created by exposing an existing Bored Ape to a vial of MUTANT SERUM or by minting a Mutant Ape in the public sale.",
+    "discordUrl": null,
+    "externalUrl": null,
+    "imageUrl": "https://lh3.googleusercontent.com/lHexKRMpw-aoSyB1WdFBff5yfANLReFxHzt1DOj_sg7mS14yARpuvYcUtsyyx-Nkpk6WTcUPFoG53VnLJezYi8hAs0OxNZwlw6Y-dmI=s120",
+    "instagramUsername": null,
+    "name": "Mutant Ape Yacht Club",
+    "symbol": "MAYC",
+    "twitterUsername": null,
+    "deltaStats": {
+      "floor": 3.5020000000000002
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "54044093-f4d7-4886-9227-be083432656a",
+    "floor": 0.38,
+    "address": "0x5df340b5d1618c543ac81837da1c2d2b17b3b5d8",
+    "description": "The BILLIONAIRE CLUB is a private collection of 10 000 billionaire apes NFTs—unique digital collectibles. \nEarlier this year, a mysterious force coming from another galaxy summoned the most influential people on planet Earth to a secret party. Acquiring one of them will give you access to an ever-growing community of investors and entrepreneurs.\n\nVisit www.billionaireclubnft.com for more details on the multiple utilities.",
+    "discordUrl": "https://discord.gg/partyapebillionaireclub",
+    "externalUrl": "http://www.billionaireclubnft.com/",
+    "imageUrl": "https://lh3.googleusercontent.com/XuNPbnt2IMjSrzmTEd8aZZyJRh2KQr2kauOB0IlvCcoPPzS7vSLvYzbDzVDFZS5M7aMIjyJ5FSf1zO8Y5k3NZvrLu4cqoWjlMAxe=s120",
+    "instagramUsername": "partyapebillionaireclub",
+    "name": "Party Ape | Billionaire Club",
+    "symbol": "PABC",
+    "twitterUsername": "partyapebc",
+    "deltaStats": {
+      "floor": 0.33
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "cdae9aa7-39a3-490e-9498-16b6ca8cc9cb",
+    "floor": 0.36000000000000004,
+    "address": "0x7e6bc952d4b4bd814853301bee48e99891424de0",
+    "description": "Jungle Freaks is a collection of 100% HAND DRAWN FREAKS by legendary Hustler Mag Cartoonist George Trosley. These 10,000 Freaks live and breathe on the Ethereum blockchain.\n\nThe year is 2077, humanity is gone and the zombies have overrun the cities and seized a lot of the military stockpiles. However, they didn’t count on the genetically enhanced ferocity and cunning traits of the gorilla regime. The Gorilla oasis stronghold is under attack but they will never surrender.",
+    "discordUrl": "https://discord.gg/SaM2WXYdxh",
+    "externalUrl": "https://junglefreaks.io/",
+    "imageUrl": "https://lh3.googleusercontent.com/9ElHIcK8dZ3fOxLLVA1KKNuN7AVmNvFycX4jK3f_GvDhTrkCgh4hBJAiXGf8UsBSWlJU9lpSrtPtCfNHDp08ChZ7Tx_LDXbiT65t=s120",
+    "instagramUsername": "JungleFreaksNFT",
+    "name": "JUNGLE FREAKS BY TROSLEY",
+    "symbol": "JFRK",
+    "twitterUsername": "JungleFreaksNFT",
+    "deltaStats": {
+      "floor": 0.335
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "c2ccc3ee-02f3-4c17-a479-7d8132cd1458",
+    "floor": 0.3,
+    "address": "0xe22e1e620dffb03065cd77db0162249c0c91bf01",
+    "description": "BearX is a limited NFT collection created on Ethereum blockchain. After being banished from their own land, only some Bears survived. This led to the few remaining to rebuild, strengthen and take flight to regain dominance over their old lands. Each BearX is unique in its own way, featuring different traits from breed, eyewear and clothing to name a few.\n\nWe support the concepts and ideas of derivatives in our community.\n\nHead to our [Twitter](https://www.twitter.com/bearX_NFT)\n\nJoin the community in our [Discord](https://discord.com/invite/bearx)\n\nLearn more about our ecosystem by reading our [Medium] https://bearx.medium.com",
+    "discordUrl": "https://discord.gg/invite/bearx",
+    "externalUrl": "https://bearxlabs.com/",
+    "imageUrl": "https://lh3.googleusercontent.com/sNCr_D2IN0TSZl_tvbE0Iu5xQ9soZnl1q3_u4LqVvX36mHJQ72UZabIbbW3C4uYZ4tvEY3N6cP-iwX3vrp2wSmFB8zxglV805Xxcsw=s120",
+    "instagramUsername": null,
+    "name": "BearXLabs",
+    "symbol": "BearX",
+    "twitterUsername": "bearX_NFT",
+    "deltaStats": {
+      "floor": 0.28500000000000003
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "a25f93e9-8248-4d93-a404-d1e5cbf22a52",
+    "floor": 0.135,
+    "address": "0xe4597f9182ba947f7f3bf8cbc6562285751d5aee",
+    "description": "With a cyberpunk aesthetic set in the dystopian future city of Cryptopolis, the first NFTs on SuperFarm are aptly named the Genesis Series. These NFTs are packed with utility across the SUPERVERSE, and will entitle their holders to unique privileges and unlock new experiences. Holders of these NFTs will enjoy key platform utilities such as priority whitelist access, farming multipliers, access to in-game items and more.\r\n\r\nThere are five unique characters that will be released during the Genesis Series Drop. If you **collect all five designs you will receive a free NFT collector’s trophy**, airdropped to your account at a later date. To get this NFT collector award you must be holding all five characters in the same wallet on 12:01AM PST April 20th, 2021. **Holders of these NFTs are also eligible for SUPER airdrops that vary based on rarity.**",
+    "discordUrl": null,
+    "externalUrl": "https://www.superfarm.com/",
+    "imageUrl": "https://lh3.googleusercontent.com/stQDZp36ffNXpmDXeEn-1QV_C34ziVVsHNQrR0-yo9l20NFe-Dl0voL6j7hACyDoFgpVG5vdurTjR3DCbiZA7V2ZDy7TRpalGWsrdA=s120",
+    "instagramUsername": null,
+    "name": "SuperFarm Genesis Series",
+    "symbol": null,
+    "twitterUsername": "SuperFarmDAO",
+    "deltaStats": {
+      "floor": 0.1
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "a12131cd-153f-474f-83d0-d43acbb986d5",
+    "floor": 0.08800000000000001,
+    "address": "0x1a2f71468f656e97c2f86541e57189f59951efe7",
+    "description": "\"memento mori\" means \" remember you die\" in latin. \nIt is an old saying used to remind people that life is short, and must be lived to the fullest.\nIt is very often symbolized by a skull.\nCryptoMories are 10 000 little skeletons here to remind you that life is good, that there are a lot of amazingly kind people, and that you are one of them. Focus on your greatness.\n\nCryptoMories are not a basic 10k generative series. They are an adaptative generative series. \nOne item differs from one Mori to another, depending on the type. A top hat on a zombie will have holes in it. This makes different types even more special. And it is extremely fun to try to figure out what item looks like on other types.\n\nAlso, there are many little fun games and easter eggs. Including VERY special Mories.. some might say unique..\n\nCryptoMories are the second series of the iwwon project, after the Los Samos handmade one. Both can be combine to access the handmade series vandals. See more on discord.",
+    "discordUrl": "https://discord.gg/YwE6avPsHh",
+    "externalUrl": "https://cryptomories.iwwon.com/home",
+    "imageUrl": "https://lh3.googleusercontent.com/Lf4PsWhcJLjfuMw6tpSHj-UNgxTO0P50m5EiNqoc_OUqSaJBOiY_Mfu84tuicHUOLZQ0cMhDOmYkHvxw_GTlvAqQ15cn9AhVSXvZFw=s120",
+    "instagramUsername": null,
+    "name": "CryptoMories",
+    "symbol": "CRYPTOMORIES",
+    "twitterUsername": "CryptoMories",
+    "deltaStats": {
+      "floor": 0.02
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "d652448f-72b5-497f-a2ec-67b591dffbff",
+    "floor": 0.08,
+    "address": "0xd8cdb4b17a741dc7c6a57a650974cd2eba544ff7",
+    "description": "Fair Launch\nLaunch date will be revealed publically, each participating address can only claim up to 20 of the 10,000 Dogs of Elon. At the end of the presale\nhttps://dogsofelon.io\n\nThe Dogs of Elon – An NFT for the moonshot trader.\nDoE is our passion project! We worked to create a CryptoPunks alternative that represented us, the meme coin hodlers. We have all witnessed the power of the meme coin community and its strength which has universally defied experts.\n\nIn celebration of this we have created 10,000 unique NFTs featuring everybodies favourite K-9. Containing special sub collections with 30 Elons and 70 zombies Doges.\n\nTo ensure the safety of the community, we took the extra step to get our contracts audited by CertiK.\n\n(How many other NFT projects are audited? Not many.)\n\nNFT Staking\nAs a celebration of the strongest communities in crypto, the DoE NFTs can be staked to earn $wDOGE and $SHIBA for a short period, one week after launch. ",
+    "discordUrl": "https://discord.gg/PzjJF4fUVQ",
+    "externalUrl": "https://dogsofelon.io/",
+    "imageUrl": "https://lh3.googleusercontent.com/_C6sPnqBIHvJLuFa5Zl40ZPQJOV5_RIBdYP61z7auLXvMhGZbg8h7IdgLj6qqQivXOdDI_ggOHRc3VV3O3zO2fMX1uGDIGNZ7gyp=s120",
+    "instagramUsername": "dogsofelonio",
+    "name": "Dogs of Elon",
+    "symbol": "DoE",
+    "twitterUsername": "dogsofelon",
+    "deltaStats": {
+      "floor": 0.07
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "f7c46b24-9624-431d-9670-fb9a583c796b",
+    "floor": 0.9510000000000001,
+    "address": "0x8a90cab2b38dba80c64b7734e58ee1db38b8992e",
+    "description": "A community-driven collectibles project featuring art by Burnt Toast. Doodles come in a joyful range of colors, traits and sizes with a collection size of 10,000. Each Doodle allows its owner to vote for experiences and activations paid for by the Doodles Community Treasury. ",
+    "discordUrl": "https://discord.gg/doodles",
+    "externalUrl": "https://doodles.app",
+    "imageUrl": "https://lh3.googleusercontent.com/7B0qai02OdHA8P_EOVK672qUliyjQdQDGNrACxs7WnTgZAkJa_wWURnIFKeOh5VTf8cfTqW3wQpozGedaC9mteKphEOtztls02RlWQ=s120",
+    "instagramUsername": null,
+    "name": "Doodles",
+    "symbol": "DOODLE",
+    "twitterUsername": "doodles",
+    "deltaStats": {
+      "floor": 1.09
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "0b381cb9-fe51-48ee-baf0-1576c19d9b6e",
+    "floor": 0.002,
+    "address": "0xd6f3bc91dae206a727445d6c953779c03e35fa7f",
+    "description": "The official 2476 token.",
+    "discordUrl": null,
+    "externalUrl": null,
+    "imageUrl": "https://lh3.googleusercontent.com/CCQNEjDb6zU1xNeWCxzqUlSGzUFJUnyJyV1EXVw48YFVRPxZ6rrY8xUBsuC0pjUE09O66LDrS-BUiIv2FMd1g-fh_aeOSMt38ESkuA=s120",
+    "instagramUsername": null,
+    "name": "Token 2476",
+    "symbol": "2476",
+    "twitterUsername": null,
+    "deltaStats": {
+      "floor": 0.002
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "052b7e4e-f46a-4e83-a827-836047d4d539",
+    "floor": 0.35000000000000003,
+    "address": "0xaa20f900e24ca7ed897c44d92012158f436ef791",
+    "description": "Eponym is a state-of-the-art generative algorithm that produces fine, abstract art, in under 1 minute, using an innovative text-to-image generator. Any word or phrase, can be transformed into a beautiful 1/1 art piece, forever etched onto the Ethereum blockchain as the visual representation of your phrase. The program was developed over the last 2 years by the world’s best generative art engineers.",
+    "discordUrl": "https://discord.gg/EponymNFT",
+    "externalUrl": "https://art-ai.com/",
+    "imageUrl": "https://lh3.googleusercontent.com/-dTDrhe_0fluAn7qP4GNHFZ2h3dL4GFdp_bkBwo-YSk5NljVuf2fQ1Tw8dTNol5_a86S95Msw9PbRmaaZcFKUGCZ_TkIec5My48_JAE=s120",
+    "instagramUsername": null,
+    "name": "Eponym by ART AI",
+    "symbol": "ARTAI",
+    "twitterUsername": "EponymNFT",
+    "deltaStats": {
+      "floor": 0.4
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "cd75599a-b86e-4e2b-a342-cc45c7d76734",
+    "floor": 0.025,
+    "address": "0x42f1654b8eeb80c96471451b1106b63d0b1a9fe1",
+    "description": "Missed out on Chubbicorns? All good, you can adopt a Chubbifren. This is an official Chubbiverse collection of 8888 cute NFTs. \nChubbifrens live in the Chubbiverse, where we eat jpegs and fart rainbows 🌈",
+    "discordUrl": "https://discord.gg/evkS8cM54G",
+    "externalUrl": "https://www.chubbiverse.com/",
+    "imageUrl": "https://lh3.googleusercontent.com/YcB7nLPfOlmsF9l5milmw4T6nAEufqPZxfHwTDNPs_gJGYsIogQuJCHRDcBtxeaaQgB4eJO87OZHBkXJg1QYwPOLUqf94z-LzxrmLg=s120",
+    "instagramUsername": null,
+    "name": "Chubbiverse Frens",
+    "symbol": "CHF",
+    "twitterUsername": "chubbicorns",
+    "deltaStats": {
+      "floor": 0.049
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "55e287e3-42b2-4c24-af16-57a132b7af5d",
+    "floor": 0.37,
+    "address": "0xa7206d878c5c3871826dfdb42191c49b1d11f466",
+    "description": "∴ AB AETERNO",
+    "discordUrl": null,
+    "externalUrl": "https://lostpoets.xyz/",
+    "imageUrl": "https://lh3.googleusercontent.com/cGKkMxKQ-7J0A4mZvcPqr2LKvGqIVsXjzGqpfxRNb4yVr-zTycPJ0kznkwKqDyUTg--A32oW8cI32BQBl6hrbM-frn1__o544ECpCg=s120",
+    "instagramUsername": null,
+    "name": "LOSTPOETS",
+    "symbol": null,
+    "twitterUsername": "poetslost",
+    "deltaStats": {
+      "floor": 0.379
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "cd91d2ac-bb7f-4a82-b385-bc1462315c2a",
+    "floor": 0.028,
+    "address": "0x7daec605e9e2a1717326eedfd660601e2753a057",
+    "description": "10KTF Stockroom is a collection of the finest Tools and Materials held by the esteemed customers of 10KTF for use in future endeavors.\n\nVisit 10ktf.com for more details.",
+    "discordUrl": null,
+    "externalUrl": null,
+    "imageUrl": "https://lh3.googleusercontent.com/8Psw091U98gxhuI5MH0GDpjEebrlZ3XxzqDbP8eD35j0IyyFapeFu-zKYu_z1jn7PiduRxkXPgSc2wp-PgDpr3Ji70mD9yu1ksb3eQ=s120",
+    "instagramUsername": null,
+    "name": "10KTF Stockroom",
+    "symbol": null,
+    "twitterUsername": null,
+    "deltaStats": {
+      "floor": 0.037000000000000005
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "1e197e9f-1d35-45e2-b5e2-2279e133a3e8",
+    "floor": 0.17,
+    "address": "0x4be3223f8708ca6b30d1e8b8926cf281ec83e770",
+    "description": "Party Degenerates are a collection of 10,000 NFTs representing the rebellious spirit of those who choose to celebrate life, rather than merely living it.\n\nThey are professional misfits, have a big heart, like to party, and are crazy enough to think they can change the world. They have flown under the radar, searching for like-minded creatives, artists, musicians, builders, and believers who dare to express their truth in a society that increasingly values rules and conformity.\n\nA mind-blowing roster of prominent digital artists and emerging talents in the broader NFT community have united to unleash the Party Degenerates under a single generative art project. Visit www.partydegenerates.com for more info.",
+    "discordUrl": "https://discord.gg/partydegenerates",
+    "externalUrl": "http://partydegenerates.com",
+    "imageUrl": "https://lh3.googleusercontent.com/wSM3rM8ayMBVChhgqvpcYif28chYOToZ-CasN0MEG1RekrH-PQ0g2xerw8IvHBMIsgzR8VqGW_YtX_w_LfDTY7SpTf74x4iRexjr=s120",
+    "instagramUsername": "partydegenerates",
+    "name": "PartyDegeneratesNFT",
+    "symbol": "PARTY",
+    "twitterUsername": "partydegens",
+    "deltaStats": {
+      "floor": 0.14100000000000001
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "11e80003-cdef-4a6d-b26a-2a2bcc8808b2",
+    "floor": 0.015000000000000001,
+    "address": "0xdebbc3691d42090d899cafe0c4ed80897a7c9d6a",
+    "description": "“After a very harsh ice age, polar bears were the only species that survived. Now, they need to explore the world, create inventions and a world of polar bears - cold, funky and definitely interesting!” Fluffy Polar Bears are a collection of 9,999 randomly and fully On-Chain generated NFTs that exist on the Ethereum Blockchain. 99 of them will be special editions of the collection and fully hand-drawn. They have +250k possible combinations and a variety of facial expressions, outfits, background colors and hats. Polar Bears are hand-drawn by the famous cartoonist Selçuk Erdem.",
+    "discordUrl": "https://discord.gg/y4CyFyng7W",
+    "externalUrl": "https://polarbearsnft.com/",
+    "imageUrl": "https://lh3.googleusercontent.com/pyNATu7ZX-iQ-6njFABGsUNfL_hQFJOSh3f5Q7Mbl3JCx-8dova1j0wbZS1xQKpL737005T7v1Hp3qwnIszi5qFiERiTz1iAhrtJ=s120",
+    "instagramUsername": null,
+    "name": "Fluffy Polar Bears",
+    "symbol": "FPB",
+    "twitterUsername": "polarbearsnft",
+    "deltaStats": {
+      "floor": 0.037000000000000005
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "7191bcd1-1b66-465d-bd4a-f45e25974ecc",
+    "floor": 0.29000000000000004,
+    "address": "0xad9fd7cb4fc7a0fbce08d64068f60cbde22ed34c",
+    "description": "Meet VOX, the adorable collectible series from Gala Labs.\r\nOwn, play and earn rewards with your unique ERC721 avatar.",
+    "discordUrl": "https://discord.gg/EHgJJM6SdQ",
+    "externalUrl": "http://collectvox.com",
+    "imageUrl": "https://lh3.googleusercontent.com/2QUNq1tqWDePg7jCqM7usnLNukDRTUc33VgVLkBYry4VKkess3MgRGw5fpz3qD5i2shfuyWdJH8Z8lWWyn39YcfeOMz7SjScZXnL=s120",
+    "instagramUsername": "gogalagames",
+    "name": "Vox Collectibles",
+    "symbol": "VOX",
+    "twitterUsername": "gogalagames",
+    "deltaStats": {
+      "floor": 0.315
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "c10d3074-942b-4cc9-911f-89d78e0f1a32",
+    "floor": 0.005,
+    "address": "0xa342f5d851e866e18ff98f351f2c6637f4478db5",
+    "description": "The Sandbox is a community-driven platform where creators can monetize voxel assets and gaming experiences on the blockchain. The Sandbox metaverse comprises a map made up of 166,464 LANDS.  LAND owners can host contests and events, stake SAND to earn and customize assets, monetize assets and experiences, vote in the metaverse governance, play games that you or others create, and more! Trade the collection and keep your eyes peeled for future drops.",
+    "discordUrl": "https://discord.gg/vAe4zvY",
+    "externalUrl": "https://www.sandbox.game/",
+    "imageUrl": "https://lh3.googleusercontent.com/SXH8tW1siikB80rwCRnjm1a5xM_MwTg9Xl9Db6mioIk9HIlDM09pVoSR7GKJgS6ulSUpgW9BDtMk_ePX_NKgO9A=s60",
+    "instagramUsername": null,
+    "name": "The Sandbox",
+    "symbol": "ASSET",
+    "twitterUsername": "thesandboxgame",
+    "deltaStats": {
+      "floor": 0.007
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "d039bf50-0065-40c7-bc6e-e4e2ad9fe93a",
+    "floor": 0.015000000000000001,
+    "address": "0xde17efac631d766e509c8bb77fc9811b4a3c0750",
+    "description": "9,999 cats zombified by radiation on the Ethereum blockchain. Earn 10 $CATFISH a day from staking and own part of a fractionalized Cats Vault. Each Zombie Cat grants access to the exclusive DAO community and voting rights over the DAO's assets.",
+    "discordUrl": "https://discord.gg/WMASwyxrvK",
+    "externalUrl": "https://www.zombiecats.io/",
+    "imageUrl": "https://lh3.googleusercontent.com/LB3jOEqKvchNzrWnsSe-Si0dZbh06K_uLZ25gcE2iVDm5gMbPjmxUyNzUimJczhZWlE8Wo1NYMLKyYU0aowc96OrXm1RShMghc5VnNw=s120",
+    "instagramUsername": null,
+    "name": "ZombieCats",
+    "symbol": "ZOMCATS",
+    "twitterUsername": "zombiecatsNFT",
+    "deltaStats": {
+      "floor": 0
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "c28870af-5f6f-467f-9678-0936966295e9",
+    "floor": 0.302,
+    "address": "0x4b3406a41399c7fd2ba65cbc93697ad9e7ea61e5",
+    "description": "∴ AB AETERNO",
+    "discordUrl": null,
+    "externalUrl": "https://lostpoets.xyz/",
+    "imageUrl": "https://lh3.googleusercontent.com/cGKkMxKQ-7J0A4mZvcPqr2LKvGqIVsXjzGqpfxRNb4yVr-zTycPJ0kznkwKqDyUTg--A32oW8cI32BQBl6hrbM-frn1__o544ECpCg=s120",
+    "instagramUsername": null,
+    "name": "LOSTPOETS",
+    "symbol": "POETS",
+    "twitterUsername": "poetslost",
+    "deltaStats": {
+      "floor": 0.265
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "eded94f2-8c33-4f0e-9754-571ac1ab3024",
+    "floor": 0.28,
+    "address": "0x05b505f6bda522efd3b5f63b6338f275f14549a2",
+    "description": "Matrix World is an open world that enables users to build 3D immersive applications on top of several blockchains. In Matrix World, users can take advantage of traditional 3D open-world features such as building 3D architectures, hosting virtual meetings, exhibiting NFTs, and more advanced functionality such as creating their own 3D decentralized applications (DApps) using Matrix's built-in computational resources. https://matrixworld.org/home",
+    "discordUrl": "https://discord.gg/Utr9ggbhED",
+    "externalUrl": "http://matrixworld.org",
+    "imageUrl": "https://lh3.googleusercontent.com/DbaRjlAcVWT9JnhYZEmioZQiKc-EKb3jJw9wQuS7lk0aivcFvY7bhK6u6ri1XOJ-mHvor_uGF_EDdmbW9tHBiHHC1Tu2yd-Puplq=s120",
+    "instagramUsername": null,
+    "name": "MatrixWorld LandVoucher",
+    "symbol": "LV",
+    "twitterUsername": "theMatrixWorld",
+    "deltaStats": {
+      "floor": 0.34
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "e663d487-f1ea-4a5e-8e89-3391c3b5fcfb",
+    "floor": 0.128,
+    "address": "0x7ab2352b1d2e185560494d5e577f9d3c238b78c5",
+    "description": "The Hundreds Official Adam Bomb Squad NFT Collectibles",
+    "discordUrl": "https://discord.gg/thehundreds",
+    "externalUrl": "https://abs.thehundreds.com/",
+    "imageUrl": "https://lh3.googleusercontent.com/AFLfluhz2BbvfAUDmTdZzZKvF-wETqzYFZUefPJIw9tO9uXiqftaznKxpgUobXFQqpmG5n2tgAvjbSycubZZ7E89D4K8QbzIFtGWCkY=s120",
+    "instagramUsername": "thehundreds",
+    "name": "Adam Bomb Squad",
+    "symbol": "ABS",
+    "twitterUsername": "AdamBombSquad",
+    "deltaStats": {
+      "floor": 0.135
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "4b4f818e-f3da-4138-960a-9dd0e4ea0ecb",
+    "floor": 0.9790000000000001,
+    "address": "0x11450058d796b02eb53e65374be59cff65d3fe7f",
+    "description": "SHIBOSHIS are 10,000 lovable Shiba Inu generated Non Fungible Tokens (NFTS) eternally written on the Ethereum blockchain. These Shibs have varying traits that make each unique and collectible (for instance Laser Eyes or Party Hat). Furthermore, each trait corresponds to an enhancement of the base ShibaStrength of the Shiboshi in our upcoming Shiboshi Game. You’ll be able to purchase, and trade these SHIBOSHIS here at ShibaSwap. These are the official SHIBOSHIS of the Shiba Inu decentralized community as seen on Forbes, Wall St. Journal, Fortune, CNN, MSNBC and just about everywhere else.",
+    "discordUrl": "https://discord.gg/shibatoken",
+    "externalUrl": "https://shiboshis.shibaswap.com/#/",
+    "imageUrl": "https://lh3.googleusercontent.com/9G_SbzGpWnId_ouP-rsTfv1UIeSaaayelyZVyo7eVETYp2uDXDXeH82Yvw4AchRHuKSrixHhGQ7ri5UUepQLaK9BpwhMH1yjImnXHA=s120",
+    "instagramUsername": null,
+    "name": "THE SHIBOSHIS",
+    "symbol": "SBSH",
+    "twitterUsername": "shibtoken",
+    "deltaStats": {
+      "floor": 0.1
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "e92a7b01-70b4-475f-a34e-cbe6f5284b84",
+    "floor": 2.295,
+    "address": "0xf4ee95274741437636e748ddac70818b4ed7d043",
+    "description": "The Doge Pound is 10,000 art pieces carefully chosen by Professor Elon. A unique digital collection of diverse NFTs lying on Ethereum Blockchain. Each one is thoughtfully designed, specifically picked, and impeccably shaped. Join us on our adventure and have a good time. Having a Doge Token grants you creative and commercial rights, as well as inclusion in the gang.",
+    "discordUrl": "https://discord.gg/6xEq5wxR6M",
+    "externalUrl": "https://thedogepoundnft.com/",
+    "imageUrl": "https://lh3.googleusercontent.com/uNkBbVvg7wyRjspsooFtYYbRHFHFISntxwijLRskjGhplP8A3Iz_4ApLU_yLp9BW-Ai0yUWC50A138IGUkII55QWRT7g12qmSRTlbA=s120",
+    "instagramUsername": "thedogepoundnfts",
+    "name": "The Doge Pound",
+    "symbol": "DOGGY",
+    "twitterUsername": "TheDogePoundNFT",
+    "deltaStats": {
+      "floor": 2.25
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "d130473b-1bac-41df-8ba0-8a9d37789404",
+    "floor": 1.6300000000000001,
+    "address": "0x1b829b926a14634d36625e60165c0770c09d02b2",
+    "description": null,
+    "discordUrl": "https://discord.gg/5uPqqqzUyE",
+    "externalUrl": "https://www.treeverse.net/",
+    "imageUrl": "https://lh3.googleusercontent.com/p8o26w4tntvlvlFK-rclU014Qo3WRfrZGcMQMD1M-07mHQYgzd_fNzPCByDQj1GWji8ES29ZLZfSJzmjwxuKfwwKCP1ewl7HE5L6qkk=s120",
+    "instagramUsername": null,
+    "name": "Treeverse",
+    "symbol": "TRV",
+    "twitterUsername": "TheTreeverse",
+    "deltaStats": {
+      "floor": 1.367
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "a8be633c-0870-47e8-b3e3-52ea89d2c25f",
+    "floor": 0.098,
+    "address": "0xdd70af84ba86f29bf437756b655110d134b5651c",
+    "description": "Bring your NFT to life using a iNFT Personality Pod by Alethea AI. \n\nA Personality Pod enables you to power your NFT with AI, turning it into an intelligent NFT (iNFT). Once your NFT is fused with a Pod, you can not only create a unique, on-chain and evolving AI-generated personality for your NFT, but also offer powerful AI Services within the world’s first Intelligent Metaverse: Noah’s Ark.\n\nTOS: https://alethea.ai/pods/tos",
+    "discordUrl": "https://discord.gg/aletheaai",
+    "externalUrl": "https://alethea.ai/",
+    "imageUrl": "https://lh3.googleusercontent.com/0LsJSNxzhiXQ-8TqwrMEJZuLgQnDTEweihqp32L_dXpkywpCIK4o8Fgs9JZDduK1Oj5Ek_xlBqd5lMIJoxSnWRi-GaknxnHINmy2H7Y=s120",
+    "instagramUsername": null,
+    "name": "iNFT Personality Pod by Alethea AI",
+    "symbol": "POD",
+    "twitterUsername": "real_alethea",
+    "deltaStats": {
+      "floor": 0.09000000000000001
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "7c07b781-471b-44b3-adb2-2caf154e982f",
+    "floor": 0.15,
+    "address": "0x79da5fa272e8fb280cee4d0649aa6a9e4e62ceb0",
+    "description": "Wall Street Bulls is a collection of 10,000 unique NFTs on the Ethereum blockchain. Inspired by the Wall Street degen culture, The Wall Street Bulls have a roadmap packed with some of the most unique utility. Your Bull doubles as membership into the upcoming Options Market; a place where your Bull can become either rich or poor, but always more rare. You would also get access to our free sister NFT collections The Wall Street Interns and The Wall Street Assets. Exclusive Merch of your Bull and the upcoming Trading Floor will all be unlocked by the community through the roadmap activation. Visit https://wallstreetbulls.io for more details. Lambos To The Moon!",
+    "discordUrl": "https://discord.gg/wallstreetbullsclub",
+    "externalUrl": "http://wallstreetbulls.io",
+    "imageUrl": "https://lh3.googleusercontent.com/c1A2Rx9bnGXS1dkCS1xfEsNLEInx2WDirGG92uYizrcbxbp-SMXwKyuRv16XHi6oZDmuCEpyvhf6rNQps5EZqI-UdPcDGb59rjEe=s120",
+    "instagramUsername": "wallstbets",
+    "name": "Wall St Bulls",
+    "symbol": "WSB",
+    "twitterUsername": "wallstmemes",
+    "deltaStats": {
+      "floor": 0.11
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "938192b1-bacd-4ee9-9585-827040710678",
+    "floor": 0.046,
+    "address": "0x338866f8ba75bb9d7a00502e11b099a2636c2c18",
+    "description": "Women and Weapons is a collection of 10,000 diverse, beautiful, and badass women NFTs. The 200+ attributes that make up these assets were painstakingly hand-drawn by notable artist Sara Baumann a.k.a \"Sparky.\" Each stroke was a labor of love that took months of planning to assemble. This is a chance to own a piece of her biggest and boldest art collection ever.\n\n5% of all proceeds go to The Malala Fund Charity so that girls and women worldwide can gain access to education that will empower them to lead. So please help us help girls make knowledge their weapon. \n\nLearn more and join us at: https://www.womenandweapons.io\n\n",
+    "discordUrl": "https://discord.gg/womenandweapons",
+    "externalUrl": "http://www.womenandweapons.io",
+    "imageUrl": "https://lh3.googleusercontent.com/8bgo7liqrG4-rLI-MMnYSR8cNXi8zrgxiDOWaecGavHnHWul82fbZ3wwqxM6WsaelPjP5ApBJB4D6DHT2_gsYD-cCaxYavggPv2f=s120",
+    "instagramUsername": null,
+    "name": "Women and Weapons",
+    "symbol": "WAW",
+    "twitterUsername": "WomenandWeapons",
+    "deltaStats": {
+      "floor": 0.060000000000000005
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "08408db4-243d-424b-a34f-a0c99dc0697d",
+    "floor": 0.049,
+    "address": "0x24998f0a028d197413ef57c7810f7a5ef8b9fa55",
+    "description": "Panda Paradise is a collection of 8,888 unique Panda NFTs - living on the Ethereum blockchain. Your Panda Paradise NFT is also your exclusive ticket into our diverse and growing community, Join our Paradise here, https://pandaparadise.io/.",
+    "discordUrl": "https://discord.gg/pandaparadise",
+    "externalUrl": "http://pandaparadise.io",
+    "imageUrl": "https://lh3.googleusercontent.com/GKPei6YLGn8IgYN5it0ujodZ-bFhfP5n_KC3EYZKdT0cy5h88gF-vNhi9VkFnCjd52YZ-VYbO98zjx7ioIFxtkCnfik3UakA1XNJ=s120",
+    "instagramUsername": "pandaparadiseio",
+    "name": "PandaParadise",
+    "symbol": "PPA",
+    "twitterUsername": "pandaparadiseio",
+    "deltaStats": {
+      "floor": 0.05
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "2219646a-0506-47e5-bd97-32f5695130ea",
+    "floor": 0.028,
+    "address": "0x664ac093f047a131403e9b1cbe3ff1df7e756429",
+    "description": "4511 Immortalz, each one of them carefully created by the gods of the Ether realm #4KF24. This reality has expired.",
+    "discordUrl": "https://discord.gg/4jHKgHnwMn",
+    "externalUrl": "https://immortalz.io",
+    "imageUrl": "https://lh3.googleusercontent.com/D-kF-uoprT92n_H9h-ipyJXA9BjFWVuYCflGn_UFwidakH6Gnw9eSLpNO5q0MTLklMuj59W_oG3p-GqFsix21GsiagQ8bGbWmuGaIQ=s120",
+    "instagramUsername": "immortalz_nft/",
+    "name": "IMMORTALZ - Ambary Assassins",
+    "symbol": "IMMORTALZ",
+    "twitterUsername": "Immortalznft",
+    "deltaStats": {
+      "floor": 0.024
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "1636977a-f0b8-44ae-acef-53854442b1e0",
+    "floor": 0.059000000000000004,
+    "address": "0x80d77b4ae7cd0d7a21fd3c1b2da25a4a06b63923",
+    "description": "Bitcoin Billionaires is a collection of 13,337 unique pixel art NFTs inspired by the hit mobile game with over 10 million downloads. Billionaires are built from 200+ traits across six species, and they inhabit a universe that lends itself to some pretty bizarre worldbuilding. It's \"Your Billionaire. Your Story\", after all!\n\nLaunch benefits include random airdrops of BAKC, Bored Ape, and Crypto Punk NFTs valued at a combined $500K USD. Later roadmap releases include games holders can play to earn/win ETH, NFT rewards, and more. The team is made up of experienced game developers and long-time crypto enthusiasts, so expect the Billionaires to only get more interesting as time goes by!",
+    "discordUrl": "https://discord.gg/BillionairesNFT",
+    "externalUrl": "https://billionaires.io/",
+    "imageUrl": "https://lh3.googleusercontent.com/6Yv993upc3BPkhYwScYjM-bjz412-ZbLbFAnMKcDMA9oY1jReVlf_mJKoRVl5Kc7-cVpnuEYSWYS-em92j7DN6jXwI2R7vKf-0sVFA=s130",
+    "instagramUsername": null,
+    "name": "BitcoinBillionaires",
+    "symbol": null,
+    "twitterUsername": "NFTBillionaires",
+    "deltaStats": {
+      "floor": 0.065
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "035e00e5-3427-4a2d-9aad-03cf6e83c4e6",
+    "floor": 0.464,
+    "address": "0x3abedba3052845ce3f57818032bfa747cded3fca",
+    "description": "EtherOrcs is a collection of 5050 Orcs ready to pillage the blockchain. With no IPFS or API, these Orcs are the very first role-playing game that takes place 100% on-chain.\n\nSpawn new Orcs, battle your Orc to level up, and pillage different loot pools to get new weapons and gear which upgrades your Orc metadata. This Horde of Orcs will stand the test of time and live on the blockchain for eternity.",
+    "discordUrl": "https://discord.gg/etherorcs",
+    "externalUrl": "http://transfer.etherorcs.com",
+    "imageUrl": "https://lh3.googleusercontent.com/Rqt9abO3ajmblpelJjiWpmoNaIUKrHAJ4TMVicJW_ycx23UeTQgkOQKmqzkhj27k7fbyG0eMZtPpukuNkudv8HCrAxtghqgMkv3wwJ0=s120",
+    "instagramUsername": null,
+    "name": "Ether Orcs",
+    "symbol": "Orcs",
+    "twitterUsername": "etherorcs",
+    "deltaStats": {
+      "floor": 0.222
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "d11574f9-15e2-4e43-94b5-ffd408f18f93",
+    "floor": 0.04,
+    "address": "0xfcd433977292f107aac6e30e7712d0e38eeb4a7c",
+    "description": "Collection of 6969 randomly generated StickDix NFTs dicking around on the Ethereum network.",
+    "discordUrl": "https://discord.gg/stickdix",
+    "externalUrl": "http://stickdix.com",
+    "imageUrl": "https://lh3.googleusercontent.com/OHRWGb3J4RfqstFSiJSTprKl9Wam9w2cq70TJRWmTTPtQTV6xVjLqbzwtdEnXyNxkRE9sE4_YyMjCX8KhggHp-5XnKd5BvWyF5lVBrs=s120",
+    "instagramUsername": "stickdixnft",
+    "name": "StickDix",
+    "symbol": "DIX",
+    "twitterUsername": "StickDixNFT",
+    "deltaStats": {
+      "floor": 0.045000000000000005
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "c6ca66fd-2b9c-4592-bbc7-4c3a736bf76a",
+    "floor": 0.153,
+    "address": "0x3a5051566b2241285be871f650c445a88a970edd",
+    "description": "The Humanoids is a collection of 10,000 unique Humanoids who live on the Ethereum blockchain. \n\n\n",
+    "discordUrl": "https://discord.gg/thehumanoids",
+    "externalUrl": "http://thehumanoids.co",
+    "imageUrl": "https://lh3.googleusercontent.com/elwah9Kx5Dlurgx8rFhH10p-Xgzb0xu-R3893NZLEjLbUWO5i-aRXhbAoRndnL9PvOz9KFQmve3RdCM6H428FVpdD-oLvufOw31OMg=s120",
+    "instagramUsername": "thehumanoidsnft",
+    "name": "The Humanoids",
+    "symbol": "HMNDS",
+    "twitterUsername": "thehumanoidsnft",
+    "deltaStats": {
+      "floor": 0.219
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "c09751b8-abeb-4aad-9014-678457528eba",
+    "floor": 0.261,
+    "address": "0x1d20a51f088492a0f1c57f047a9e30c9ab5c07ea",
+    "description": "metadata revealed after block time friday, september 24, 2021 5:23:15 am gmt.",
+    "discordUrl": "https://discord.gg/loomlock",
+    "externalUrl": "https://loomlock.com",
+    "imageUrl": "https://lh3.googleusercontent.com/LI4ZlKPBilru26Z3Awy8WrJkadB8DumWEopZUfEV_fVrnDoK6xl9SfoXQcqRuyeThcWCM2TdarvalgVPZ2lABU4S7g3y1mYtqJ3Lqr0=s120",
+    "instagramUsername": null,
+    "name": "loomlocknft (Wassies)",
+    "symbol": "LL",
+    "twitterUsername": "loomlocknft",
+    "deltaStats": {
+      "floor": 0.24400000000000002
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "59a4ba19-e07c-4ee6-a2e4-b1d213391746",
+    "floor": 0.05,
+    "address": "0x368ad4a7a7f49b8fa8f34476be0fc4d04ce622f5",
+    "description": "Explore the remarkable world of Organic Growth: Crystal Reef, 10301 unique NFT collectibles that transform and grow every time they are purchased from another collector. This revolutionary digital art project is a collaboration between artists Michael Joo (ASomatica) and Danil Krivoruchko Myshli). \n\nThe facets and contours of each OG:Crystal are generated algorithmically, the product of each owner’s crypto wallet history as well as myriad combinations of crystalline structures.\n\nTwo months after the initial sale date or seven generations of growth, every OG:Crystal will be “locked” and any new transactions will not influence shape, structure, or rarity. ",
+    "discordUrl": "https://discord.gg/dGhkJ8VVVp",
+    "externalUrl": "https://ogcrystals.com/",
+    "imageUrl": "https://lh3.googleusercontent.com/f-r-IwOKSGRwZk94Q2X4LdtQBx0bauz6hUmOmWna2KklzOrylKGo8yCmAloaHCEoUTGoPksb8r3sMmC568dSrbGeipYrlnQln3V9Rg=s120",
+    "instagramUsername": null,
+    "name": "OG:Crystals",
+    "symbol": "OG Crystals",
+    "twitterUsername": "ogcrystals",
+    "deltaStats": {
+      "floor": 0.07
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "b348b217-ba51-44dc-acd1-1e8075a218cd",
+    "floor": 0.802,
+    "address": "0x8943c7bac1914c9a7aba750bf2b6b09fd21037e0",
+    "description": "Lazy Lions is a collection of 10,000 unique NFTs. Note to self: remember to finish this later.",
+    "discordUrl": "https://discord.gg/LazyLionsNFT",
+    "externalUrl": "http://lazylionsnft.com",
+    "imageUrl": "https://lh3.googleusercontent.com/kFZpw-bkoyH03qFbfqkwkkhHVxT7qclK_tYFmhU1K2HegU3v2wSMmhL6TIgw7Stx1KIoKs1sdJQ4My71ktXV7GygPBjaQZCACERt=s120",
+    "instagramUsername": null,
+    "name": "Lazy Lions",
+    "symbol": "LION",
+    "twitterUsername": "LazyLionsNFT",
+    "deltaStats": {
+      "floor": 0.8500000000000001
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "bbc0f4a1-fb34-449a-a1e7-0f1524bd451f",
+    "floor": 0.023,
+    "address": "0xfd3c3717164831916e6d2d7cdde9904dd793ec84",
+    "description": "Get in on the ground floor. We're going to the treetops!\nA minority and artist-led 10k PFP project🦎 #chamfam",
+    "discordUrl": "https://discord.gg/chameleoncollective",
+    "externalUrl": "http://chameleoncollective.io",
+    "imageUrl": "https://lh3.googleusercontent.com/aVnX3VCmxCTWjegT7drwHPxYF15D13VFGMDx22dcPxTiUdVW4NEFdavH2wVMQiHO_vcY5gUfEvZq8onc-Vj_uF28mqaSNAPFdievSAU=s120",
+    "instagramUsername": "Chameleon_NFT",
+    "name": "Chameleon Collective",
+    "symbol": "CCNFT",
+    "twitterUsername": "Chameleon_NFT",
+    "deltaStats": {
+      "floor": 0.035
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "355e574d-7268-4df5-a2ed-a7a70f8cfd15",
+    "floor": 0.22,
+    "address": "0x2d004b72d8b7d36f9da2e4a14516618bf53bac57",
+    "description": "Furballs are entirely on-chain, with a full interactive gameplay experience at Furballs.com. There are 88 billion+ possible furball combinations in the first edition, each with their own special abilities... but only thousands minted per edition. Each edition has new artwork, game modes, and surprises.",
+    "discordUrl": null,
+    "externalUrl": "https://furballs.com",
+    "imageUrl": "https://lh3.googleusercontent.com/1W-p4TqsIG1_mO14mXzFme_QdPLy8QpL4FLuNKKKrcnhGTPq-bA4ZWgAIT5MGQbJGn_A5UJU-OBFXPMA22bKKn9GaTKGNVQYqlL7d0M=s120",
+    "instagramUsername": null,
+    "name": "Furballs.com Official",
+    "symbol": "FBL",
+    "twitterUsername": null,
+    "deltaStats": {
+      "floor": 0.218
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "86342441-4894-42d6-8759-bb1ab0111869",
+    "floor": 0.19,
+    "address": "0x9c57d0278199c931cf149cc769f37bb7847091e7",
+    "description": "Sipher is the most awesome.",
+    "discordUrl": "https://discord.gg/sipherxyz",
+    "externalUrl": "https://sipher.xyz",
+    "imageUrl": "https://lh3.googleusercontent.com/-V0eEOrC5W9AcbS_tvv_Ew9zp-Gf5WLS0WNdBGhd2b9CKVjO2IMDUsbN5uEzwxRuLpR_AiUU_TDfANQuh9uO-auOxW5Cdu435MFcKg=s120",
+    "instagramUsername": null,
+    "name": "Sipherian Surge",
+    "symbol": "INU",
+    "twitterUsername": "SIPHERxyz",
+    "deltaStats": {
+      "floor": 0.20500000000000002
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "a54593ef-fd9f-4b55-a2b1-3bac170c95f5",
+    "floor": 0.01,
+    "address": "0x5fba17737ee4809230946115c0e8a418bce70acc",
+    "description": "Cosmic Cowgirls is a collection of 6,969 randomly generated space cowgirl NFTs on the Ethereum blockchain. The Cosmic Cowgirl collection embraces three prominent themes: cowgirls, space, and anime. Each cowgirl features bright colors, unique traits, and a signature cowgirl hat. The art is manga inspired and out-of-this-world!",
+    "discordUrl": "https://discord.gg/ysB5uhYs",
+    "externalUrl": "https://www.cosmic-cowgirls.io/",
+    "imageUrl": "https://lh3.googleusercontent.com/DKBSGSwTRs47prOzH3pzfdBINq0brwTtMu4F2BWnOq6bV7Rtrb4euJAgEtAHPCclULoA45fPKlO2BdohD9S1qkYV-HLGDSoPFRHi8A=s120",
+    "instagramUsername": null,
+    "name": "Cosmic CowGirls NFT",
+    "symbol": "CCG",
+    "twitterUsername": "CowgirlsNFT",
+    "deltaStats": {
+      "floor": 0.01
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "edbf9034-1895-42d9-b8e4-a3edda35a4ce",
+    "floor": 0.099,
+    "address": "0xe6ef513f7429d92cb54ebd4c14026aeb90849a78",
+    "description": "Impact Theory Founder's Keys unlock the future of all things Impact Theory. With seven categories of utility unlocked to varying degrees by each tier, this is a new kind of NFT project that spans our entire company. Impact Theory builds worlds, and the keys get you VIP access to a vast array of creations. Visit our website for a full utility map by tier and find the Key that's right for you. ",
+    "discordUrl": "https://discord.gg/MNYebR2qwj",
+    "externalUrl": null,
+    "imageUrl": "https://lh3.googleusercontent.com/vnqKXfAxswTUdBxgyFBGQ9OapIl1iNWf4GSYaTjG7O5JP6zdOeocfQpAYJqXSkFV4yrxPiU2cx11_6aQrElOcVjp0SAy1QcYiDcYdg=s120",
+    "instagramUsername": "tombilyeu",
+    "name": "Impact Theory Founder's Key",
+    "symbol": "ITFK",
+    "twitterUsername": "tombilyeu",
+    "deltaStats": {
+      "floor": 0.109
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "05b90ddd-8e63-44b3-a74e-846cb1fbd7c2",
+    "floor": 4.9,
+    "address": "0x1a92f7381b9f03921564a437210bb9396471050c",
+    "description": "Cool Cats is a collection of 9,999 randomly generated and stylistically curated NFTs that exist on the Ethereum Blockchain. Cool Cat holders can participate in exclusive events such as NFT claims, raffles, community giveaways, and more. Remember, all cats are cool, but some are cooler than others.",
+    "discordUrl": "https://discord.gg/X6A4AXrKaR",
+    "externalUrl": "http://coolcatsnft.com",
+    "imageUrl": "https://lh3.googleusercontent.com/LIov33kogXOK4XZd2ESj29sqm_Hww5JSdO7AFn5wjt8xgnJJ0UpNV9yITqxra3s_LMEW1AnnrgOVB_hDpjJRA1uF4skI5Sdi_9rULi8=s120",
+    "instagramUsername": null,
+    "name": "Cool Cats NFT",
+    "symbol": "COOL",
+    "twitterUsername": "coolcatsnft",
+    "deltaStats": {
+      "floor": 5.907
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "ac402534-5e59-4de6-9a7d-aa685012a6b0",
+    "floor": 0.751,
+    "address": "0x9a534628b4062e123ce7ee2222ec20b86e16ca8f",
+    "description": "The MekaVerse is a collection of 8,888 generative Mekas inspired by the Japanese Anime universe.\r\n\r\nIn the distant future, drivers fight in a world divided into 4 Factions. Originals Meka, Mirage, F9, and Gadians are the Titans who rule this planet. Which Faction are you going to join?\r\n\r\nEach MekaVerse NFT holder has access to exclusive events on Discord, Twitter, and more. \r\nThe Mekaverse does not stop at one planet, it extends far beyond that!\r\n\r\nVisit [www.themekaverse.com](https://www.themekaverse.com) website for more details.",
+    "discordUrl": "https://discord.gg/mekaverse",
+    "externalUrl": "https://themekaverse.com/",
+    "imageUrl": "https://lh3.googleusercontent.com/6CS0frnjPEpvJ8hE3OG6_TbJFEC5YYThnZMdLTTmW-Z91lyYAJkPA7-ou2uE-b_J-cBUBeqWkI4HYKHEiu2PAyCT6wkYKzoeCyuy=s120",
+    "instagramUsername": null,
+    "name": "MekaVerse",
+    "symbol": "MEKA",
+    "twitterUsername": "MekaVerse",
+    "deltaStats": {
+      "floor": 0.8430000000000001
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "76ffd5cb-14b1-4f34-a899-70571da3c992",
+    "floor": 0.049,
+    "address": "0xc36cf0cfcb5d905b8b513860db0cfe63f6cf9f5c",
+    "description": "From one of the founders of Zynga and some of the creative minds behind FarmVille and Words With Friends comes Town Star. Blockchain is the next evolution of gaming and has the $148B industry buzzing with excitement. It’s gaming re-imagined to benefit creators and players, alike.",
+    "discordUrl": "https://discord.gg/CxZ4AC2",
+    "externalUrl": "https://www.gala.games/",
+    "imageUrl": "https://lh3.googleusercontent.com/wp7V1K4Ezhi8yHU6LFpff-GMsjend65nRiwNz5pGAjCwk7ybznEpfUvXiIxQoOWBmeN00AGjVTRhLUqY4fee1fus=s120",
+    "instagramUsername": null,
+    "name": "Town Star",
+    "symbol": null,
+    "twitterUsername": "GoGalaGames",
+    "deltaStats": {
+      "floor": 0.015000000000000001
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "c2b0ceb5-8387-4ab0-b4cb-46fab9ff691b",
+    "floor": 0.079,
+    "address": "0x6069a6c32cf691f5982febae4faf8a6f3ab2f0f6",
+    "description": "The Bulls on the Block are Evolving. These Evolved Bulls can only be created by locking up your original Bull in the vault until the 15th of October, 2022. ",
+    "discordUrl": "https://discord.gg/bullsontheblock",
+    "externalUrl": "http://bullsonteblock.com",
+    "imageUrl": "https://lh3.googleusercontent.com/z7yu67wfGPd1lmThU6LB8tZk7u6mZGlgS1yBebhEl-O67HLSIfrfzbrzfj1bVfZMsnqdiRK-Dp9VjXs873Pl_J7COB6beHOXXJzR=s120",
+    "instagramUsername": "bullsontheblocknft",
+    "name": "BullsOnTheBlock Evo",
+    "symbol": "EVOBOTB",
+    "twitterUsername": "bullsontheblock",
+    "deltaStats": {
+      "floor": 0.05
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "338727c9-3aae-47f8-9332-6c1d7b846a95",
+    "floor": 0.46,
+    "address": "0x36d30b3b85255473d27dd0f7fd8f35e36a9d6f06",
+    "description": "8,888 Editions of the Genesis NFT from 888 to celebrate the milestone of 88.8K followers on Twitter.",
+    "discordUrl": null,
+    "externalUrl": null,
+    "imageUrl": "https://lh3.googleusercontent.com/h0MhwYG3nIpAP8Pse5MAN8SkpuuB_eshuQpc0g7ShW3G0XgZmIGYfb3nN-qV079TfjDyVl4BpY-ch5xMclDWEMIn6oMZV3CFZfMCVWs=s120",
+    "instagramUsername": null,
+    "name": "888 inner circle",
+    "symbol": null,
+    "twitterUsername": null,
+    "deltaStats": {
+      "floor": 0.5900000000000001
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "4bf6ddc8-3c26-44af-8084-1f488b4788cc",
+    "floor": 0.26,
+    "address": "0x10daa9f4c0f985430fde4959adb2c791ef2ccf83",
+    "description": "Metakey is an experiment exploring the unlimited use cases blockchain tech can bring to a token, (NFT or FT)\r\n\r\nAll you need is ONE Metakey, (Any edition), and we will integrate a use case in every project we can.",
+    "discordUrl": "https://discord.gg/invite/47tfHj4huW",
+    "externalUrl": "https://app.rarible.com/collection/0x10daa9f4c0f985430fde4959adb2c791ef2ccf83",
+    "imageUrl": "https://lh3.googleusercontent.com/As-mBbeR0kQrbjpT9cvmmTuRqM9nTAXKd2q0GZqPxPNg9S7fihp4bJ4cIOL1kFuRgXjsfk4TBWF52_kh9iRCRdiP9IDICkJURAUwbg=s120",
+    "instagramUsername": null,
+    "name": "The Meta Key",
+    "symbol": "MetaKey",
+    "twitterUsername": "themetakey",
+    "deltaStats": {
+      "floor": 0.23500000000000001
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "f81aa99c-503e-407a-b0aa-c63621e53f00",
+    "floor": 0.05,
+    "address": "0xf0b23d4738ed2c7d89a13d3391ae4e9a8ccf0e44",
+    "description": "The Diamond Crypto Dunks is a collection of unique NFT’s with multiple rarity combinations designed by Nicky Diamonds. Each NFT is unique in order to prioritize rarity and quality.",
+    "discordUrl": "https://discord.gg/q9YfgYDttz",
+    "externalUrl": "https://www.nickydiamonds.io/",
+    "imageUrl": "https://lh3.googleusercontent.com/dcKXd1XS1exaXeRSMXNeafnJiOjhmikkQIs4eL0pba8R_5geU3_p1sHdwnbvey9_3X6HMLvAUM8OqaHIwTof1jPHfEWseeh41fwLNbc=s120",
+    "instagramUsername": "NickyDiamonds",
+    "name": "Diamond Crypto Dunks",
+    "symbol": "DCD",
+    "twitterUsername": "NickyDiamonds",
+    "deltaStats": {
+      "floor": 0.059000000000000004
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "01ca69ca-4949-423a-9b3f-9a20cf1acda0",
+    "floor": 0.45,
+    "address": "0x12d2d1bed91c24f878f37e66bd829ce7197e4d14",
+    "description": "Where it all started: [Genesis](https://opensea.io/collection/galacticapesgenesis)",
+    "discordUrl": "https://discord.gg/galacticapes",
+    "externalUrl": "http://galacticapes.com",
+    "imageUrl": "https://lh3.googleusercontent.com/fy46-MlNjZMR1NCTNAgmh9e97SNffpSBkwd0HpL9XTBfRt6-GvjTytWHoN9Pzmbw83TbRzo8nGgZ32QbVVMYnrmBb2vM6_6_3yXv=s120",
+    "instagramUsername": null,
+    "name": "GalacticApes",
+    "symbol": "GALAPE",
+    "twitterUsername": "galacticapesnft",
+    "deltaStats": {
+      "floor": 0.6
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "e26b1763-4a3f-4095-92db-2d33a60d7e35",
+    "floor": 0.035,
+    "address": "0xece4775b96c207cef81e054a3c607e9326d19d42",
+    "description": "[Website](https://madape.io) | [Discord](https://discord.gg/madape) | [Twitter](https://twitter.com/madapenft)\r\n\r\nMad Ape Tournament is a collection of 10,000 NFTs inspired by games, anime and pop culture.\r\n\r\nMain utility is that a Mad Ape Tournament NFT grants the holder an exclusive access to a competitive RPG game where a limited number of players enter with the goal to dethrone the Mad Ape King and to become the new king.\r\n\r\nOnly holders of the Mad Ape Tournament NFTs will be eligible to enter the NFT game!",
+    "discordUrl": "https://discord.gg/madape",
+    "externalUrl": "https://madape.io",
+    "imageUrl": "https://lh3.googleusercontent.com/apixFhrLSq17T0ARXOtYiU1TMDutbL94lNaR2xRl-UsllDPNPu4ITHRVfHa52eJe6qif_1yGggS_4DOwCPwizKhn0HD7nw_eVGRmEg=s120",
+    "instagramUsername": null,
+    "name": "Mad Ape Tournament",
+    "symbol": "MAPE",
+    "twitterUsername": "madapenft",
+    "deltaStats": {
+      "floor": 0.05
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "8e489360-795d-48de-95d8-6f88b178526b",
+    "floor": 0.028,
+    "address": "0x50e712b3a260d7639179e8277836253461418f23",
+    "description": "A collection of 5,555 meta fashion avatars based on the Ethereum blockchain. Each unique Modz is randomly generated from combination of over 200 individually drawn elements, including over 100 different outfits.",
+    "discordUrl": "https://discord.gg/themodz",
+    "externalUrl": "https://themodz.io/",
+    "imageUrl": "https://lh3.googleusercontent.com/heX46klvvk_hDumjHDuHVOu2mia2_LWeGA8_SO3tVid4GqE8V_vRlExkI73HD2grIDM5NBJXqnkSvJonJrpsc46YgsNvRI31epCgqqM=s120",
+    "instagramUsername": "themodzkids/",
+    "name": "The Modz",
+    "symbol": "MODZ",
+    "twitterUsername": "TheModzKids",
+    "deltaStats": {
+      "floor": 0.039
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "8aab4711-17bc-4178-8976-b03fc37a80c6",
+    "floor": 0.025,
+    "address": "0x82c7a8f707110f5fbb16184a5933e9f78a34c6ab",
+    "description": "An entire wallet inside an NFT. Emblem Vaults are containers of assets. A vault might contain some bitcoin, a few NFT's or even encrypted files. Be sure to verify the contents of a vault before purchase. Expand \"Properties\", \"Boosts\" and \"Levels\" ",
+    "discordUrl": null,
+    "externalUrl": "https://emblem.pro",
+    "imageUrl": "https://lh3.googleusercontent.com/VkSY4QiLanH0h2oS37cjRAENLDLBqLKUX3YC4ZvdEW60zI9OXoRl4E9uR1x3d8hU8ekFai4Ruwq4FObZ0VH2NpU=s120",
+    "instagramUsername": null,
+    "name": "Emblem Vault [Ethereum]",
+    "symbol": "Emblem.pro",
+    "twitterUsername": "emblemvault",
+    "deltaStats": {
+      "floor": 0.024
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "982cf3eb-271a-4c44-ac2b-a6e044bb87a5",
+    "floor": 3.6,
+    "address": "0x1cb1a5e65610aeff2551a50f76a87a7d3fb649c6",
+    "description": "CrypToadz are a collection 6969 small amphibious creatures trying escape the tyrannical rule of the Evil King Gremplin. Created by Gremplin, with a small bit of help from his friends. Visit cryptoadz.io for more details.",
+    "discordUrl": "https://discord.gg/PPgC3DeD",
+    "externalUrl": "https://cryptoadz.io",
+    "imageUrl": "https://lh3.googleusercontent.com/iofetZEyiEIGcNyJKpbOafb_efJyeo7QOYnTog8qcQJhqoBU-Vu9l3lXidZhXOAdu6dj4fzWW6BZDU5vLseC-K03rMMu-_j2LvwcbHo=s120",
+    "instagramUsername": null,
+    "name": "CrypToadz by GREMPLIN",
+    "symbol": "TOADZ",
+    "twitterUsername": "cryptoadzNFT",
+    "deltaStats": {
+      "floor": 3.5
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "2cd54709-9092-4bc3-afcb-2f2c842a633c",
+    "floor": 0.196,
+    "address": "0xf7143ba42d40eaeb49b88dac0067e54af042e963",
+    "description": "Metasaurs are a genetic simulation, living on the Ethereum blockchain, this time, forever…",
+    "discordUrl": "https://discord.gg/metasaurs",
+    "externalUrl": "https://metasaurs.com",
+    "imageUrl": "https://lh3.googleusercontent.com/xvqA-v_fQM5TE3CmJIpSTdFu4cmTeVpwRWeuLf4VdTBW0_ji9K91BirQWcshvGqlCAyMSwrrp8e-JSLp5YUHErAak0l3kXYBOdKfQak=s120",
+    "instagramUsername": "metasaursnft",
+    "name": "Metasaurs by Dr. DMT",
+    "symbol": "MTS",
+    "twitterUsername": "metasaurs",
+    "deltaStats": {
+      "floor": 0.20800000000000002
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "4e8783b1-a57d-4b59-a426-0c1f94026426",
+    "floor": 0.11,
+    "address": "0xc49a9ab342b6ea66792d4110e9ca0ab36e3a5674",
+    "description": "A golden age of apes is arising, one where there are no wars to be fought between nations, but rather just ONE NATION, #ChibiNation that would set them on a course to heal the broken planet as they plot their ascent to the stars. As their identity formed, they busied themselves with entertainment and fashion, expressing themselves through their appearance. You can tell a lot about an ape from what they wear, from their interests and hobbies even down to their mood.  \n\n3000 randomly generated 3D characters aping around the Ethereum blockchain.  Every ape is created from 117 possible traits, where no 3 traits are equal, ensuring that each ape is highly unique!  \n\n[**Website**](https://chibiapes.com) · [**Twitter**](https://twitter.com/ChibiLabs) · [**Discord**](https://discord.com/invite/TMwHadd4aM) · [**Instagram**](https://www.instagram.com/chibi_labs/)  \n",
+    "discordUrl": "https://discord.gg/ChibiLabs",
+    "externalUrl": "https://chibiapes.com/",
+    "imageUrl": "https://lh3.googleusercontent.com/TZVNAISFoAQ-WHN1IUyWp0g3Bfq7W2twaKLZFTvp6AJn5CPolJlarZB2v-hU_tgejiE4HZSojIN2sv_u1QNoEndVJdtYkxZGDmuO3L4=s120",
+    "instagramUsername": "Chibi_Labs",
+    "name": "Chibi Apes",
+    "symbol": "CHIBIAPE",
+    "twitterUsername": "ChibiLabs",
+    "deltaStats": {
+      "floor": 0.12300000000000001
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "c0ff89a8-ed54-492f-8214-c083671eb182",
+    "floor": 0.47400000000000003,
+    "address": "0x61db9dde04f78fd55b0b4331a3d148073a101850",
+    "description": "Monster apes with traits from several collections, live on the blockchain.",
+    "discordUrl": "https://discord.gg/club1111gold",
+    "externalUrl": "https://apeharmony.com/",
+    "imageUrl": "https://lh3.googleusercontent.com/6A9Q3-CMj9HXDB6nmkdqWuGAFtmdG_Jpv1KKybOFzLtFsmQOCMJxvxwjsT7nWTckPu7ltDXAkOi1S1-_ReBTOd7mZtXDD7fedRvrdzk=s120",
+    "instagramUsername": null,
+    "name": "Ape Harmony Monster Club",
+    "symbol": "AHMC",
+    "twitterUsername": "club11eleven",
+    "deltaStats": {
+      "floor": 0.17400000000000002
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "c0735095-c1b3-4e39-97b4-e60690a7856f",
+    "floor": 0.05,
+    "address": "0xb2e4e69527d57fa108c535721c057075a7a82e86",
+    "description": "The Magic Mushroom Clubhouse is a friendly troop of 9,200 explorers scavenging the biotic metaverse. They earn badges on their adventures by spreading the ancient powers of mushrooms, discovering the secrets of their ancestors and helping others along the way.",
+    "discordUrl": "https://discord.gg/ptsENPER6f",
+    "externalUrl": "https://www.magicmushroomclubnft.com",
+    "imageUrl": "https://lh3.googleusercontent.com/N3uFgyMt0xOew9YjD8GiOLQEbbQ2Y7WJOqoHdUdZZSljKrbuKNt6VGkAByzyPAI80y81tELH6tKatSZvFXKfcbBdm6GfCyZhFWxgOTw=s120",
+    "instagramUsername": "mushroomclubnft",
+    "name": "Magic Mushroom Clubhouse",
+    "symbol": "SHROOM",
+    "twitterUsername": "MushroomClubNFT",
+    "deltaStats": {
+      "floor": 0.041
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "6f3cf0dd-6cad-4e21-a62f-113f9a4a6ba7",
+    "floor": 0.2,
+    "address": "0x986aea67c7d6a15036e18678065eb663fc5be883",
+    "description": "WELCOME TO THE NIFTY LEAGUE!\nOur mission is to create a leading NFT gaming platform through community governance and development. Nifty League prides itself on being one of the first GameFi platforms offering interactive play-to-earn games with customizable characters.\n\nAdvance your gaming skills and join our community to earn daily NFTL rewards from the Nifty DAO!",
+    "discordUrl": "https://discord.gg/4bmTHYWjhe",
+    "externalUrl": "https://nifty-league.com/",
+    "imageUrl": "https://lh3.googleusercontent.com/eJhIV33weRWP-pYJq9GUQtccP5WYtRWCuZKfzqX3HiclTx_3YOrCQ3nR34LPK3YpU49ezSXRdaCV4VyG53FXIa0aJyo1YkDQTYGLGw=s120",
+    "instagramUsername": null,
+    "name": "Nifty League DEGENs",
+    "symbol": "DEGEN",
+    "twitterUsername": "NiftyLeague",
+    "deltaStats": {
+      "floor": 0.25
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "80a40c80-13ab-4982-b243-cfeab04cb8aa",
+    "floor": 0.030000000000000002,
+    "address": "0xc53aa1957ae91676620bbe8bb3919acf1ed49d15",
+    "description": "A REMIX! Collection\n\nDario De Siena in collaboration with REMIX! Team has created Prima Donna, the first generative art project from Dario. This collection includes 2,000 uniquely generated artworks with Dario’s classic colorful and trippy style.",
+    "discordUrl": "https://discord.gg/apedao",
+    "externalUrl": "http://apedaoremix.com",
+    "imageUrl": "https://lh3.googleusercontent.com/mDKt2DHva1D5GhG3D4ZNP4q6HFIBflQ6c0n85F88wiGj-JZH5qkSFMJlpTtieBB9Mu9iLIyul-2xhN-KQgF2n8KNgcfsDAubOgXAjQU=s120",
+    "instagramUsername": "apedaoremix",
+    "name": "Prima Donna by Dario De Siena",
+    "symbol": "PRIMADONNA",
+    "twitterUsername": "apedaoremix",
+    "deltaStats": {
+      "floor": 0.045000000000000005
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "bee51283-8754-4d2a-82e5-2be0e621da2c",
+    "floor": 0.305,
+    "address": "0x73da73ef3a6982109c4d5bdb0db9dd3e3783f313",
+    "description": "Join the Curio [Discord](https://discord.curio.cards). [Curio Cards](https://curio.cards) is an online art show and permanent gallery that launched on May 9, 2017. Curio is the first Art NFT project on Ethereum, featuring 30 unique series of cards from 7 different artists. Curio Cards are referenced with CryptoPunks and CryptoKitties in the original ERC-721 Non-Fungible Token Standard, and pre-dates them both.\n\nGiven the age of the project, Curio Cards need to be wrapped to work with OpenSea. Wrapping upgrades the card, placing it inside a newer contract which is OpenSea compatible. You can then buy, sell, and unwrap cards at anytime. FInd out more on the [Curio Docs](https://docs.curio.cards), or use the [Curio Wrapper Tool](https://wrap.curio.cards). You don't need to do anything for cards that are already wrapped.\n\nA 1% artist royalty fee on OpenSea sales was voted in by the community on 3/31/21. 100% of this royalty is split equally between the original artists.",
+    "discordUrl": "https://discord.gg/jGymBn8zzR",
+    "externalUrl": "https://Curio.Cards",
+    "imageUrl": "https://lh3.googleusercontent.com/xNW1W9O2CYUNGS2GeHqv9yHw-wLdSb9uVoc51TL5GSp8yvC2en45pqp5zYFHhRGHZpgHJdagD2QELXwpu01frltG7Nl055aVqDTDSg=s120",
+    "instagramUsername": null,
+    "name": "My Curio Cards",
+    "symbol": null,
+    "twitterUsername": "MyCurioCards",
+    "deltaStats": {
+      "floor": 0.307
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "66088efe-6469-4c33-9800-99f70beeb738",
+    "floor": 0.385,
+    "address": "0x2acab3dea77832c09420663b0e1cb386031ba17b",
+    "description": "10,000 undead NFTs on the Ethereum blockchain. With your Deadfella comes utility, community and opportunity. Join the horde.",
+    "discordUrl": "https://discord.gg/8acJn6VAJT",
+    "externalUrl": "https://deadfellaz.io",
+    "imageUrl": "https://lh3.googleusercontent.com/seJEwLWJP3RAXrxboeG11qbc_MYrxwVrsxGH0s0qxvF68hefOjf5qrPSKkIknUTYzfvinOUPWbYBdM8VEtGEE980Qv2ti_GGd86OWQ=s120",
+    "instagramUsername": "deadfellaznft",
+    "name": "DeadFellaz",
+    "symbol": "DEADFELLAZ",
+    "twitterUsername": "deadfellaznft",
+    "deltaStats": {
+      "floor": 0.404
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "aa895e6b-601c-4d8e-bc3d-d16e40b1baa2",
+    "floor": 0.075,
+    "address": "0x00fa82ea9be4e24ec6d7ed86ef93bfe85b9a3e68",
+    "description": "Rare Ghost Club (RGC) is an NFT project consisting of 10,000 unique combinations of ghosts created by LordWave, in the works since 2008. Every character is a unique collectible with proof of ownership stored on the Ethereum blockchain. ",
+    "discordUrl": "https://discord.gg/rareghostclub",
+    "externalUrl": "https://www.rareghostclub.com/",
+    "imageUrl": "https://lh3.googleusercontent.com/bEqhsnXScL3Xfdwvw5eAhbIRiAJgazOLUZjKH5QsobTObsaOogV1n3DePqj8ed6oUAGHmG11I_6zqNBIqzJEMgXmuEjigunReSbcMWU=s120",
+    "instagramUsername": "rareghostclub",
+    "name": "Rare Ghost Club (RGC)",
+    "symbol": "RGC",
+    "twitterUsername": "rareghostclub",
+    "deltaStats": {
+      "floor": 0.09000000000000001
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "d29f6fe1-0aed-4d85-b699-b7e18c065b44",
+    "floor": 0.125,
+    "address": "0x6adc37239d83d29c49eff0b38891174636fc66d6",
+    "description": "The Genesis Key can be used to open loot boxes to redeem Genesis weapons, BYOpills and other exciting loot.",
+    "discordUrl": "https://discord.gg/invite/b39PB83ZzS",
+    "externalUrl": "http://www.galaxyfightclub.com",
+    "imageUrl": "https://lh3.googleusercontent.com/JOa9smy9JZOirYABdh02I6qFJD_uPQqSK6r125Ahr19c43TK_xj_LR6sPr4pRSc_yyfwVMI9dsBUH6DTDOcnyUgQED33Xjxdi_XMAw=s120",
+    "instagramUsername": null,
+    "name": "GFC Genesis Gear Collection",
+    "symbol": "GFCGK",
+    "twitterUsername": "GalaxyFight_NFT",
+    "deltaStats": {
+      "floor": 0
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "7f65fcca-ba76-4dbb-b9d1-274fd53680ef",
+    "floor": 0.05,
+    "address": "0x3db5463a9e2d04334192c6f2dd4b72def4751a61",
+    "description": "ALPACADABRAZ are a unique alpaca subspecies that have been living in a long undiscovered paradise. One unfortunate day, they were captured by farmers who abused the ALPACADABRAZ' special abilities. Luckily, some ALPACADABRAZ managed to escape and survive, unfortunately over 9000 ALPACADABRAZ weren’t so lucky. The living alpacas are full of animations, while the deceased alpacas are now stored as jpegs forever.\n\n**This project is in the public domain and all copyrights are waived.**\n\nMeet the alpacas on our [website](https://www.alpacadabraz.io)\n\nJoin the community in our [Discord](https://discord.com/invite/alpacadabraz)\n\nGet live updates on our [Twitter](https://wwww.twitter.com/alpacadabraz)\n\n\n\n",
+    "discordUrl": "https://discord.gg/invite/alpacadabraz",
+    "externalUrl": "https://alpacadabraz.io/",
+    "imageUrl": "https://lh3.googleusercontent.com/wB2-qmC6w8Yc825fyDxaWkbNrhCNprGtJZOdNuigC1XiA0gMHcPxt-Dbr5iYzdu8_2252MdyuDk5JcOG-tQWNLHvdRaRgICf2H988A=s120",
+    "instagramUsername": null,
+    "name": "ALPACADABRAZ",
+    "symbol": "PACA",
+    "twitterUsername": "alpacadabraz",
+    "deltaStats": {
+      "floor": 0.08
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "dd2b89ef-f552-40ba-ae34-1075085cefc7",
+    "floor": 0.23,
+    "address": "0x90ca8a3eb2574f937f514749ce619fdcca187d45",
+    "description": "Gambling Ape owners co-own a Casino in the Metaverse, are invited to exclusive meetups & weekly competitions, and much more!\n\nJoin our community with more than 13,000 Members in Discord 👇 https://discord.gg/gamblingapes",
+    "discordUrl": "https://discord.gg/gamblingapes",
+    "externalUrl": "https://gamblingapes.com/",
+    "imageUrl": "https://lh3.googleusercontent.com/1ns_WTPljFm-kKhLE_F209E--RthWf7pdIljZZ4Kiibze7oPlQuvtNQkI-fwmijEocWxULr7lDDdSpk9E7dihYB1UNZSX0ktBrKg-w",
+    "instagramUsername": "gamblingapes",
+    "name": "Gambling Apes Official",
+    "symbol": "GA",
+    "twitterUsername": "gamblingapes",
+    "deltaStats": {
+      "floor": 0.254
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "659fa13b-0a1f-4603-bc76-b62d5101943c",
+    "floor": 0.11,
+    "address": "0xbd4455da5929d5639ee098abfaa3241e9ae111af",
+    "description": "10,000 uniquely generated, buildable & playable NFT virtual worlds",
+    "discordUrl": "https://discord.gg/pOIWBnohM0",
+    "externalUrl": "https://www.nftworlds.com/",
+    "imageUrl": "https://lh3.googleusercontent.com/v_UsJI2BUVDJL26XS2kiyHK-ypvJMafzq5rU38mbQRSVrQpm6Ik-Xq1n3f_2zB7KOsdkX1eJCJEpVIw3tF-P1R2yQuvHcvE1nQu6BA=s120",
+    "instagramUsername": "nftworldsNFT",
+    "name": "NFT Worlds (nftworlds.com)",
+    "symbol": "NFT Worlds",
+    "twitterUsername": "nftworldsNFT",
+    "deltaStats": {
+      "floor": 0.13
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "0144e788-1832-4bb0-8dea-887439285313",
+    "floor": 0.18000000000000002,
+    "address": "0xa7ee407497b2aeb43580cabe2b04026b5419d1dc",
+    "description": "SuperlativeSS are 11,111 collectible #NFTs with Real World Utility. Inspired by primary personality traits. SuperlativeSS has been built by a passionate team and a powerful grassroots community. The project offers incredible utility and is dedicated to supporting the next generation of artists.",
+    "discordUrl": "https://discord.gg/SuperlativeSS",
+    "externalUrl": "https://superlativesecretsociety.com/",
+    "imageUrl": "https://lh3.googleusercontent.com/Q8vDFvXcLTTDCkPdts4K2A6fW5rtHDU8oRDgl7YK3-fNL1Azfk-GljpQhLTbDkUtQR9ccFo_BVDKXs0wG1Fks8MiWL-nmWurVr6h=s120",
+    "instagramUsername": "superlativesecretsociety",
+    "name": "The Superlative Secret Society",
+    "symbol": "SuperlativeSS",
+    "twitterUsername": "SuperlativeSS",
+    "deltaStats": {
+      "floor": 0.2
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "bfd9bb42-0db7-4b76-a52e-0fe43b2e880a",
+    "floor": 0.35700000000000004,
+    "address": "0x3702f4c46785bbd947d59a2516ac1ea30f2babf2",
+    "description": "GFC is a a collection of 9,994 Galaxy Fighters with a dedicated cross-brand, cross-platform (PC + Mobile) PvP fighting game where players can battle, win and earn ETH.",
+    "discordUrl": "https://discord.gg/HfX4C9dsU4",
+    "externalUrl": "https://galaxyfightclub.com/",
+    "imageUrl": "https://lh3.googleusercontent.com/AG-bMrIZAa8Gby3GSuacvR7KWfD3AIvFD1H7r9-3z_iIm1GI9n6NBt573G_xeQq-RggWtmJkU27wLX9sE_ZJViL-wFpd88y8ewjT6g=s120",
+    "instagramUsername": null,
+    "name": "Galaxy Fight Club",
+    "symbol": "GFC",
+    "twitterUsername": "GalaxyFight_NFT",
+    "deltaStats": {
+      "floor": 0.46900000000000003
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "4b041d5c-6e2d-4930-a259-cacb70417a2d",
+    "floor": 0.07,
+    "address": "0x0cfb5d82be2b949e8fa73a656df91821e2ad99fd",
+    "description": "World renowned craftsman Wagmi San, famous for the most grailed accessories, recently set up a shop in New Tokyo called 10KTF.\n\nDepending on the day, Wagmi San might create accessories for Apes, Cats, Robots, Loots… it’s really up to whatever he’s in the mood for. A man of honor, he only makes objects for customers who own parent NFTs. His accessories are 1 of 1 digital objects that will only be created once.\n\nLife is good. But he’s still required to pay for protection to keep his shop open. It’s better than the alternative. After what happened last summer, he can’t let that happen again.\n\nVisit [10ktf.com](https://10ktf.com) to learn more.",
+    "discordUrl": "https://discord.gg/h6Vwax7t5q",
+    "externalUrl": "http://10ktf.com",
+    "imageUrl": "https://lh3.googleusercontent.com/pyp53Pww5B2BvzOhN06mXQQWttj8j6nwj-SK9M6faFS1k-VYKQ_knLCgtwOcE4GHIZlli4xgwJqxBmzoh8K-FwuGOQikyV_7fOKdHA=s120",
+    "instagramUsername": null,
+    "name": "10KTF",
+    "symbol": "10KTF",
+    "twitterUsername": "10KTFShop",
+    "deltaStats": {
+      "floor": 0.15
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "a14d1731-fc95-4d64-afbb-aa12df276ec9",
+    "floor": 1.05,
+    "address": "0x0c2e57efddba8c768147d1fdf9176a0a6ebd5d83",
+    "description": "3,333 Genesis Kaiju Kingz created by Augminted Labs to protect the metaverse. The community is all about growth and providing a place for the future of web3 to learn, build, and conquer. Join the Kingz and live forever as a legend. 6666 babies to accompany them.",
+    "discordUrl": "https://discord.gg/KaijuKingz",
+    "externalUrl": "https://kaijukingz.io/#/",
+    "imageUrl": "https://lh3.googleusercontent.com/bQvXzE_Pn8SwA-xqlfhFKDRi_0QZn9uXDYkQ-E7-C-B6KXkg4-GkQuBOjanhLBqURzkdkEL7XbFrUz6ICD1l02TgN_2IB4HtHpAL=s120",
+    "instagramUsername": null,
+    "name": "Kaiju Kingz",
+    "symbol": "KAIJU",
+    "twitterUsername": "KaijuKingz",
+    "deltaStats": {
+      "floor": 1.3010000000000002
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "7952eb5d-cb85-43d3-88d6-b99acb29c357",
+    "floor": 0.2,
+    "address": "0xa88209d0f1d772f5bba488a2e4bbb13921056a8b",
+    "description": "Vogue Singapore launches 10 NFTs that were created exclusively for the world’s first Vogue issue dedicated to the metaverse.\n\nCelebrating the creative renaissance born out of NFTs, the collection is inspired by the theme of 'New Beginnings' with the sunrise as a leitmotif and features two virtual-only NFT covers plus eight NFTs from the art, design and beauty worlds by artists Chad Knight, The Fabricant, Shavonne Wong, Lanzavecchia + Wai, Baëlf Design and Dain Yoon.",
+    "discordUrl": null,
+    "externalUrl": "https://vogue.sg",
+    "imageUrl": "https://lh3.googleusercontent.com/6cLQkUiB3m47iB5WvuC4MDbcY7VIeXiLhEpJ9tj7w2DgS5rWUl9DyPPuYJ3efEj5jksob-3-_-lpy4eyJtXwCqwC1fJMC-F7zw0Itw=s120",
+    "instagramUsername": "VogueSingapore",
+    "name": "Vogue Singapore NFT Collection",
+    "symbol": null,
+    "twitterUsername": "VogueSingapore",
+    "deltaStats": {
+      "floor": 0
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "11b24ceb-1fa3-4b5c-89f1-10133751c231",
+    "floor": 0.3,
+    "address": "0x960b7a6bcd451c9968473f7bbfd9be826efd549a",
+    "description": "#### Mint for free while they last! https://onchainmonkey.com/\n\n#### Completely on chain 10k collection with all these properties:\n\n  * all metadata is on chain\n  * all images are on chain (in svg format)\n  * all created in a single txn\n  * all 10,000 OnChain Monkeys are unique\n  * there are 7 traits with 171 values\n  * the traits have distribution and rarities based on BAYC and being on chain, these can be used in other apps and collections in the future\n  * the individual traits for the OnChain Monkeys is inspired by BAYC. For example, the 8 background colors are the same 8 as BAYC apes. The 19 two tone fur colors are taken from the 19 BAYC ape furs and have a direct 1-1 mapping. The 6 earring types are similar to the BAYC apes.\n  * Tips for collectors - the Monkeys with the gold fur are the most rare! As are some other traits for you to figure out (like diamond earrings)! :)\n",
+    "discordUrl": "https://discord.gg/ocm",
+    "externalUrl": "https://onchainmonkey.com/",
+    "imageUrl": "https://lh3.googleusercontent.com/uvfcABtbkQdUPul8c7IvgZamdEDfwcrAwYJDxBlLZMGDn0X_uYZWA6JYBztHQyNAkbg1etUY9Is9whgPVWHNVvlffgopKVv2lhIXDA=s120",
+    "instagramUsername": null,
+    "name": "OnChainMonkey",
+    "symbol": "OCMONK",
+    "twitterUsername": "huuep",
+    "deltaStats": {
+      "floor": 0.34
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "94fd4a57-f79a-408d-bd16-92327575c49a",
+    "floor": 0.1,
+    "address": "0x82712d0052c6d8185383b5554a071c440b902992",
+    "description": "Welcome to Curious Addys' Trading Club! We're a collection of 10,000 adorable octopuses ready to explore NFTs and crypto with you. Our goal is to be the default first stop any newcomer to NFTs and crypto comes to, so we can help teach them everything they need to know to explore this space safely in a fun, welcoming social environment. Think of us as the Duolingo of crypto!",
+    "discordUrl": "https://discord.gg/catc",
+    "externalUrl": "http://curiousaddys.com",
+    "imageUrl": "https://lh3.googleusercontent.com/-T-XoQR_VZwTi0WM4MNXyWO6iHpa4xTu1ISfgMZCq5K-W4UD6hxxIETNXXdxyrsGaMzG0ioZy3G1pjKR4ZccCNUcd_osE5dGNy5ong=s120",
+    "instagramUsername": null,
+    "name": "Curious Addys' Trading Club",
+    "symbol": "CATC",
+    "twitterUsername": "curiousaddys",
+    "deltaStats": {
+      "floor": 0
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "f963a8ad-92ce-4c6e-97d3-a97db33f4540",
+    "floor": 0.916,
+    "address": "0xbd3531da5cf5857e7cfaa92426877b022e612cf8",
+    "description": "Located in the freezing cold, arctic region of the metaverse you can find 8,888 cute chubby Pudgy Penguins sliding around on the ETH blockchain.\r\n\r\nCome join the huddle today at [pudgypenguins.io](https://pudgypenguins.io)",
+    "discordUrl": "https://discord.gg/SYzRxkQ76H",
+    "externalUrl": "https://www.pudgypenguins.io/",
+    "imageUrl": "https://lh3.googleusercontent.com/bcCd1TfusKK6wWjmshwmizmY9j7An3pp9kxopMxfIt-_I8WFnSIK-5gevOduoYK4Qpq2e3DyXgROKNfkP396W5ViEYXhxoyAZG3s_vY=s120",
+    "instagramUsername": null,
+    "name": "Pudgy Penguins",
+    "symbol": "PPG",
+    "twitterUsername": "pudgy_penguins",
+    "deltaStats": {
+      "floor": 0.01
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  },
+  {
+    "id": "c88bf83b-e269-4e3f-a126-99e091343061",
+    "floor": 0.11,
+    "address": "0x74ecb5f64363bd663abd3ef08df75dd22d853bfc",
+    "description": "The Gauntlets are the first collection of the BossLogic Universe, crafted and curated carefully by BossLogic. With a possession of a Gauntlet, users receive a BLU membership which grants access to member-only benefits including entry to VerseU; an interactive Metaverse gaming experience. Visit bossdrops.io to learn more.",
+    "discordUrl": "https://discord.gg/BxUGGXYDGK",
+    "externalUrl": "https://bossdrops.io/",
+    "imageUrl": "https://lh3.googleusercontent.com/F2CCKlvej5J8xiGuF-iXCU4xu7vkRq7tIQX6ZfwQ5uEbHKAJJTNoGJ6YjTbraWJJG1vG94QbydTW0TO00HhygJwI5BTv-N9lTmuW9A=s120",
+    "instagramUsername": "bossdropsnft",
+    "name": "Gauntlets",
+    "symbol": "GNT",
+    "twitterUsername": "bossdropsnft",
+    "deltaStats": {
+      "floor": 0.08800000000000001
+    },
+    "floorData": [0, 2, 8, 5, 3, 6]
+  }
+]

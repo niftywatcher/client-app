@@ -1,9 +1,14 @@
-import React from "react";
+import React, { memo } from "react";
 import {
   Box,
   Flex,
   HStack,
+  IconButton,
   Image,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
   Text,
   useColorModeValue,
   VStack,
@@ -11,13 +16,78 @@ import {
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import colors from "../../../Shared/utils/colors";
+import { cloneDeep, isEqual } from "lodash";
+import WatchList from "../../../Shared/Interfaces/WatchList";
+import { AddIcon } from "@chakra-ui/icons";
+
+type AddWatchListButtonProps = {
+  collectionId: string;
+  watchLists: { [id: number]: WatchList };
+  setWatchLists: React.Dispatch<
+    React.SetStateAction<{ [id: number]: WatchList }>
+  >;
+};
+
+const AddWatchListButton = ({
+  collectionId,
+  watchLists,
+  setWatchLists,
+}: AddWatchListButtonProps) => {
+  const addToWatchList = (watchListId: number): void => {
+    setWatchLists((prevState) => {
+      const newState = cloneDeep(prevState);
+
+      newState[watchListId].collections.push(collectionId);
+
+      return newState;
+    });
+  };
+  return (
+    <React.Fragment>
+      {Object.keys(watchLists).length ? (
+        <Menu>
+          <MenuButton
+            as={IconButton}
+            aria-label="Options"
+            icon={<AddIcon color="green.300" />}
+            variant="outline"
+          />
+          <MenuList>
+            {Object.values(watchLists).map((wl) => (
+              <MenuItem
+                key={wl.id}
+                icon={<AddIcon />}
+                onClick={() => addToWatchList(wl.id)}
+              >
+                {wl.name}
+              </MenuItem>
+            ))}
+          </MenuList>
+        </Menu>
+      ) : null}
+    </React.Fragment>
+  );
+};
 
 interface CardProps {
+  collectionId: string;
   name: string;
   imageUrl: string;
+  data: number[];
+  setWatchLists: React.Dispatch<
+    React.SetStateAction<{ [id: number]: WatchList }>
+  >;
+  watchLists: { [id: number]: WatchList };
 }
 
-const Card = ({ name, imageUrl }: CardProps) => {
+const Card = ({
+  collectionId,
+  name,
+  imageUrl,
+  data,
+  setWatchLists,
+  watchLists,
+}: CardProps) => {
   const cardBgColor = useColorModeValue(
     colors.componentBackgroundLight,
     "gray.700"
@@ -53,7 +123,7 @@ const Card = ({ name, imageUrl }: CardProps) => {
             [1, "#ffffff00"], // end
           ],
         },
-        data: [0, 2, 8, 5, 3, 6],
+        data,
       },
     ],
     title: null,
@@ -101,7 +171,11 @@ const Card = ({ name, imageUrl }: CardProps) => {
             <Text fontSize="medium">Floor E 0.02 + 2%</Text>
           </VStack>
           <Box borderRadius="50%" borderColor="gray.100">
-            +
+            <AddWatchListButton
+              collectionId={collectionId}
+              watchLists={Object.values(watchLists).filter((wl) => wl.id !== 0)}
+              setWatchLists={setWatchLists}
+            />
           </Box>
         </Flex>
       </HStack>
@@ -112,4 +186,4 @@ const Card = ({ name, imageUrl }: CardProps) => {
   );
 };
 
-export default Card;
+export default memo(Card, isEqual);
