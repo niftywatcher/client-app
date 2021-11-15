@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import {
   Box,
   Flex,
@@ -16,14 +16,16 @@ import {
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import colors from "../../../Shared/utils/colors";
-import { cloneDeep } from "lodash";
+import { cloneDeep, isEqual } from "lodash";
 import WatchList from "../../../Shared/Interfaces/WatchList";
 import { AddIcon } from "@chakra-ui/icons";
 
 type AddWatchListButtonProps = {
   collectionId: string;
-  watchLists: WatchList[];
-  setWatchLists: React.Dispatch<React.SetStateAction<any[]>>;
+  watchLists: { [id: number]: WatchList };
+  setWatchLists: React.Dispatch<
+    React.SetStateAction<{ [id: number]: WatchList }>
+  >;
 };
 
 const AddWatchListButton = ({
@@ -35,18 +37,14 @@ const AddWatchListButton = ({
     setWatchLists((prevState) => {
       const newState = cloneDeep(prevState);
 
-      return newState.map((item) => {
-        if (item.id === watchListId) {
-          item.collections.push(collectionId);
-        }
+      newState[watchListId].collections.push(collectionId);
 
-        return item;
-      });
+      return newState;
     });
   };
   return (
     <React.Fragment>
-      {watchLists.length ? (
+      {Object.keys(watchLists).length ? (
         <Menu>
           <MenuButton
             as={IconButton}
@@ -55,7 +53,7 @@ const AddWatchListButton = ({
             variant="outline"
           />
           <MenuList>
-            {watchLists.map((wl) => (
+            {Object.values(watchLists).map((wl) => (
               <MenuItem
                 key={wl.id}
                 icon={<AddIcon />}
@@ -76,8 +74,10 @@ interface CardProps {
   name: string;
   imageUrl: string;
   data: number[];
-  setWatchLists: React.Dispatch<React.SetStateAction<any[]>>;
-  watchLists: WatchList[];
+  setWatchLists: React.Dispatch<
+    React.SetStateAction<{ [id: number]: WatchList }>
+  >;
+  watchLists: { [id: number]: WatchList };
 }
 
 const Card = ({
@@ -173,7 +173,7 @@ const Card = ({
           <Box borderRadius="50%" borderColor="gray.100">
             <AddWatchListButton
               collectionId={collectionId}
-              watchLists={watchLists.filter((wl) => wl.id !== 0)}
+              watchLists={Object.values(watchLists).filter((wl) => wl.id !== 0)}
               setWatchLists={setWatchLists}
             />
           </Box>
@@ -186,4 +186,4 @@ const Card = ({
   );
 };
 
-export default Card;
+export default memo(Card, isEqual);

@@ -1,36 +1,17 @@
-import React, { useState } from "react";
-import { VStack, Text, chakra, HStack, Input } from "@chakra-ui/react";
-import { cloneDeep } from "lodash";
+import React, { useState, memo } from "react";
+import { VStack, chakra, HStack, Input } from "@chakra-ui/react";
+import { cloneDeep, isEqual } from "lodash";
 import { AddIcon } from "@chakra-ui/icons";
 import WatchList from "../../Shared/Interfaces/WatchList";
-
-interface LinkProps {
-  name: String;
-  active: Boolean;
-  onClick: () => void;
-}
-
-const Link = ({ name, active, onClick }: LinkProps) => {
-  return (
-    <Text
-      onClick={onClick}
-      color={active ? "green.300" : "white"}
-      fontWeight={active ? "bold" : "semibold"}
-      _hover={{
-        color: "gray.300",
-        cursor: "pointer",
-      }}
-    >
-      {name}
-    </Text>
-  );
-};
+import Link from "./Link";
 
 type NavigationProps = {
   activeWatchList: number;
-  watchLists: WatchList[];
+  watchLists: { [id: number]: WatchList };
   setActiveWatchList: React.Dispatch<React.SetStateAction<any>>;
-  setWatchLists: React.Dispatch<React.SetStateAction<any[]>>;
+  setWatchLists: React.Dispatch<
+    React.SetStateAction<{ [id: number]: WatchList }>
+  >;
 };
 
 const Navigation = ({
@@ -45,15 +26,16 @@ const Navigation = ({
     if (watchListName !== "") {
       setWatchLists((prevState) => {
         const newState = cloneDeep(prevState);
+        const id = Object.keys(newState).length++;
 
-        return [
+        return {
           ...newState,
-          {
-            id: newState.length++,
+          [id]: {
+            id,
             name: watchListName,
             collections: [],
           },
-        ];
+        };
       });
 
       setWatchListName("");
@@ -69,7 +51,7 @@ const Navigation = ({
         w="100%"
         paddingLeft="92px"
       >
-        {watchLists.map((item) => {
+        {Object.values(watchLists).map((item) => {
           return (
             <Link
               name={item.name}
@@ -102,4 +84,4 @@ const Navigation = ({
   );
 };
 
-export default Navigation;
+export default memo(Navigation, isEqual);

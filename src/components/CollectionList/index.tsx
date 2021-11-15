@@ -1,13 +1,16 @@
-import React from "react";
+import React, { memo } from "react";
 import { chakra, Container, VStack } from "@chakra-ui/react";
 import Card from "./Card";
 import Collection from "../../Shared/Interfaces/collection";
 import WatchList from "../../Shared/Interfaces/WatchList";
+import { isEqual } from "lodash";
 
 type CollectionListProps = {
   collections: Collection[];
-  setWatchLists: React.Dispatch<React.SetStateAction<any[]>>;
-  watchLists: WatchList[];
+  setWatchLists: React.Dispatch<
+    React.SetStateAction<{ [id: number]: WatchList }>
+  >;
+  watchLists: { [id: number]: WatchList };
 };
 
 const CollectionList = ({
@@ -36,4 +39,4 @@ const CollectionList = ({
   );
 };
 
-export default CollectionList;
+export default memo(CollectionList, isEqual);

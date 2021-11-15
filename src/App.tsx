@@ -14,17 +14,17 @@ import WatchList from "./Shared/Interfaces/WatchList";
 function App() {
   const collectionData: Collection[] = collections.slice(0, 25);
 
-  const [watchLists, setWatchLists] = useState<WatchList[]>([
-    {
+  const [watchLists, setWatchLists] = useState<{ [id: number]: WatchList }>({
+    0: {
       id: 0,
       name: "Trending Collections",
       collections: collectionData.map((col) => col.id),
     },
-  ]);
+  });
 
   const [activeWatchList, setActiveWatchList] = useState(watchLists[0].id);
 
-  const currentWatchList = watchLists.find((wl) => wl.id === activeWatchList);
+  const currentWatchList = watchLists[activeWatchList];
 
   const filteredCollections = collectionData.filter(
     (col) =>
