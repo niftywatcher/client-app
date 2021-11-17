@@ -18,6 +18,7 @@ import { useHistory } from "react-router-dom";
 import SplitView from "../SplitView";
 import colors from "../../Shared/utils/colors";
 import dimensions from "../../Shared/utils/dimensions";
+import ConnectButton from "./ConnectButton";
 
 const Header = () => {
   const history = useHistory();
@@ -83,7 +84,7 @@ const Header = () => {
                   <Button onClick={toggleColorMode}>
                     Toggle {colorMode === "light" ? "Dark" : "Light"}
                   </Button>
-                  <Button colorScheme="green">Connect Wallet</Button>
+                  <ConnectButton />
                 </HStack>
               </Flex>
             </Container>
