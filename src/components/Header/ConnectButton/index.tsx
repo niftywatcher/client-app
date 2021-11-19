@@ -4,12 +4,12 @@ import { useWeb3React } from "@web3-react/core";
 import { injected } from "../../../Shared/utils";
 
 const ConnectButton = () => {
-  // const { active, account, library, connector, activate, deactivate } =
   const { active, account, activate, deactivate } = useWeb3React();
 
   async function connect() {
     try {
       await activate(injected);
+      window.localStorage.removeItem("disconnect");
     } catch (ex) {
       console.log(ex);
     }
@@ -18,6 +18,8 @@ const ConnectButton = () => {
   async function disconnect() {
     try {
       deactivate();
+
+      window.localStorage.setItem("disconnect", "true");
     } catch (ex) {
       console.log(ex);
     }
