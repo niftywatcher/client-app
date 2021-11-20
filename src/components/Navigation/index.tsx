@@ -4,6 +4,7 @@ import { cloneDeep, isEqual } from "lodash";
 import { AddIcon } from "@chakra-ui/icons";
 import WatchList from "../../Shared/Interfaces/WatchList";
 import Link from "./Link";
+import { useWeb3React } from "@web3-react/core";
 
 type NavigationProps = {
   activeWatchList: number;
@@ -21,6 +22,7 @@ const Navigation = ({
   setWatchLists,
 }: NavigationProps) => {
   const [watchListName, setWatchListName] = useState("");
+  const { active } = useWeb3React();
 
   const handleSetWatchList = () => {
     if (watchListName !== "") {
@@ -51,16 +53,24 @@ const Navigation = ({
         w="100%"
         paddingLeft="92px"
       >
-        {Object.values(watchLists).map((item) => {
-          return (
-            <Link
-              name={item.name}
-              active={item.id === activeWatchList}
-              key={item.id}
-              onClick={() => setActiveWatchList(item.id)}
-            />
-          );
-        })}
+        {Object.values(watchLists)
+          .filter((wl) => {
+            if (active) return true;
+
+            if (wl.id === 0) return true;
+
+            return false;
+          })
+          .map((item) => {
+            return (
+              <Link
+                name={item.name}
+                active={item.id === activeWatchList}
+                key={item.id}
+                onClick={() => setActiveWatchList(item.id)}
+              />
+            );
+          })}
         <HStack>
           <Input
             maxW="115px"
@@ -68,6 +78,7 @@ const Navigation = ({
             variant="unstyled"
             placeholder="New Watchlist"
             value={watchListName}
+            isDisabled={!active}
             onChange={(e) => setWatchListName(e.target.value)}
             onKeyUp={(e) => {
               if (e.key === "Enter") handleSetWatchList();
