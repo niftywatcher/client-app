@@ -23,9 +23,10 @@ function MetamaskProvider({
   useEffect(() => {
     injected
       .isAuthorized()
-      .then((isAuthorized) => {
+      .then(async (isAuthorized) => {
         setLoaded(true);
         const disconnect = window.localStorage.getItem("disconnect");
+
         if (isAuthorized && !networkActive && !networkError && !disconnect) {
           activateNetwork(injected);
         }
@@ -34,6 +35,26 @@ function MetamaskProvider({
         setLoaded(true);
       });
   }, [activateNetwork, networkActive, networkError]);
+
+  // useEffect(() => {
+  //   injected.isAuthorized().then((isAuthorized) => {
+  //     if (
+  //       isAuthorized &&
+  //       networkActive &&
+  //       !networkError &&
+  //       library &&
+  //       account
+  //     ) {
+  //       if (library && account && loaded) {
+  //         // const nounce = await mock(true, 1000);
+
+  //         library.eth
+  //           .sign(library.utils.utf8ToHex("Hello world"), account)
+  //           .then((sig: any) => console.log(sig));
+  //       }
+  //     }
+  //   });
+  // }, [networkActive, networkError, library, account, loaded]);
 
   if (loaded) {
     return children;

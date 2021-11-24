@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { chakra, ChakraProvider } from "@chakra-ui/react";
+import { Button, chakra, ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter } from "react-router-dom";
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
@@ -10,6 +10,7 @@ import dimensions from "./Shared/utils/dimensions";
 import collections from "./collections.json";
 import Collection from "./Shared/Interfaces/collection";
 import WatchList from "./Shared/Interfaces/WatchList";
+import { useWeb3React } from "@web3-react/core";
 
 function App() {
   const collectionData: Collection[] = collections.slice(0, 10);
@@ -22,6 +23,13 @@ function App() {
     },
   });
 
+  const {
+    active: networkActive,
+    error: networkError,
+    library,
+    account,
+  } = useWeb3React();
+
   const [activeWatchList, setActiveWatchList] = useState(watchLists[0].id);
 
   const currentWatchList = watchLists[activeWatchList];
@@ -31,6 +39,22 @@ function App() {
       currentWatchList &&
       currentWatchList.collections.find((wlId) => wlId === col.id)
   );
+
+  const handleSign = async () => {
+    if (library && account && networkActive && !networkError) {
+      try {
+        const sig = await library.eth.personal.sign(
+          "Signing a message for authentication of app",
+          account,
+          "I pledge to ape!"
+        );
+
+        console.log({ sig });
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  };
 
   return (
     <BrowserRouter>
@@ -50,11 +74,14 @@ function App() {
               />
             }
             right={
-              <CollectionList
-                collections={filteredCollections}
-                watchLists={watchLists}
-                setWatchLists={setWatchLists}
-              />
+              <>
+                <Button onClick={handleSign}>Sign</Button>
+                <CollectionList
+                  collections={filteredCollections}
+                  watchLists={watchLists}
+                  setWatchLists={setWatchLists}
+                />
+              </>
             }
             align="flex-start"
           />
