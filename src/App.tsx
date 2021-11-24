@@ -11,6 +11,7 @@ import collections from "./collections.json";
 import Collection from "./Shared/Interfaces/collection";
 import WatchList from "./Shared/Interfaces/WatchList";
 import { useWeb3React } from "@web3-react/core";
+import { ethers } from "ethers";
 
 function App() {
   const collectionData: Collection[] = collections.slice(0, 10);
@@ -22,6 +23,8 @@ function App() {
       collections: collectionData.map((col) => col.id),
     },
   });
+
+  const [signature, setSignature] = useState("");
 
   const {
     active: networkActive,
@@ -40,20 +43,28 @@ function App() {
       currentWatchList.collections.find((wlId) => wlId === col.id)
   );
 
-  const handleSign = async () => {
+  const handleSign = () => {
     if (library && account && networkActive && !networkError) {
       try {
-        const sig = await library.eth.personal.sign(
-          "Signing a message for authentication of app",
-          account,
-          "I pledge to ape!"
-        );
+        const signer = library.getSigner();
+        const sig = signer
+          .signMessage(process.env.REACT_APP_SECRET_PHRASE)
+          .then(setSignature);
 
-        console.log({ sig });
+        setSignature(sig);
       } catch (err) {
         console.log(err);
       }
     }
+  };
+
+  const handleRecover = async () => {
+    const recovered = await ethers.utils.verifyMessage(
+      process.env.REACT_APP_SECRET_PHRASE || "",
+      signature
+    );
+
+    console.log({ recovered, account, signature });
   };
 
   return (
@@ -76,6 +87,7 @@ function App() {
             right={
               <>
                 <Button onClick={handleSign}>Sign</Button>
+                <Button onClick={handleRecover}>Recover</Button>
                 <CollectionList
                   collections={filteredCollections}
                   watchLists={watchLists}
