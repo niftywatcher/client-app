@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, chakra, ChakraProvider } from "@chakra-ui/react";
+import { chakra, ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter } from "react-router-dom";
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
@@ -10,8 +10,6 @@ import dimensions from "./Shared/utils/dimensions";
 import collections from "./collections.json";
 import Collection from "./Shared/Interfaces/collection";
 import WatchList from "./Shared/Interfaces/WatchList";
-import { useWeb3React } from "@web3-react/core";
-import { ethers } from "ethers";
 
 function App() {
   const collectionData: Collection[] = collections.slice(0, 10);
@@ -24,15 +22,6 @@ function App() {
     },
   });
 
-  const [signature, setSignature] = useState("");
-
-  const {
-    active: networkActive,
-    error: networkError,
-    library,
-    account,
-  } = useWeb3React();
-
   const [activeWatchList, setActiveWatchList] = useState(watchLists[0].id);
 
   const currentWatchList = watchLists[activeWatchList];
@@ -42,30 +31,6 @@ function App() {
       currentWatchList &&
       currentWatchList.collections.find((wlId) => wlId === col.id)
   );
-
-  const handleSign = () => {
-    if (library && account && networkActive && !networkError) {
-      try {
-        const signer = library.getSigner();
-        const sig = signer
-          .signMessage(process.env.REACT_APP_SECRET_PHRASE)
-          .then(setSignature);
-
-        setSignature(sig);
-      } catch (err) {
-        console.log(err);
-      }
-    }
-  };
-
-  const handleRecover = async () => {
-    const recovered = await ethers.utils.verifyMessage(
-      process.env.REACT_APP_SECRET_PHRASE || "",
-      signature
-    );
-
-    console.log({ recovered, account, signature });
-  };
 
   return (
     <BrowserRouter>
@@ -86,8 +51,6 @@ function App() {
             }
             right={
               <>
-                <Button onClick={handleSign}>Sign</Button>
-                <Button onClick={handleRecover}>Recover</Button>
                 <CollectionList
                   collections={filteredCollections}
                   watchLists={watchLists}
