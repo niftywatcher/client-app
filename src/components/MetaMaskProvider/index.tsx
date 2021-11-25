@@ -23,6 +23,7 @@ function MetamaskProvider({
   const [loaded, setLoaded] = useState(false);
 
   const disconnect = window.localStorage.getItem("disconnect");
+  const jwt = getCookie("jwt");
 
   useEffect(() => {
     injected
@@ -42,17 +43,17 @@ function MetamaskProvider({
     async function getAuthorization(): Promise<void> {
       try {
         const isAuthorized = await injected.isAuthorized();
-        const jwt = getCookie("jwt");
 
         // if user is logged in to MM and has not yet authenticated with server
-        if (
-          isAuthorized &&
-          networkActive &&
-          loaded &&
-          !networkError &&
-          !disconnect &&
-          !jwt
-        ) {
+        console.log({
+          isAuthorized,
+          networkActive,
+          loaded,
+          networkError,
+          disconnect,
+          jwt,
+        });
+        if (isAuthorized && networkActive && loaded && !networkError && !jwt) {
           // 1.fetch nonce
           const nonce = process.env.REACT_APP_SECRET_PHRASE;
 
@@ -70,33 +71,13 @@ function MetamaskProvider({
     }
 
     getAuthorization();
-  }, [networkActive, networkError, disconnect, library, loaded]);
+  }, [networkActive, networkError, disconnect, library, loaded, jwt]);
 
   /**
    * 1. on failure of signature display error message
    * 2. on connect, make the user sign the message and set jwt token
    * 3.
    */
-
-  // useEffect(() => {
-  //   injected.isAuthorized().then((isAuthorized) => {
-  //     if (
-  //       isAuthorized &&
-  //       networkActive &&
-  //       !networkError &&
-  //       library &&
-  //       account
-  //     ) {
-  //       if (library && account && loaded) {
-  //         // const nounce = await mock(true, 1000);
-
-  //         library.eth
-  //           .sign(library.utils.utf8ToHex("Hello world"), account)
-  //           .then((sig: any) => console.log(sig));
-  //       }
-  //     }
-  //   });
-  // }, [networkActive, networkError, library, account, loaded]);
 
   if (loaded) {
     return children;
