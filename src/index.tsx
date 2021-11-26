@@ -1,4 +1,4 @@
-import { ColorModeScript } from "@chakra-ui/react";
+import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
@@ -18,9 +18,11 @@ ReactDOM.render(
   <React.StrictMode>
     <Web3ReactProvider getLibrary={getLibrary}>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-      <MetamaskProvider>
-        <App />
-      </MetamaskProvider>
+      <ChakraProvider theme={theme}>
+        <MetamaskProvider>
+          <App />
+        </MetamaskProvider>
+      </ChakraProvider>
     </Web3ReactProvider>
   </React.StrictMode>,
   document.getElementById("root")

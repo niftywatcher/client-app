@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { chakra, ChakraProvider } from "@chakra-ui/react";
+import { chakra } from "@chakra-ui/react";
 import { BrowserRouter } from "react-router-dom";
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import SplitView from "./components/SplitView";
-import theme from "./theme";
 import CollectionList from "./components/CollectionList/index";
 import dimensions from "./Shared/utils/dimensions";
 import collections from "./collections.json";
@@ -34,34 +33,32 @@ function App() {
 
   return (
     <BrowserRouter>
-      <ChakraProvider theme={theme}>
-        <Header />
-        <chakra.main
-          height={`calc(100vh - ${dimensions.headerHeight}px)`}
-          overflow="hidden"
-        >
-          <SplitView
-            left={
-              <Navigation
-                activeWatchList={activeWatchList}
-                setActiveWatchList={setActiveWatchList}
+      <Header />
+      <chakra.main
+        height={`calc(100vh - ${dimensions.headerHeight}px)`}
+        overflow="hidden"
+      >
+        <SplitView
+          left={
+            <Navigation
+              activeWatchList={activeWatchList}
+              setActiveWatchList={setActiveWatchList}
+              watchLists={watchLists}
+              setWatchLists={setWatchLists}
+            />
+          }
+          right={
+            <>
+              <CollectionList
+                collections={filteredCollections}
                 watchLists={watchLists}
                 setWatchLists={setWatchLists}
               />
-            }
-            right={
-              <>
-                <CollectionList
-                  collections={filteredCollections}
-                  watchLists={watchLists}
-                  setWatchLists={setWatchLists}
-                />
-              </>
-            }
-            align="flex-start"
-          />
-        </chakra.main>
-      </ChakraProvider>
+            </>
+          }
+          align="flex-start"
+        />
+      </chakra.main>
     </BrowserRouter>
   );
 }
