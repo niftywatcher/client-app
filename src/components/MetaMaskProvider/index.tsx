@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { injected } from "../../Shared/utils/connector";
 import { useWeb3React } from "@web3-react/core";
 import { getCookie } from "../../Shared/utils";
-import { Button, HStack, Text, useToast } from "@chakra-ui/react";
+import { useToast } from "@chakra-ui/react";
 
 /**
  * This provider helps you stay connected when you leave the page. It was inspired by this solution: https://www.reddit.com/r/ethdev/comments/nw7iyv/displaying_connected_wallet_after_browser_refresh/h5uxl88/?context=3
@@ -18,6 +18,7 @@ function MetamaskProvider({
     active: networkActive,
     error: networkError,
     activate: activateNetwork,
+    deactivate: deactivateNetwork,
     library,
   } = useWeb3React();
 
@@ -59,39 +60,27 @@ function MetamaskProvider({
 
           // 3. check for jwt token, but we'll set it here instead
           document.cookie = "jwt=0xiPledgeToApe;";
+
+          toast.closeAll();
+
+          toastIdRef.current = toast({
+            title: "Successful Connection",
+            duration: 3000,
+            status: "success",
+            position: "top",
+            isClosable: true,
+          });
         }
       } catch (err) {
         console.log(err);
 
+        window.localStorage.setItem("disconnect", "true");
+
+        deactivateNetwork();
+
         toastIdRef.current = toast({
-          title: (
-            <HStack>
-              <Text>There was an error: </Text>
-              <Button
-                color="white"
-                variant="link"
-                textDecoration="underline"
-                onClick={async () => {
-                  if (toastIdRef.current) {
-                    toast.close(toastIdRef.current);
-                  }
-
-                  // 1.fetch nonce
-                  const nonce = process.env.REACT_APP_SECRET_PHRASE;
-
-                  // 2. sign nonce and send back to server with signature
-                  const signer = library.getSigner();
-                  const sig = await signer.signMessage(nonce);
-                  console.log({ sig });
-
-                  // 3. check for jwt token, but we'll set it here instead
-                  document.cookie = "jwt=0xiPledgeToApe;";
-                }}
-              >
-                Retry connection
-              </Button>
-            </HStack>
-          ),
+          title: "Signature failed, please try to re-connect.",
+          duration: 9000,
           status: "error",
           isClosable: true,
           position: "top",
@@ -100,7 +89,15 @@ function MetamaskProvider({
     }
 
     getAuthorization();
-  }, [networkActive, networkError, disconnect, library, loaded, jwt, toast]);
+  }, [
+    networkActive,
+    networkError,
+    library,
+    loaded,
+    jwt,
+    toast,
+    deactivateNetwork,
+  ]);
 
   if (loaded) {
     return children;
