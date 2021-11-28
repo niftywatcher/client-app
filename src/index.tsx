@@ -5,12 +5,10 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import theme from "./theme";
 import { Web3ReactProvider } from "@web3-react/core";
-// import Web3 from "web3";
 import { ethers } from "ethers";
 import MetamaskProvider from "./components/MetaMaskProvider/index";
 
 function getLibrary(provider: any, connector: any) {
-  // return new Web3(provider); // this will vary according to whether you use e.g. ethers or web3.js
   return new ethers.providers.Web3Provider(provider); // this will vary according to whether you use e.g. ethers or web3.js
 }
 
