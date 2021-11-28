@@ -1,7 +1,8 @@
 import React from "react";
-import { Button } from "@chakra-ui/react";
+import { Button, HStack, Text } from "@chakra-ui/react";
 import { useWeb3React } from "@web3-react/core";
 import { injected } from "../../../Shared/utils";
+import WalletIcon from "./WalletIcon/index";
 
 const ConnectButton = () => {
   const { active, account, activate, deactivate } = useWeb3React();
@@ -36,13 +37,24 @@ const ConnectButton = () => {
   };
 
   return (
-    <Button colorScheme="green" onClick={handleClick}>
-      {active
-        ? `${account?.slice(0, 5)}...${account?.slice(
-            account.length - 4,
-            account.length
-          )}`
-        : "Connect"}
+    <Button
+      colorScheme="green"
+      backgroundColor="green.300"
+      onClick={handleClick}
+    >
+      <HStack spacing={2}>
+        <WalletIcon />
+        {active ? (
+          <Text color="black">
+            {`${account?.slice(0, 2)}...${account?.slice(
+              account.length - 7,
+              account.length
+            )}`}
+          </Text>
+        ) : (
+          <Text color="black">Connect</Text>
+        )}
+      </HStack>
     </Button>
   );
 };

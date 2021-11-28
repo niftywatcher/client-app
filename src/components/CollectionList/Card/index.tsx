@@ -10,7 +10,6 @@ import {
   MenuItem,
   MenuList,
   Text,
-  useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
 import Highcharts from "highcharts";
