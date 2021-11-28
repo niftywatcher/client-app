@@ -88,11 +88,6 @@ const Card = ({
   setWatchLists,
   watchLists,
 }: CardProps) => {
-  const cardBgColor = useColorModeValue(
-    colors.componentBackgroundLight,
-    "gray.700"
-  );
-
   const options = {
     chart: {
       backgroundColor: "transparent",
@@ -152,7 +147,7 @@ const Card = ({
       w="100%"
       h="271px"
       borderRadius="16px"
-      backgroundColor={cardBgColor}
+      backgroundColor={colors.componentBackgroundLight}
       position="relative"
     >
       <HStack w="100%" padding="4" paddingBottom="0">
@@ -165,10 +160,17 @@ const Card = ({
         />
         <Flex justify="space-between" w="100%">
           <VStack>
-            <Text fontSize="x-large" textAlign="left" fontWeight="bold">
+            <Text
+              fontSize="x-large"
+              textAlign="left"
+              fontWeight="bold"
+              color="black"
+            >
               {name}
             </Text>
-            <Text fontSize="medium">Floor E 0.02 + 2%</Text>
+            <Text color="black" fontSize="medium">
+              Floor E 0.02 + 2%
+            </Text>
           </VStack>
           <Box borderRadius="50%" borderColor="gray.100">
             <AddWatchListButton

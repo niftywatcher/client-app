@@ -28,11 +28,6 @@ const Header = () => {
     colors.backgroundDark
   );
 
-  const inputBoxColor = useColorModeValue(
-    colors.componentBackgroundLight,
-    "gray.700"
-  );
-
   return (
     <chakra.header
       h={`${dimensions.headerHeight}px`}
@@ -77,7 +72,9 @@ const Header = () => {
                     placeholder="Search for collection"
                     maxW="400px"
                     w="100%"
-                    backgroundColor={inputBoxColor}
+                    color="black"
+                    _placeholder={{ color: "gray.400" }}
+                    backgroundColor={colors.componentBackgroundLight}
                   />
                 </InputGroup>
                 <HStack>
