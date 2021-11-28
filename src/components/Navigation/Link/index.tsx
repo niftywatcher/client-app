@@ -13,7 +13,8 @@ const Link = ({ name, active, onClick }: LinkProps) => {
     <Text
       onClick={onClick}
       color={active ? "green.300" : "white"}
-      fontWeight={active ? "bold" : "semibold"}
+      fontSize="md"
+      fontWeight={active ? "medium" : "normal"}
       _hover={{
         color: "gray.300",
         cursor: "pointer",

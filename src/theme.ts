@@ -13,6 +13,7 @@ const theme = extendTheme({
     global: (props: any) => ({
       "html, body": {
         boxSizing: "border-box",
+        fontFamily: "Roboto Mono",
       },
       body: {
         backgroundColor: mode(

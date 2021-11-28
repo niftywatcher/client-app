@@ -1,10 +1,10 @@
 import React, { useState, memo } from "react";
-import { VStack, chakra, HStack, Input } from "@chakra-ui/react";
+import { VStack, chakra } from "@chakra-ui/react";
 import { cloneDeep, isEqual } from "lodash";
-import { AddIcon } from "@chakra-ui/icons";
 import WatchList from "../../Shared/Interfaces/WatchList";
 import Link from "./Link";
 import { useWeb3React } from "@web3-react/core";
+import NewWatchListInput from "./NewWatchListInput";
 
 type NavigationProps = {
   activeWatchList: number;
@@ -71,25 +71,12 @@ const Navigation = ({
               />
             );
           })}
-        <HStack>
-          <Input
-            maxW="115px"
-            color="white"
-            variant="unstyled"
-            placeholder="New Watchlist"
-            value={watchListName}
-            isDisabled={!active}
-            onChange={(e) => setWatchListName(e.target.value)}
-            onKeyUp={(e) => {
-              if (e.key === "Enter") handleSetWatchList();
-            }}
-          />
-          <AddIcon
-            cursor="pointer"
-            color="green.300"
-            onClick={handleSetWatchList}
-          />
-        </HStack>
+        <NewWatchListInput
+          value={watchListName}
+          setValue={setWatchListName}
+          disabled={!active}
+          handleSetWatchList={handleSetWatchList}
+        />
       </VStack>
     </chakra.nav>
   );
