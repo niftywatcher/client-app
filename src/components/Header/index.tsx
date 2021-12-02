@@ -14,14 +14,12 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { Search2Icon } from "@chakra-ui/icons";
-import { useHistory } from "react-router-dom";
 import SplitView from "../SplitView";
 import colors from "../../Shared/utils/colors";
 import dimensions from "../../Shared/utils/dimensions";
 import ConnectButton from "./ConnectButton";
 
 const Header = () => {
-  const history = useHistory();
   const { colorMode, toggleColorMode } = useColorMode();
   const backgroundColor = useColorModeValue(
     colors.backgroundLight,
@@ -51,7 +49,7 @@ const Header = () => {
               backgroundColor="black"
               color="white"
               fontSize="xl"
-              onClick={() => history.push("/")}
+              // onClick={() => history.push("/")}
               cursor="pointer"
               fontWeight="extrabold"
             >

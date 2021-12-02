@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import { chakra } from "@chakra-ui/react";
-import { BrowserRouter } from "react-router-dom";
+import { chakra, Container } from "@chakra-ui/react";
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import SplitView from "./components/SplitView";
-import CollectionList from "./components/CollectionList/index";
 import dimensions from "./Shared/utils/dimensions";
 import collections from "./collections.json";
 import Collection from "./Shared/Interfaces/collection";
 import WatchList from "./Shared/Interfaces/WatchList";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const collectionData: Collection[] = collections.slice(0, 10);
@@ -23,16 +22,16 @@ function App() {
 
   const [activeWatchList, setActiveWatchList] = useState(watchLists[0].id);
 
-  const currentWatchList = watchLists[activeWatchList];
+  // const currentWatchList = watchLists[activeWatchList];
 
-  const filteredCollections = collectionData.filter(
-    (col) =>
-      currentWatchList &&
-      currentWatchList.collections.find((wlId) => wlId === col.id)
-  );
+  // const filteredCollections = collectionData.filter(
+  //   (col) =>
+  //     currentWatchList &&
+  //     currentWatchList.collections.find((wlId) => wlId === col.id)
+  // );
 
   return (
-    <BrowserRouter>
+    <>
       <Header />
       <chakra.main
         height={`calc(100vh - ${dimensions.headerHeight}px)`}
@@ -40,26 +39,31 @@ function App() {
       >
         <SplitView
           left={
-            <Navigation
-              activeWatchList={activeWatchList}
-              setActiveWatchList={setActiveWatchList}
-              watchLists={watchLists}
-              setWatchLists={setWatchLists}
-            />
-          }
-          right={
             <>
-              <CollectionList
-                collections={filteredCollections}
+              <Navigation
+                activeWatchList={activeWatchList}
+                setActiveWatchList={setActiveWatchList}
                 watchLists={watchLists}
                 setWatchLists={setWatchLists}
               />
             </>
           }
+          right={
+            <chakra.section
+              h="100%"
+              w="100%"
+              paddingTop="50px"
+              overflow="scroll"
+            >
+              <Container maxW="container.xl" padding="0 50px" h="100%">
+                <Outlet />
+              </Container>
+            </chakra.section>
+          }
           align="flex-start"
         />
       </chakra.main>
-    </BrowserRouter>
+    </>
   );
 }
 
