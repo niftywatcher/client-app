@@ -10,6 +10,16 @@ import MetamaskProvider from "./components/MetaMaskProvider/index";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Trending from "./routes/WatchList/Trending";
 
+/**
+ * How do we want to manage state for list of collections
+ *
+ * global state {
+ *  watchLists [{trending}, {blueChips}, {allThingApes}]
+ * }
+ *
+ * <Navigator /> component will handle adding a new
+ */
+
 function getLibrary(provider: any, connector: any) {
   return new ethers.providers.Web3Provider(provider); // this will vary according to whether you use e.g. ethers or web3.js
 }
@@ -28,9 +38,9 @@ ReactDOM.render(
                   element={<Navigate replace to="/watchLists/trending" />}
                 />
                 <Route path="watchLists">
-                  <Route index element={<Trending />} />
-                  <Route path="trending" element={<Trending />} />
+                  <Route index element={<Navigate to="trending" />} />
                   <Route path=":watchList" element={<div>New trends</div>} />
+                  <Route path="trending" element={<Trending />} />
                 </Route>
                 <Route path="collections">
                   <Route
