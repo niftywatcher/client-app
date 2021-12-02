@@ -14,21 +14,6 @@ function getLibrary(provider: any, connector: any) {
   return new ethers.providers.Web3Provider(provider); // this will vary according to whether you use e.g. ethers or web3.js
 }
 
-/**
- * / -> <Home /> which has Trending collections [INDEX route]
- * -----
- * Problem is how do we know ahead of time what the trending will be?
- * This will be derived from the API, and so this will be dynamic
- * /trending -> <CollectionLists />
- * /blueChips -> <CollectionLists />
- *
- * /collections/:watchList
- * ex., /collections/trending, /collections/:blueChips -> then fetch for each list from API
- *
- * -----
- * /collection/:collectionId -> <Collection />
- */
-
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
@@ -47,7 +32,12 @@ ReactDOM.render(
                   <Route path="trending" element={<Trending />} />
                   <Route path=":watchList" element={<div>New trends</div>} />
                 </Route>
-                <Route path="collection"></Route>
+                <Route path="collections">
+                  <Route
+                    path=":collectionId"
+                    element={<div>Searchable collections go here</div>}
+                  />
+                </Route>
               </Route>
             </Routes>
           </MetamaskProvider>
