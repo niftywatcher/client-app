@@ -42,11 +42,9 @@ ReactDOM.render(
                   index
                   element={<Navigate replace to="/watchLists/trending" />}
                 />
-                <Route path="watchLists/trending" element={<Trending />} />
-                <Route
-                  path="watchLists"
-                  element={<Navigate replace to="/watchLists/trending" />}
-                >
+                <Route path="watchLists">
+                  <Route index element={<Trending />} />
+                  <Route path="trending" element={<Trending />} />
                   <Route path=":watchList" element={<div>New trends</div>} />
                 </Route>
                 <Route path="collection"></Route>
