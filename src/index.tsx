@@ -7,8 +7,6 @@ import theme from "./theme";
 import { Web3ReactProvider } from "@web3-react/core";
 import { ethers } from "ethers";
 import MetamaskProvider from "./components/MetaMaskProvider/index";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Trending from "./routes/WatchList/Trending";
 
 /**
  * How do we want to manage state for list of collections
@@ -26,34 +24,14 @@ function getLibrary(provider: any, connector: any) {
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Web3ReactProvider getLibrary={getLibrary}>
-        <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-        <ChakraProvider theme={theme}>
-          <MetamaskProvider>
-            <Routes>
-              <Route path="/" element={<App />}>
-                <Route
-                  index
-                  element={<Navigate replace to="/watchLists/trending" />}
-                />
-                <Route path="watchLists">
-                  <Route index element={<Navigate to="trending" />} />
-                  <Route path=":watchList" element={<div>New trends</div>} />
-                  <Route path="trending" element={<Trending />} />
-                </Route>
-                <Route path="collections">
-                  <Route
-                    path=":collectionId"
-                    element={<div>Searchable collections go here</div>}
-                  />
-                </Route>
-              </Route>
-            </Routes>
-          </MetamaskProvider>
-        </ChakraProvider>
-      </Web3ReactProvider>
-    </BrowserRouter>
+    <Web3ReactProvider getLibrary={getLibrary}>
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+      <ChakraProvider theme={theme}>
+        <MetamaskProvider>
+          <App />
+        </MetamaskProvider>
+      </ChakraProvider>
+    </Web3ReactProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
