@@ -5,8 +5,10 @@ import Link from "./Link";
 import { useWeb3React } from "@web3-react/core";
 import NewWatchListInput from "./NewWatchListInput";
 import { useApp } from "../../app-context";
+import { useNavigate } from "react-router-dom";
 
 const Navigation = () => {
+  const navigate = useNavigate();
   const [watchListName, setWatchListName] = useState("");
   const { active } = useWeb3React();
   const { state, setState } = useApp();
@@ -52,7 +54,11 @@ const Navigation = () => {
               name={item.name}
               active={+item.id === +activeItem}
               key={item.id}
-              onClick={() => setActiveItem(item.id)}
+              onClick={() => {
+                setActiveItem(item.id);
+
+                navigate(`/watchLists/${item.slug}`, { replace: true });
+              }}
             />
           );
         })}
