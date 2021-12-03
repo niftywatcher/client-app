@@ -15,7 +15,7 @@ import { AppProvider } from "./app-context";
  * ------Context------
  * global state {
  *  user {
- *    watchLists = [{ trending, id, slug }, { blueChips, id, slug }]
+ *    watchLists = { id: { trending, id, slug }, { blueChips, id, slug } }
  *  }
  * }
  
@@ -24,9 +24,13 @@ import { AppProvider } from "./app-context";
 
  * -----:watchList.tsx------
  * go and grab the :watchList id from the backend
- * 
+ 
+ * TODO
+ * 1. add collection ids to user.watchLists[id] = collection[collectionIds]
+ * 2. on each page render the filtered lists
+ * 3. create collection page with specific data (play around with charts)
+ * 4. display the main page card charts nicely
 
- * <Navigator /> component will handle adding a new
  */
 
 function getLibrary(provider: any, connector: any) {
