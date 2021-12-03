@@ -1,43 +1,38 @@
 import React, { useState, memo } from "react";
 import { VStack, chakra } from "@chakra-ui/react";
-import { cloneDeep, isEqual } from "lodash";
-import WatchList from "../../Shared/Interfaces/WatchList";
+import { camelCase, cloneDeep, isEqual } from "lodash";
 import Link from "./Link";
 import { useWeb3React } from "@web3-react/core";
 import NewWatchListInput from "./NewWatchListInput";
+import { useApp } from "../../app-context";
+import { useNavigate } from "react-router-dom";
 
-type NavigationProps = {
-  activeWatchList: number;
-  watchLists: { [id: number]: WatchList };
-  setActiveWatchList: React.Dispatch<React.SetStateAction<any>>;
-  setWatchLists: React.Dispatch<
-    React.SetStateAction<{ [id: number]: WatchList }>
-  >;
-};
-
-const Navigation = ({
-  activeWatchList,
-  setActiveWatchList,
-  watchLists,
-  setWatchLists,
-}: NavigationProps) => {
+const Navigation = () => {
+  const navigate = useNavigate();
   const [watchListName, setWatchListName] = useState("");
   const { active } = useWeb3React();
+  const { state, setState } = useApp();
+  const { watchLists } = state.user;
+  const [activeItem, setActiveItem] = useState(watchLists[0].id);
+
+  const watchListsSorted = Object.entries(watchLists)
+    .map(([id, wl]) => ({ ...wl, id: +id }))
+    .sort((a, b) => a.order - b.order);
 
   const handleSetWatchList = () => {
     if (watchListName !== "") {
-      setWatchLists((prevState) => {
+      setState((prevState) => {
         const newState = cloneDeep(prevState);
-        const id = Object.keys(newState).length++;
+        const id = Object.keys(newState.user.watchLists).length++;
 
-        return {
-          ...newState,
-          [id]: {
-            id,
-            name: watchListName,
-            collections: [],
-          },
+        newState.user.watchLists[id] = {
+          id,
+          order: id,
+          slug: camelCase(watchListName),
+          name: watchListName,
         };
+
+        return newState;
       });
 
       setWatchListName("");
@@ -53,24 +48,20 @@ const Navigation = ({
         w="100%"
         paddingLeft="92px"
       >
-        {Object.values(watchLists)
-          .filter((wl) => {
-            if (active) return true;
+        {watchListsSorted.map((item) => {
+          return (
+            <Link
+              name={item.name}
+              active={+item.id === +activeItem}
+              key={item.id}
+              onClick={() => {
+                setActiveItem(item.id);
 
-            if (wl.id === 0) return true;
-
-            return false;
-          })
-          .map((item) => {
-            return (
-              <Link
-                name={item.name}
-                active={item.id === activeWatchList}
-                key={item.id}
-                onClick={() => setActiveWatchList(item.id)}
-              />
-            );
-          })}
+                navigate(`/watchLists/${item.slug}`, { replace: true });
+              }}
+            />
+          );
+        })}
         <NewWatchListInput
           value={watchListName}
           setValue={setWatchListName}
