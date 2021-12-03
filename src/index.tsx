@@ -7,14 +7,25 @@ import theme from "./theme";
 import { Web3ReactProvider } from "@web3-react/core";
 import { ethers } from "ethers";
 import MetamaskProvider from "./components/MetaMaskProvider/index";
+import { AppProvider } from "./app-context";
 
 /**
  * How do we want to manage state for list of collections
- *
+ 
+ * ------Context------
  * global state {
- *  watchLists [{trending}, {blueChips}, {allThingApes}]
+ *  user {
+ *    watchLists = [{ trending, id, slug }, { blueChips, id, slug }]
+ *  }
  * }
- *
+ 
+ * -----Trending.tsx------
+ * go and grab the trending lists from the global state id
+
+ * -----:watchList.tsx------
+ * go and grab the :watchList id from the backend
+ * 
+
  * <Navigator /> component will handle adding a new
  */
 
@@ -28,7 +39,9 @@ ReactDOM.render(
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <ChakraProvider theme={theme}>
         <MetamaskProvider>
-          <App />
+          <AppProvider>
+            <App />
+          </AppProvider>
         </MetamaskProvider>
       </ChakraProvider>
     </Web3ReactProvider>
