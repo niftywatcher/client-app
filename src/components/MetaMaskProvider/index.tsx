@@ -51,7 +51,8 @@ function MetamaskProvider({
         // if user is logged in to MM and has not yet authenticated with server
         if (isAuthorized && networkActive && loaded && !networkError && !jwt) {
           // 1.fetch nonce
-          const nonce = process.env.REACT_APP_SECRET_PHRASE;
+          // const nonce = process.env.REACT_APP_SECRET_PHRASE;
+          const nonce = "iPledgeToApe";
 
           // 2. sign nonce and send back to server with signature
           const signer = library.getSigner();

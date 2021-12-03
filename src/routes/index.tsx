@@ -1,32 +1,70 @@
-import React from "react";
-import { Flex, Text, VStack } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { chakra, Container } from "@chakra-ui/react";
+import Header from "../components/Header";
+import Navigation from "../components/Navigation";
+import SplitView from "../components/SplitView";
+import dimensions from "../Shared/utils/dimensions";
+import collections from "../collections.json";
+import Collection from "../Shared/Interfaces/collection";
+import WatchList from "../Shared/Interfaces/WatchList";
+import { Outlet } from "react-router-dom";
 
-const Home = () => {
-  const now = new Date();
-  const fiveMinutesAgo = new Date(
-    now.getTime() - 1000 * 60 * 5
-  ).toLocaleTimeString();
+const Layout = () => {
+  const collectionData: Collection[] = collections.slice(0, 10);
+
+  const [watchLists, setWatchLists] = useState<{ [id: number]: WatchList }>({
+    0: {
+      id: 0,
+      name: "Trending Collections",
+      collections: collectionData.map((col) => col.id),
+    },
+  });
+
+  const [activeWatchList, setActiveWatchList] = useState(watchLists[0].id);
+
+  // const currentWatchList = watchLists[activeWatchList];
+
+  // const filteredCollections = collectionData.filter(
+  //   (col) =>
+  //     currentWatchList &&
+  //     currentWatchList.collections.find((wlId) => wlId === col.id)
+  // );
 
   return (
-    <React.Fragment>
-      <VStack spacing="16px" width="100%">
-        <VStack spacing="2px" width="100%">
-          <Text
-            fontSize="large"
-            textAlign="left"
-            fontWeight="bold"
-            width="100%"
-          >
-            Trending Collections
-          </Text>
-          <Flex justify="space-between" width="100%" align="center">
-            <Text fontSize="sm">Period: 5 mins</Text>
-            <Text fontSize="sm">Last updated at {fiveMinutesAgo}</Text>
-          </Flex>
-        </VStack>
-      </VStack>
-    </React.Fragment>
+    <>
+      <Header />
+      <chakra.main
+        height={`calc(100vh - ${dimensions.headerHeight}px)`}
+        overflow="hidden"
+      >
+        <SplitView
+          left={
+            <>
+              <Navigation
+                activeWatchList={activeWatchList}
+                setActiveWatchList={setActiveWatchList}
+                watchLists={watchLists}
+                setWatchLists={setWatchLists}
+              />
+            </>
+          }
+          right={
+            <chakra.section
+              h="100%"
+              w="100%"
+              paddingTop="50px"
+              overflow="scroll"
+            >
+              <Container maxW="container.xl" padding="0 50px" h="100%">
+                <Outlet />
+              </Container>
+            </chakra.section>
+          }
+          align="flex-start"
+        />
+      </chakra.main>
+    </>
   );
 };
 
-export default Home;
+export default Layout;

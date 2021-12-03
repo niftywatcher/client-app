@@ -14,23 +14,16 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { Search2Icon } from "@chakra-ui/icons";
-import { useHistory } from "react-router-dom";
 import SplitView from "../SplitView";
 import colors from "../../Shared/utils/colors";
 import dimensions from "../../Shared/utils/dimensions";
 import ConnectButton from "./ConnectButton";
 
 const Header = () => {
-  const history = useHistory();
   const { colorMode, toggleColorMode } = useColorMode();
   const backgroundColor = useColorModeValue(
     colors.backgroundLight,
     colors.backgroundDark
-  );
-
-  const inputBoxColor = useColorModeValue(
-    colors.componentBackgroundLight,
-    "gray.700"
   );
 
   return (
@@ -56,7 +49,7 @@ const Header = () => {
               backgroundColor="black"
               color="white"
               fontSize="xl"
-              onClick={() => history.push("/")}
+              // onClick={() => history.push("/")}
               cursor="pointer"
               fontWeight="extrabold"
             >
@@ -77,7 +70,9 @@ const Header = () => {
                     placeholder="Search for collection"
                     maxW="400px"
                     w="100%"
-                    backgroundColor={inputBoxColor}
+                    color="black"
+                    _placeholder={{ color: "gray.400" }}
+                    backgroundColor={colors.componentBackgroundLight}
                   />
                 </InputGroup>
                 <HStack>
