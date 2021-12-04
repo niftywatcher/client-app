@@ -6,6 +6,7 @@ import HighchartsReact from "highcharts-react-official";
 import Highcharts from "highcharts";
 import generateFloorData from "./floorDataGenerator";
 import colors from "../../../Shared/utils/colors";
+import generateVolumeData from "./volumeDataGenerator";
 
 const CollectionDetail = () => {
   const { address } = useParams();
@@ -16,30 +17,32 @@ const CollectionDetail = () => {
     chart: {
       backgroundColor: "transparent",
       height: 300,
-      margin: [20, 20, 20, 20],
-      type: "line",
+      margin: [20, 70, 20, 70],
+      // type: "line",
+      zoomType: "xy",
     },
     credits: {
       enabled: false,
     },
-    // plotOptions: {
-    //   series: {
-    //     marker: {
-    //       enabled: false,
-    //     },
-    //   },
-    // },
     series: [
       {
+        type: "line",
+        name: "Floor",
         showInLegend: false,
         color: "#34C096",
         data: generateFloorData(),
+        zIndex: 2,
+        // yAxis: 1,
       },
-      // {
-      //   showInLegend: false,
-      //   color: "#34C096",
-      //   data: generateFloorData(),
-      // },
+      {
+        type: "column",
+        name: "volume",
+        showInLegend: false,
+        color: "#63B3ED",
+        data: generateVolumeData(),
+        zIndex: 1,
+        yAxis: 1,
+      },
     ],
     title: null,
     xAxis: {
@@ -52,13 +55,23 @@ const CollectionDetail = () => {
       minorTickLength: 0,
       tickLength: 0,
     },
-    yAxis: {
-      title: null,
-      labels: {
-        enabled: false,
+    yAxis: [
+      {
+        title: { text: "Floor" },
+        labels: {
+          enabled: true,
+        },
+        gridLineColor: "transparent",
       },
-      gridLineColor: "transparent",
-    },
+      {
+        title: { text: "Volume" },
+        labels: {
+          enabled: true,
+        },
+        gridLineColor: "transparent",
+        opposite: true,
+      },
+    ],
   };
 
   console.log({ options });
