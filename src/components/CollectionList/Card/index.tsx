@@ -18,6 +18,7 @@ import colors from "../../../Shared/utils/colors";
 import { cloneDeep, isEqual } from "lodash";
 import WatchList from "../../../Shared/Interfaces/WatchList";
 import { AddIcon } from "@chakra-ui/icons";
+import { Link } from "react-router-dom";
 
 type AddWatchListButtonProps = {
   collectionId: string;
@@ -69,6 +70,7 @@ const AddWatchListButton = ({
 };
 
 interface CardProps {
+  address: string;
   collectionId: string;
   name: string;
   imageUrl: string;
@@ -80,6 +82,7 @@ interface CardProps {
 }
 
 const Card = ({
+  address,
   collectionId,
   name,
   imageUrl,
@@ -159,14 +162,21 @@ const Card = ({
         />
         <Flex justify="space-between" w="100%">
           <VStack>
-            <Text
-              fontSize="x-large"
-              textAlign="left"
-              fontWeight="bold"
-              color="black"
-            >
-              {name}
-            </Text>
+            <Link replace to={`/collection/${address}`}>
+              <Text
+                fontSize="28px"
+                textAlign="left"
+                fontWeight="bold"
+                color="black"
+                _hover={{
+                  cursor: "pointer",
+                  color: "green.300",
+                  textDecoration: "underline",
+                }}
+              >
+                {name}
+              </Text>
+            </Link>
             <Text color="black" fontSize="medium">
               Floor E 0.02 + 2%
             </Text>

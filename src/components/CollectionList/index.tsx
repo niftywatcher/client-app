@@ -23,6 +23,7 @@ const CollectionList = ({
       {collections.map((collection: Collection) => (
         <Card
           key={collection.id}
+          address={collection.address}
           collectionId={collection.id}
           name={collection.name}
           imageUrl={collection.imageUrl}
