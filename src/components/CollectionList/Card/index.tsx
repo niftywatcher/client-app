@@ -18,6 +18,7 @@ import colors from "../../../Shared/utils/colors";
 import { cloneDeep, isEqual } from "lodash";
 import WatchList from "../../../Shared/Interfaces/WatchList";
 import { AddIcon } from "@chakra-ui/icons";
+import { Link } from "react-router-dom";
 
 type AddWatchListButtonProps = {
   collectionId: string;
@@ -69,8 +70,10 @@ const AddWatchListButton = ({
 };
 
 interface CardProps {
+  address: string;
   collectionId: string;
   name: string;
+  deltaFloor: number;
   imageUrl: string;
   data: number[];
   setWatchLists: React.Dispatch<
@@ -80,8 +83,10 @@ interface CardProps {
 }
 
 const Card = ({
+  address,
   collectionId,
   name,
+  deltaFloor,
   imageUrl,
   data,
   setWatchLists,
@@ -158,18 +163,30 @@ const Card = ({
           alt="collection logo"
         />
         <Flex justify="space-between" w="100%">
-          <VStack>
-            <Text
-              fontSize="x-large"
-              textAlign="left"
-              fontWeight="bold"
-              color="black"
-            >
-              {name}
-            </Text>
-            <Text color="black" fontSize="medium">
-              Floor E 0.02 + 2%
-            </Text>
+          <VStack alignItems="flex-start" spacing={0}>
+            <Link replace to={`/collection/${address}`}>
+              <Text
+                fontSize="28px"
+                textAlign="left"
+                fontWeight="bold"
+                color="black"
+                _hover={{
+                  cursor: "pointer",
+                  color: "green.300",
+                  textDecoration: "underline",
+                }}
+              >
+                {name}
+              </Text>
+            </Link>
+            <HStack mt="0">
+              <Text color="black" fontSize="16px" fontWeight="normal">
+                {`Floor 0.02 E`}
+              </Text>
+              <Text fontSize="16px" fontWeight="normal" color="green.400">
+                {`${deltaFloor * 100}%`}
+              </Text>
+            </HStack>
           </VStack>
           <Box borderRadius="50%" borderColor="gray.100">
             <AddWatchListButton

@@ -23,12 +23,14 @@ const CollectionList = ({
       {collections.map((collection: Collection) => (
         <Card
           key={collection.id}
+          address={collection.address}
           collectionId={collection.id}
           name={collection.name}
           imageUrl={collection.imageUrl}
           data={collection.floorData}
           setWatchLists={setWatchLists}
           watchLists={watchLists}
+          deltaFloor={collection.deltaStats.floor}
         />
       ))}
     </VStack>

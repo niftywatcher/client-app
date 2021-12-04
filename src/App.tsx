@@ -3,6 +3,7 @@ import { BrowserRouter, Navigate, Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
 import Trending from "./routes/WatchList/Trending";
 import Layout from "./routes/index";
+import CollectionDetail from "./routes/Collection/Detail";
 
 function App() {
   return (
@@ -18,11 +19,8 @@ function App() {
             <Route path=":watchList" element={<div>New trends</div>} />
             <Route path="trending" element={<Trending />} />
           </Route>
-          <Route path="collections">
-            <Route
-              path=":collectionId"
-              element={<div>Searchable collections go here</div>}
-            />
+          <Route path="collection">
+            <Route path=":address" element={<CollectionDetail />} />
           </Route>
         </Route>
       </Routes>
