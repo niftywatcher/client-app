@@ -30,6 +30,7 @@ const CollectionList = ({
           data={collection.floorData}
           setWatchLists={setWatchLists}
           watchLists={watchLists}
+          deltaFloor={collection.deltaStats.floor}
         />
       ))}
     </VStack>

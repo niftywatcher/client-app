@@ -73,6 +73,7 @@ interface CardProps {
   address: string;
   collectionId: string;
   name: string;
+  deltaFloor: number;
   imageUrl: string;
   data: number[];
   setWatchLists: React.Dispatch<
@@ -85,6 +86,7 @@ const Card = ({
   address,
   collectionId,
   name,
+  deltaFloor,
   imageUrl,
   data,
   setWatchLists,
@@ -161,7 +163,7 @@ const Card = ({
           alt="collection logo"
         />
         <Flex justify="space-between" w="100%">
-          <VStack>
+          <VStack alignItems="flex-start" spacing={0}>
             <Link replace to={`/collection/${address}`}>
               <Text
                 fontSize="28px"
@@ -177,9 +179,14 @@ const Card = ({
                 {name}
               </Text>
             </Link>
-            <Text color="black" fontSize="medium">
-              Floor E 0.02 + 2%
-            </Text>
+            <HStack mt="0">
+              <Text color="black" fontSize="16px" fontWeight="normal">
+                {`Floor 0.02 E`}
+              </Text>
+              <Text fontSize="16px" fontWeight="normal" color="green.400">
+                {`${deltaFloor * 100}%`}
+              </Text>
+            </HStack>
           </VStack>
           <Box borderRadius="50%" borderColor="gray.100">
             <AddWatchListButton
