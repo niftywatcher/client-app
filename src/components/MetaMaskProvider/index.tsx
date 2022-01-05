@@ -1,13 +1,43 @@
 import React, { useEffect, useState } from "react";
-import { injected } from "../../Shared/utils/connector";
 import { useWeb3React } from "@web3-react/core";
-import { getCookie } from "../../Shared/utils";
 import { useToast } from "@chakra-ui/react";
+import { useMutation } from "react-query";
+import { request, gql } from "graphql-request";
+import { injected } from "../../Shared/utils/connector";
+import { getCookie } from "../../Shared/utils";
 
 /**
  * This provider helps you stay connected when you leave the page. It was inspired by this solution: https://www.reddit.com/r/ethdev/comments/nw7iyv/displaying_connected_wallet_after_browser_refresh/h5uxl88/?context=3
  * TODO: need to checkout uniswap way of handling this provider: https://github.com/Uniswap/interface/blob/13d7d2c99235aacd199641a9bfcae8aa6f7d94ae/src/components/Web3ReactManager/index.tsx#L22
  */
+
+interface GenerateNonceVariables {
+  address: string | null | undefined;
+}
+
+interface NonceReturn {
+  data: {
+    GenerateNonce: string;
+  };
+}
+
+const getNonce = async (
+  variables: GenerateNonceVariables
+): Promise<NonceReturn> => {
+  const response = await request(
+    "http://localhost:8000/graphql",
+    gql`
+      mutation auth($address: String!) {
+        GenerateNonce(address: $address)
+      }
+    `,
+    variables
+  );
+
+  console.log({ response });
+
+  return response;
+};
 
 function MetamaskProvider({
   children,
@@ -15,6 +45,7 @@ function MetamaskProvider({
   children: JSX.Element;
 }): JSX.Element {
   const {
+    account,
     active: networkActive,
     error: networkError,
     activate: activateNetwork,
@@ -29,6 +60,7 @@ function MetamaskProvider({
   const disconnect = window.localStorage.getItem("disconnect");
   const jwt = getCookie("jwt");
 
+  // reconnects network if we're already connected
   useEffect(() => {
     injected
       .isAuthorized()
@@ -43,6 +75,40 @@ function MetamaskProvider({
       });
   }, [activateNetwork, networkActive, networkError, disconnect]);
 
+  const signMessage = async () => {
+    const nonce = "iPledgeToApe";
+
+    const signer = library.getSigner();
+    const sig = await signer.signMessage(nonce);
+
+    return sig;
+  };
+
+  const mutation = useMutation(getNonce, {
+    onError: async (err) => {
+      const sig = await signMessage();
+      console.log({ sig });
+
+      document.cookie = "jwt=0xiPledgeToApe;";
+
+      toast.closeAll();
+
+      toastIdRef.current = toast({
+        title: "Successful Connection",
+        duration: 3000,
+        status: "success",
+        position: "top",
+        isClosable: true,
+      });
+    },
+    onSuccess: ({ data }) => {
+      console.log({ data });
+    },
+  });
+
+  const { mutate } = mutation;
+
+  // check if we're connected to the server
   useEffect(() => {
     async function getAuthorization(): Promise<void> {
       try {
@@ -50,27 +116,7 @@ function MetamaskProvider({
 
         // if user is logged in to MM and has not yet authenticated with server
         if (isAuthorized && networkActive && loaded && !networkError && !jwt) {
-          // 1.fetch nonce
-          // const nonce = process.env.REACT_APP_SECRET_PHRASE;
-          const nonce = "iPledgeToApe";
-
-          // 2. sign nonce and send back to server with signature
-          const signer = library.getSigner();
-          const sig = await signer.signMessage(nonce);
-          console.log({ sig });
-
-          // 3. check for jwt token, but we'll set it here instead
-          document.cookie = "jwt=0xiPledgeToApe;";
-
-          toast.closeAll();
-
-          toastIdRef.current = toast({
-            title: "Successful Connection",
-            duration: 3000,
-            status: "success",
-            position: "top",
-            isClosable: true,
-          });
+          await mutate({ address: account });
         }
       } catch (err) {
         console.log(err);
@@ -98,6 +144,8 @@ function MetamaskProvider({
     jwt,
     toast,
     deactivateNetwork,
+    account,
+    mutate,
   ]);
 
   if (loaded) {

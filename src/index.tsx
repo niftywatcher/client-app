@@ -1,6 +1,7 @@
 import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import React from "react";
 import ReactDOM from "react-dom";
+import { QueryClientProvider, QueryClient } from "react-query";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import theme from "./theme";
@@ -33,6 +34,8 @@ import { AppProvider } from "./app-context";
 
  */
 
+const queryClient = new QueryClient();
+
 function getLibrary(provider: any, connector: any) {
   return new ethers.providers.Web3Provider(provider); // this will vary according to whether you use e.g. ethers or web3.js
 }
@@ -42,11 +45,13 @@ ReactDOM.render(
     <Web3ReactProvider getLibrary={getLibrary}>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <ChakraProvider theme={theme}>
-        <MetamaskProvider>
-          <AppProvider>
-            <App />
-          </AppProvider>
-        </MetamaskProvider>
+        <QueryClientProvider client={queryClient}>
+          <MetamaskProvider>
+            <AppProvider>
+              <App />
+            </AppProvider>
+          </MetamaskProvider>
+        </QueryClientProvider>
       </ChakraProvider>
     </Web3ReactProvider>
   </React.StrictMode>,
