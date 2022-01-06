@@ -9,6 +9,7 @@ import { Web3ReactProvider } from "@web3-react/core";
 import { ethers } from "ethers";
 import MetamaskProvider from "./components/MetaMaskProvider/index";
 import { AppProvider } from "./app-context";
+import { CookiesProvider } from "react-cookie";
 
 /**
  * How do we want to manage state for list of collections
@@ -46,11 +47,13 @@ ReactDOM.render(
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <ChakraProvider theme={theme}>
         <QueryClientProvider client={queryClient}>
-          <MetamaskProvider>
-            <AppProvider>
-              <App />
-            </AppProvider>
-          </MetamaskProvider>
+          <CookiesProvider>
+            <MetamaskProvider>
+              <AppProvider>
+                <App />
+              </AppProvider>
+            </MetamaskProvider>
+          </CookiesProvider>
         </QueryClientProvider>
       </ChakraProvider>
     </Web3ReactProvider>

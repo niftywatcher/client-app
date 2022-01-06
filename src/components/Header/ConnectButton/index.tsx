@@ -3,9 +3,11 @@ import { Button, HStack, Text } from "@chakra-ui/react";
 import { useWeb3React } from "@web3-react/core";
 import { injected } from "../../../Shared/utils";
 import WalletIcon from "./WalletIcon/index";
+import { useCookies } from "react-cookie";
 
 const ConnectButton = () => {
   const { active, account, activate, deactivate } = useWeb3React();
+  const [, , removeCookie] = useCookies(["jwt"]);
 
   async function connect() {
     try {
@@ -30,7 +32,7 @@ const ConnectButton = () => {
     if (active) {
       disconnect();
 
-      document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      removeCookie("jwt", { path: "/" });
     } else {
       connect();
     }

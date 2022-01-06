@@ -4,7 +4,7 @@ import { useToast } from "@chakra-ui/react";
 import { useMutation } from "react-query";
 import { request, gql } from "graphql-request";
 import { injected } from "../../Shared/utils/connector";
-import { getCookie } from "../../Shared/utils";
+import { useCookies } from "react-cookie";
 
 /**
  * This provider helps you stay connected when you leave the page. It was inspired by this solution: https://www.reddit.com/r/ethdev/comments/nw7iyv/displaying_connected_wallet_after_browser_refresh/h5uxl88/?context=3
@@ -82,9 +82,12 @@ function MetamaskProvider({
   const toast = useToast();
   const toastIdRef: any = React.useRef();
   const [loaded, setLoaded] = useState(false);
+  const [cookies, setCookie] = useCookies(["jwt"]);
+
+  console.log({ cookies });
 
   const disconnect = window.localStorage.getItem("disconnect");
-  const jwt = getCookie("jwt");
+  const jwt = cookies.jwt;
 
   // reconnects network if we're already connected
   useEffect(() => {
@@ -155,7 +158,7 @@ function MetamaskProvider({
 
           console.log({ verify });
 
-          document.cookie = "jwt=0xiPledgeToApe;";
+          setCookie("jwt", "0xiPledgeToApe;", { path: "/" });
 
           toast.closeAll();
 
@@ -196,6 +199,7 @@ function MetamaskProvider({
     account,
     getNonce,
     verifySignature,
+    setCookie,
   ]);
 
   if (loaded) {
