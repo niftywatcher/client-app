@@ -1,0 +1,3 @@
+  mutation verifySignature($address: String!, $signature: String!) {
+    VerifySignature(address: $address, signature: $signature)
+  }
