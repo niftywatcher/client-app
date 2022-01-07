@@ -2,68 +2,21 @@ import React, { useCallback, useEffect, useState } from "react";
 import { useWeb3React } from "@web3-react/core";
 import { useToast } from "@chakra-ui/react";
 import { useMutation } from "react-query";
-import { request, gql } from "graphql-request";
 import { injected } from "../../Shared/utils/connector";
 import { useCookies } from "react-cookie";
+import {
+  getNonceApi,
+  // verifySigApi,
+  verifySigQuery,
+  VerifySigReturn,
+  VerifySigVariables,
+} from "./mutations";
+import { mutationRequest } from "../../Shared/utils/mutationRequest/index";
 
 /**
  * This provider helps you stay connected when you leave the page. It was inspired by this solution: https://www.reddit.com/r/ethdev/comments/nw7iyv/displaying_connected_wallet_after_browser_refresh/h5uxl88/?context=3
  * TODO: need to checkout uniswap way of handling this provider: https://github.com/Uniswap/interface/blob/13d7d2c99235aacd199641a9bfcae8aa6f7d94ae/src/components/Web3ReactManager/index.tsx#L22
  */
-
-const API_URL = process.env.REACT_APP_API || "";
-interface GenerateNonceVariables<T> {
-  address: T;
-}
-
-interface NonceReturn {
-  data: {
-    GenerateNonce: string;
-  };
-}
-
-const getNonceApi = async (
-  variables: GenerateNonceVariables<string>
-): Promise<NonceReturn> => {
-  const response = await request(
-    API_URL,
-    gql`
-      mutation generateNonce($address: String!) {
-        GenerateNonce(address: $address)
-      }
-    `,
-    variables
-  );
-
-  return response;
-};
-
-interface VerifySigVariables<T> {
-  address: T;
-  signature: String;
-}
-
-interface VerifySigReturn {
-  data: {
-    VerifySignature: boolean;
-  };
-}
-
-const verifySigApi = async (
-  variables: VerifySigVariables<string>
-): Promise<VerifySigReturn> => {
-  const response = await request(
-    API_URL,
-    gql`
-      mutation verifySignature($address: String!, $signature: String!) {
-        VerifySignature(address: $address, signature: $signature)
-      }
-    `,
-    variables
-  );
-
-  return response;
-};
 
 function MetamaskProvider({
   children,
@@ -84,8 +37,6 @@ function MetamaskProvider({
   const [loaded, setLoaded] = useState(false);
   const [cookies, setCookie] = useCookies(["jwt"]);
 
-  console.log({ cookies });
-
   const disconnect = window.localStorage.getItem("disconnect");
   const jwt = cookies.jwt;
 
@@ -105,7 +56,14 @@ function MetamaskProvider({
   }, [activateNetwork, networkActive, networkError, disconnect]);
 
   const { mutateAsync: mutateNonce } = useMutation(getNonceApi);
-  const { mutateAsync: mutateVerify } = useMutation(verifySigApi);
+  const { mutateAsync: mutateVerify } = useMutation(
+    (variables: VerifySigVariables<string>) =>
+      mutationRequest<string, VerifySigVariables<string>, VerifySigReturn>(
+        verifySigQuery,
+        variables
+      )
+  );
+  // const { mutateAsync: mutateVerify } = useMutation(verifySigApi);
 
   const getNonce = useCallback(async () => {
     try {
