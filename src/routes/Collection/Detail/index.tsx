@@ -7,6 +7,8 @@ import Highcharts from "highcharts";
 import generateFloorData from "./floorDataGenerator";
 import colors from "../../../Shared/utils/colors";
 import generateVolumeData from "./volumeDataGenerator";
+import { usePetsQuery } from "../../../generated/index";
+import graphqlRequestClient from "../../../lib/graphqlRequestClient";
 
 const CollectionDetail = () => {
   const { address } = useParams();
@@ -79,6 +81,10 @@ const CollectionDetail = () => {
   };
 
   console.log({ options });
+
+  const { data, error } = usePetsQuery(graphqlRequestClient);
+
+  console.log({ data, error });
 
   return (
     <chakra.section h="100%" w="100%">

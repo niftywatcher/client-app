@@ -7,6 +7,7 @@ import {
   useGenerateNonceMutation,
   useVerifySignatureMutation,
 } from "../../generated";
+import graphqlRequestClient from "../../lib/graphqlRequestClient";
 
 /**
  * This provider helps you stay connected when you leave the page. It was inspired by this solution: https://www.reddit.com/r/ethdev/comments/nw7iyv/displaying_connected_wallet_after_browser_refresh/h5uxl88/?context=3
@@ -59,8 +60,11 @@ function MetamaskProvider({
   //       variables
   //     )
   // );
-  const { mutateAsync: mutateNonce } = useGenerateNonceMutation();
-  const { mutateAsync: mutateVerify } = useVerifySignatureMutation();
+  const { mutateAsync: mutateNonce } =
+    useGenerateNonceMutation(graphqlRequestClient);
+
+  const { mutateAsync: mutateVerify } =
+    useVerifySignatureMutation(graphqlRequestClient);
 
   const getNonce = useCallback(async () => {
     try {
