@@ -23,5 +23,7 @@ type Pet {
 
 type Person {
   name: String @fake(type: firstName)
+  lastName: String @fake(type: lastName)
   age: Int
+  country: String @fake(type: country)
 }
