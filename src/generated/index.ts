@@ -39,6 +39,12 @@ export type MutationVerifySignatureArgs = {
   signature: Scalars['String'];
 };
 
+export type Person = {
+  __typename?: 'Person';
+  age?: Maybe<Scalars['Int']>;
+  name?: Maybe<Scalars['String']>;
+};
+
 export type Pet = {
   __typename?: 'Pet';
   image?: Maybe<Scalars['String']>;
@@ -48,6 +54,7 @@ export type Pet = {
 export type Query = {
   __typename?: 'Query';
   NoOp?: Maybe<Scalars['Boolean']>;
+  person?: Maybe<Person>;
   pet?: Maybe<Pet>;
   pets?: Maybe<Array<Maybe<Pet>>>;
 };
@@ -250,7 +257,7 @@ export type VerifySignatureMutation = { __typename?: 'Mutation', VerifySignature
 export type PetsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type PetsQuery = { __typename?: 'Query', pets?: Array<{ __typename?: 'Pet', name?: string | null | undefined, image?: string | null | undefined } | null | undefined> | null | undefined };
+export type PetsQuery = { __typename?: 'Query', pets?: Array<{ __typename?: 'Pet', name?: string | null | undefined, image?: string | null | undefined } | null | undefined> | null | undefined, person?: { __typename?: 'Person', name?: string | null | undefined, age?: number | null | undefined } | null | undefined };
 
 
 export const GenerateNonceDocument = `
@@ -294,6 +301,10 @@ export const PetsDocument = `
   pets {
     name
     image
+  }
+  person {
+    name
+    age
   }
 }
     `;

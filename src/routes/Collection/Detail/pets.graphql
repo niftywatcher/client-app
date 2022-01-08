@@ -3,4 +3,8 @@ query pets{
     name
     image
   }
+  person {
+    name
+    age
+  }
 }
