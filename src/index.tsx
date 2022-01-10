@@ -35,7 +35,13 @@ import { CookiesProvider } from "react-cookie";
 
  */
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+    },
+  },
+});
 
 function getLibrary(provider: any, connector: any) {
   return new ethers.providers.Web3Provider(provider); // this will vary according to whether you use e.g. ethers or web3.js
