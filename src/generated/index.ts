@@ -42,6 +42,8 @@ export type MutationVerifySignatureArgs = {
 export type Person = {
   __typename?: 'Person';
   age?: Maybe<Scalars['Int']>;
+  country?: Maybe<Scalars['String']>;
+  lastName?: Maybe<Scalars['String']>;
   name?: Maybe<Scalars['String']>;
 };
 

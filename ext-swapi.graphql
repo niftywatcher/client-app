@@ -16,6 +16,10 @@ extend type Query {
   person: Person
 }
 
+# extend type Mutation {
+#   VerifySignature(address: String!, signature: String!): Boolean
+# }
+
 type Pet {
   name: String @fake(type: firstName)
   image: String @fake(type: imageUrl, options: { imageKeywords: ["cats"] })
@@ -27,3 +31,25 @@ type Person {
   age: Int
   country: String @fake(type: country)
 }
+
+
+# #
+# type Mutation {
+#   #
+#   NoOp: Boolean
+
+#   #
+#   GenerateNonce(address: String!): String!
+
+#   #
+#   VerifySignature(address: String!, signature: String!): Boolean!
+# }
+
+# #
+# type Query {
+#   #
+#   NoOp: Boolean
+# }
+
+# #
+# scalar Time
