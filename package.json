@@ -38,7 +38,7 @@
     "eject": "react-scripts eject",
     "format": "prettier --write src/**/*.ts{,x}",
     "lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
-    "graphql:codegen": "graphql-codegen --config codegen.yml",
+    "gql:codegen": "graphql-codegen --config codegen.yml",
     "gql-faker-extend": "graphql-faker ./ext-swapi-server.graphql --extend http://localhost:8000/graphql",
     "gql-faker-local": "graphql-faker ./ext-swapi-local.graphql"
   },

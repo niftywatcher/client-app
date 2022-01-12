@@ -51,15 +51,6 @@ function MetamaskProvider({
       });
   }, [activateNetwork, networkActive, networkError, disconnect]);
 
-  // const { mutateAsync: mutateNonce } = useMutation(getNonceApi);
-  // const { mutateAsync: mutateVerify } = useMutation(verifySigApi);
-  // const { mutateAsync: mutateVerify } = useMutation(
-  //   (variables: VerifySigVariables<string>) =>
-  //     mutationRequest<string, VerifySigVariables<string>, VerifySigReturn>(
-  //       verifySigQuery,
-  //       variables
-  //     )
-  // );
   const { mutateAsync: mutateNonce } =
     useGenerateNonceMutation(graphqlRequestClient);
 
@@ -76,7 +67,6 @@ function MetamaskProvider({
       }
     } catch (err) {
       console.log({ getNonceError: err });
-      return "8f13d9a7103441f37f8e7960de0c1469f2ddab11178a9a596967e91e51522c14";
     }
   }, [account, mutateNonce]);
 
@@ -92,7 +82,6 @@ function MetamaskProvider({
         }
       } catch (err) {
         console.log({ verifySignature: err });
-        return true;
       }
     },
     [account, mutateVerify]

@@ -4,33 +4,42 @@ import { camelCase, cloneDeep, isEqual } from "lodash";
 import Link from "./Link";
 import { useWeb3React } from "@web3-react/core";
 import NewWatchListInput from "./NewWatchListInput";
-import { useApp } from "../../app-context";
+import { useAppState } from "../../app-context";
 import { useNavigate } from "react-router-dom";
 
 const Navigation = () => {
   const navigate = useNavigate();
   const [watchListName, setWatchListName] = useState("");
   const { active } = useWeb3React();
-  const { state, setState } = useApp();
+  const { state, setState } = useAppState();
   const { watchLists } = state.user;
-  const [activeItem, setActiveItem] = useState(watchLists[0].id);
+  const [activeItem, setActiveItem] = useState("0");
+
+  if (!watchLists) {
+    return <div>loading</div>;
+  }
 
   const watchListsSorted = Object.entries(watchLists)
-    .map(([id, wl]) => ({ ...wl, id: +id }))
+    .map(([id, wl]) => ({ ...wl, id: "" + id }))
     .sort((a, b) => a.order - b.order);
 
   const handleSetWatchList = () => {
     if (watchListName !== "") {
       setState((prevState) => {
         const newState = cloneDeep(prevState);
-        const id = Object.keys(newState.user.watchLists).length++;
 
-        newState.user.watchLists[id] = {
-          id,
-          order: id,
-          slug: camelCase(watchListName),
-          name: watchListName,
-        };
+        if (newState.user && newState.user.watchLists) {
+          const id = Object.keys(newState.user.watchLists).length++;
+
+          newState.user.watchLists[id] = {
+            id,
+            order: id,
+            slug: camelCase(watchListName),
+            name: watchListName,
+          };
+
+          return newState;
+        }
 
         return newState;
       });
@@ -38,6 +47,8 @@ const Navigation = () => {
       setWatchListName("");
     }
   };
+
+  console.log(watchListsSorted);
 
   return (
     <chakra.nav h="100vh" w="100%" backgroundColor="black" paddingTop="50px">

@@ -1,6 +1,6 @@
 import { GraphQLClient } from 'graphql-request';
 import { RequestInit } from 'graphql-request/dist/types.dom';
-import { useMutation, UseMutationOptions, useQuery, UseQueryOptions } from 'react-query';
+import { useQuery, UseQueryOptions, useMutation, UseMutationOptions } from 'react-query';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
@@ -23,7 +23,7 @@ export type Scalars = {
 
 export type Mutation = {
   __typename?: 'Mutation';
-  GenerateNonce: Scalars['String'];
+  GenerateNonce?: Maybe<Scalars['String']>;
   NoOp?: Maybe<Scalars['Boolean']>;
   VerifySignature: Scalars['Boolean'];
 };
@@ -39,26 +39,24 @@ export type MutationVerifySignatureArgs = {
   signature: Scalars['String'];
 };
 
-export type Person = {
-  __typename?: 'Person';
-  age?: Maybe<Scalars['Int']>;
-  country?: Maybe<Scalars['String']>;
-  lastName?: Maybe<Scalars['String']>;
-  name?: Maybe<Scalars['String']>;
-};
-
-export type Pet = {
-  __typename?: 'Pet';
-  image?: Maybe<Scalars['String']>;
-  name?: Maybe<Scalars['String']>;
-};
-
 export type Query = {
   __typename?: 'Query';
   NoOp?: Maybe<Scalars['Boolean']>;
-  person?: Maybe<Person>;
-  pet?: Maybe<Pet>;
-  pets?: Maybe<Array<Maybe<Pet>>>;
+  user?: Maybe<User>;
+};
+
+export type User = {
+  __typename?: 'User';
+  trending?: Maybe<WatchList>;
+  watchLists?: Maybe<Array<Maybe<WatchList>>>;
+};
+
+export type WatchList = {
+  __typename?: 'WatchList';
+  id: Scalars['String'];
+  name: Scalars['String'];
+  order: Scalars['Int'];
+  slug: Scalars['String'];
 };
 
 export enum Fake__Locale {
@@ -241,12 +239,17 @@ export type Fake__Options = {
   useFullAddress?: InputMaybe<Scalars['Boolean']>;
 };
 
+export type AppStartupQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type AppStartupQuery = { __typename?: 'Query', user?: { __typename?: 'User', trending?: { __typename?: 'WatchList', id: string, order: number, name: string, slug: string } | null | undefined, watchLists?: Array<{ __typename?: 'WatchList', id: string, order: number, name: string, slug: string } | null | undefined> | null | undefined } | null | undefined };
+
 export type GenerateNonceMutationVariables = Exact<{
   address: Scalars['String'];
 }>;
 
 
-export type GenerateNonceMutation = { __typename?: 'Mutation', GenerateNonce: string };
+export type GenerateNonceMutation = { __typename?: 'Mutation', GenerateNonce?: string | null | undefined };
 
 export type VerifySignatureMutationVariables = Exact<{
   address: Scalars['String'];
@@ -256,12 +259,39 @@ export type VerifySignatureMutationVariables = Exact<{
 
 export type VerifySignatureMutation = { __typename?: 'Mutation', VerifySignature: boolean };
 
-export type PetsQueryVariables = Exact<{ [key: string]: never; }>;
 
-
-export type PetsQuery = { __typename?: 'Query', pets?: Array<{ __typename?: 'Pet', name?: string | null | undefined, image?: string | null | undefined } | null | undefined> | null | undefined, person?: { __typename?: 'Person', name?: string | null | undefined, age?: number | null | undefined } | null | undefined };
-
-
+export const AppStartupDocument = `
+    query appStartup {
+  user {
+    trending {
+      id
+      order
+      name
+      slug
+    }
+    watchLists {
+      id
+      order
+      name
+      slug
+    }
+  }
+}
+    `;
+export const useAppStartupQuery = <
+      TData = AppStartupQuery,
+      TError = unknown
+    >(
+      client: GraphQLClient,
+      variables?: AppStartupQueryVariables,
+      options?: UseQueryOptions<AppStartupQuery, TError, TData>,
+      headers?: RequestInit['headers']
+    ) =>
+    useQuery<AppStartupQuery, TError, TData>(
+      variables === undefined ? ['appStartup'] : ['appStartup', variables],
+      fetcher<AppStartupQuery, AppStartupQueryVariables>(client, AppStartupDocument, variables, headers),
+      options
+    );
 export const GenerateNonceDocument = `
     mutation generateNonce($address: String!) {
   GenerateNonce(address: $address)
@@ -296,31 +326,5 @@ export const useVerifySignatureMutation = <
     useMutation<VerifySignatureMutation, TError, VerifySignatureMutationVariables, TContext>(
       'verifySignature',
       (variables?: VerifySignatureMutationVariables) => fetcher<VerifySignatureMutation, VerifySignatureMutationVariables>(client, VerifySignatureDocument, variables, headers)(),
-      options
-    );
-export const PetsDocument = `
-    query pets {
-  pets {
-    name
-    image
-  }
-  person {
-    name
-    age
-  }
-}
-    `;
-export const usePetsQuery = <
-      TData = PetsQuery,
-      TError = unknown
-    >(
-      client: GraphQLClient,
-      variables?: PetsQueryVariables,
-      options?: UseQueryOptions<PetsQuery, TError, TData>,
-      headers?: RequestInit['headers']
-    ) =>
-    useQuery<PetsQuery, TError, TData>(
-      variables === undefined ? ['pets'] : ['pets', variables],
-      fetcher<PetsQuery, PetsQueryVariables>(client, PetsDocument, variables, headers),
       options
     );

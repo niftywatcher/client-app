@@ -8,23 +8,26 @@ type WatchList = {
 };
 
 type State = {
+  loading: boolean;
   user: {
-    watchLists: {
+    watchLists?: {
       [id: string]: WatchList;
     };
   };
 };
 
 const initialState: State = {
+  loading: false,
   user: {
-    watchLists: {
-      0: {
-        id: 0,
-        order: 0,
-        name: "Trending Collections",
-        slug: "trending",
-      },
-    },
+    // watchLists: null,
+    // watchLists: {
+    //   0: {
+    //     id: 0,
+    //     order: 0,
+    //     name: "Trending Collections",
+    //     slug: "trending",
+    //   },
+    // },
   },
 };
 
@@ -41,7 +44,7 @@ function AppProvider({ children }: { children: JSX.Element }) {
   return <AppContext.Provider value={store}>{children}</AppContext.Provider>;
 }
 
-function useApp() {
+function useAppState() {
   const context = React.useContext(AppContext);
   if (context === undefined) {
     throw new Error("useApp must be used within a AppProvider");
@@ -49,4 +52,4 @@ function useApp() {
   return context;
 }
 
-export { AppProvider, useApp };
+export { AppProvider, useAppState };
