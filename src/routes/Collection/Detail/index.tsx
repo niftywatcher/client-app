@@ -29,7 +29,10 @@ const CollectionDetail = () => {
         type: "line",
         name: "Floor",
         showInLegend: false,
-        color: "#34C096",
+        // color: "red",
+        // color: "#34C096",
+        // color: "#68D391",
+        color: "#48BB78",
         data: generateFloorData(),
         zIndex: 2,
         // yAxis: 1,
@@ -38,7 +41,8 @@ const CollectionDetail = () => {
         type: "column",
         name: "volume",
         showInLegend: false,
-        color: "#63B3ED",
+        color: "#9F7AEA",
+        // color: "#3182CE",
         data: generateVolumeData(),
         zIndex: 1,
         yAxis: 1,
@@ -73,8 +77,6 @@ const CollectionDetail = () => {
       },
     ],
   };
-
-  console.log({ options });
 
   return (
     <chakra.section h="100%" w="100%">

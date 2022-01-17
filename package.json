@@ -18,11 +18,13 @@
     "@web3-react/injected-connector": "^6.0.7",
     "ethers": "^5.4",
     "framer-motion": "^4",
+    "graphql": "^16.2.0",
     "highcharts": "^9.3.1",
     "highcharts-react-official": "^3.1.0",
     "history": "5",
     "lodash": "^4.17.21",
     "react": "^17.0.2",
+    "react-cookie": "^4.1.1",
     "react-dom": "^17.0.2",
     "react-router-dom": "6",
     "react-scripts": "4.0.3",
@@ -35,7 +37,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "format": "prettier --write src/**/*.ts{,x}",
-    "lint": "tsc --noEmit && eslint src/**/*.ts{,x}"
+    "lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
+    "gql:codegen": "graphql-codegen --config codegen.yml",
+    "gql-faker-extend": "graphql-faker ./ext-swapi-server.graphql --extend http://localhost:8000/graphql",
+    "gql-faker-local": "graphql-faker ./ext-swapi-local.graphql"
   },
   "eslintConfig": {
     "extends": [
@@ -56,6 +61,11 @@
     ]
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "2.3.1",
+    "@graphql-codegen/introspection": "2.1.1",
+    "@graphql-codegen/typescript": "2.4.2",
+    "@graphql-codegen/typescript-operations": "2.2.2",
+    "@graphql-codegen/typescript-react-query": "^3.3.0",
     "@types/react-router-dom": "^5.3.2",
     "@typescript-eslint/eslint-plugin": "^5.3.0",
     "@typescript-eslint/parser": "^5.3.0",
@@ -64,6 +74,8 @@
     "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-jest": "^25.2.2",
     "eslint-plugin-prettier": "^4.0.0",
-    "prettier": "^2.4.1"
+    "graphql-request": "^3.7.0",
+    "prettier": "^2.4.1",
+    "react-query": "^3.34.7"
   }
 }

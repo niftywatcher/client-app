@@ -39,6 +39,14 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+## `yarn graphql:codegen`
+
+Builds graphql schema from the server. If you're running the proxy server with mock data you will need to use [http://localhost:9002/graphql](http://localhost:9002/graphql) and have it running. To run proxy server see `yarn gql-faker`. If you're looking to build schema and hooks from server make sure you have [http://localhost:8000/graphql](http://localhost:8000/graphql) running.
+
+## `yarn gql-faker`
+
+Runs a proxy server that connects to the local server you're running. This helps generates mock data and helps us generate our types. Any changes to mock types will be saved in the file `./ext-swapi.graphql`
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).

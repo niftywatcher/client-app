@@ -1,0 +1,55 @@
+# This is sample SDL schema for GraphQL Faker in extend mode.
+#
+# In this mode Faker leverages SDL extend keyword.
+# Also you can use following two directives to enhance fake data:
+#   - @fake
+#   - @examples
+#
+# Press save or Cmd+Enter to apply the changes and update server. Switch to GraphiQL
+# on the left panel to immediately test your changes.
+#
+# Developed with ❤️ by APIs.guru | https://github.com/APIs-guru/graphql-faker
+
+extend type Query {
+  pet: Pet
+  pets: [Pet] @listLength(min: 1, max: 10)
+  person: Person
+}
+
+# extend type Mutation {
+#   VerifySignature(address: String!, signature: String!): Boolean
+# }
+
+type Pet {
+  name: String @fake(type: firstName)
+  image: String @fake(type: imageUrl, options: { imageKeywords: ["cats"] })
+}
+
+type Person {
+  name: String @fake(type: firstName)
+  lastName: String @fake(type: lastName)
+  age: Int
+  country: String @fake(type: country)
+}
+
+
+# #
+# type Mutation {
+#   #
+#   NoOp: Boolean
+
+#   #
+#   GenerateNonce(address: String!): String!
+
+#   #
+#   VerifySignature(address: String!, signature: String!): Boolean!
+# }
+
+# #
+# type Query {
+#   #
+#   NoOp: Boolean
+# }
+
+# #
+# scalar Time

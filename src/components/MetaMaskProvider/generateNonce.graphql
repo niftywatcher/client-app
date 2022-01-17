@@ -1,0 +1,3 @@
+mutation generateNonce($address: String!) {
+  GenerateNonce(address: $address)
+}
