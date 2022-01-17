@@ -1,7 +1,7 @@
 import * as React from "react";
 
 type WatchList = {
-  id: number;
+  id: string;
   order: number;
   name: string;
   slug: string;

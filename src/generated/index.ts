@@ -23,9 +23,16 @@ export type Scalars = {
 
 export type Mutation = {
   __typename?: 'Mutation';
+  CreateWatchList: WatchList;
   GenerateNonce?: Maybe<Scalars['String']>;
   NoOp?: Maybe<Scalars['Boolean']>;
   VerifySignature: Scalars['Boolean'];
+};
+
+
+export type MutationCreateWatchListArgs = {
+  name: Scalars['String'];
+  slug: Scalars['String'];
 };
 
 
@@ -259,6 +266,14 @@ export type VerifySignatureMutationVariables = Exact<{
 
 export type VerifySignatureMutation = { __typename?: 'Mutation', VerifySignature: boolean };
 
+export type CreateWatchListMutationVariables = Exact<{
+  name: Scalars['String'];
+  slug: Scalars['String'];
+}>;
+
+
+export type CreateWatchListMutation = { __typename?: 'Mutation', CreateWatchList: { __typename?: 'WatchList', id: string, order: number, name: string, slug: string } };
+
 
 export const AppStartupDocument = `
     query appStartup {
@@ -326,5 +341,28 @@ export const useVerifySignatureMutation = <
     useMutation<VerifySignatureMutation, TError, VerifySignatureMutationVariables, TContext>(
       'verifySignature',
       (variables?: VerifySignatureMutationVariables) => fetcher<VerifySignatureMutation, VerifySignatureMutationVariables>(client, VerifySignatureDocument, variables, headers)(),
+      options
+    );
+export const CreateWatchListDocument = `
+    mutation createWatchList($name: String!, $slug: String!) {
+  CreateWatchList(name: $name, slug: $slug) {
+    id
+    order
+    name
+    slug
+  }
+}
+    `;
+export const useCreateWatchListMutation = <
+      TError = unknown,
+      TContext = unknown
+    >(
+      client: GraphQLClient,
+      options?: UseMutationOptions<CreateWatchListMutation, TError, CreateWatchListMutationVariables, TContext>,
+      headers?: RequestInit['headers']
+    ) =>
+    useMutation<CreateWatchListMutation, TError, CreateWatchListMutationVariables, TContext>(
+      'createWatchList',
+      (variables?: CreateWatchListMutationVariables) => fetcher<CreateWatchListMutation, CreateWatchListMutationVariables>(client, CreateWatchListDocument, variables, headers)(),
       options
     );

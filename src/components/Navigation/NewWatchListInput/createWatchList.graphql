@@ -1,0 +1,8 @@
+mutation createWatchList($name: String!, $slug: String!) {
+  CreateWatchList(name: $name, slug: $slug) {
+    id
+    order
+    name
+    slug
+  }
+}

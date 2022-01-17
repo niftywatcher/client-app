@@ -6,6 +6,8 @@ import { useWeb3React } from "@web3-react/core";
 import NewWatchListInput from "./NewWatchListInput";
 import { useAppState } from "../../app-context";
 import { useNavigate } from "react-router-dom";
+import { useCreateWatchListMutation } from "../../generated";
+import graphqlRequestClient from "../../lib/graphqlRequestClient";
 
 const Navigation = () => {
   const navigate = useNavigate();
@@ -13,7 +15,9 @@ const Navigation = () => {
   const { active } = useWeb3React();
   const { state, setState } = useAppState();
   const { watchLists } = state.user;
-  const [activeItem, setActiveItem] = useState("0");
+  const [activeItem, setActiveItem] = useState("0123");
+  const { mutateAsync, isLoading } =
+    useCreateWatchListMutation(graphqlRequestClient);
 
   if (!watchLists) {
     return <div>loading</div>;
@@ -23,20 +27,20 @@ const Navigation = () => {
     .map(([id, wl]) => ({ ...wl, id: "" + id }))
     .sort((a, b) => a.order - b.order);
 
-  const handleSetWatchList = () => {
+  const handleSetWatchList = async () => {
     if (watchListName !== "") {
+      const response = await mutateAsync({
+        name: watchListName,
+        slug: camelCase(watchListName),
+      });
+
+      const data = response.CreateWatchList;
+
       setState((prevState) => {
         const newState = cloneDeep(prevState);
 
         if (newState.user && newState.user.watchLists) {
-          const id = Object.keys(newState.user.watchLists).length++;
-
-          newState.user.watchLists[id] = {
-            id,
-            order: id,
-            slug: camelCase(watchListName),
-            name: watchListName,
-          };
+          newState.user.watchLists[data.id] = { ...data };
 
           return newState;
         }
@@ -61,7 +65,7 @@ const Navigation = () => {
           return (
             <Link
               name={item.name}
-              active={+item.id === +activeItem}
+              active={"" + item.id === "" + activeItem}
               key={item.id}
               onClick={() => {
                 setActiveItem(item.id);
@@ -76,6 +80,7 @@ const Navigation = () => {
           setValue={setWatchListName}
           disabled={!active}
           handleSetWatchList={handleSetWatchList}
+          loading={isLoading}
         />
       </VStack>
     </chakra.nav>
