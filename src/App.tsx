@@ -66,8 +66,6 @@ function App() {
   //   });
   // }
 
-  console.log({ appState });
-
   return (
     <BrowserRouter>
       <Routes>

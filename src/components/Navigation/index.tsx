@@ -48,8 +48,6 @@ const Navigation = () => {
     }
   };
 
-  console.log(watchListsSorted);
-
   return (
     <chakra.nav h="100vh" w="100%" backgroundColor="black" paddingTop="50px">
       <VStack

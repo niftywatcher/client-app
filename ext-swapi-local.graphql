@@ -64,7 +64,7 @@ type WatchList {
 type Mutation {
   NoOp: Boolean
   GenerateNonce(address: String!): String @examples(values: ["8f13d9a7103441f37f8e7960de0c1469f2ddab11178a9a596967e91e51522c14", "123mfjh27103441f37f8e7960de0c1469f2ddab11178a9a596967e9fda"])
-  VerifySignature(address: String!, signature: String!): Boolean!
+  VerifySignature(address: String!, signature: String!): Boolean! @examples(values: true)
 }
 
 #

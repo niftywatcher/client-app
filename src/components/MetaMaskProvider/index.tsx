@@ -97,6 +97,8 @@ function MetamaskProvider({
         if (isAuthorized && networkActive && loaded && !networkError && !jwt) {
           const nonce = await getNonce();
 
+          console.log({ nonce });
+
           const signer = library.getSigner();
           const sig = await signer.signMessage(nonce);
 
