@@ -1,0 +1,14 @@
+query trendingCollections {
+  trending {
+    id
+    floor
+    address
+    description
+    imageUrl
+    name
+    symbol
+    twitterUsername
+    changeInFloor5Minutes
+    floorData
+  }
+}

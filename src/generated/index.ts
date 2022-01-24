@@ -21,6 +21,20 @@ export type Scalars = {
   examples__JSON: any;
 };
 
+export type Collection = {
+  __typename?: 'Collection';
+  address: Scalars['String'];
+  changeInFloor5Minutes: Scalars['Float'];
+  description: Scalars['String'];
+  floor: Scalars['Float'];
+  floorData: Array<Scalars['Float']>;
+  id: Scalars['String'];
+  imageUrl: Scalars['String'];
+  name: Scalars['String'];
+  symbol: Scalars['String'];
+  twitterUsername: Scalars['String'];
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
   CreateWatchList: WatchList;
@@ -49,6 +63,7 @@ export type MutationVerifySignatureArgs = {
 export type Query = {
   __typename?: 'Query';
   NoOp?: Maybe<Scalars['Boolean']>;
+  trending: Array<Collection>;
   user?: Maybe<User>;
 };
 
@@ -274,6 +289,11 @@ export type CreateWatchListMutationVariables = Exact<{
 
 export type CreateWatchListMutation = { __typename?: 'Mutation', CreateWatchList: { __typename?: 'WatchList', id: string, order: number, name: string, slug: string } };
 
+export type TrendingCollectionsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type TrendingCollectionsQuery = { __typename?: 'Query', trending: Array<{ __typename?: 'Collection', id: string, floor: number, address: string, description: string, imageUrl: string, name: string, symbol: string, twitterUsername: string, changeInFloor5Minutes: number, floorData: Array<number> }> };
+
 
 export const AppStartupDocument = `
     query appStartup {
@@ -364,5 +384,35 @@ export const useCreateWatchListMutation = <
     useMutation<CreateWatchListMutation, TError, CreateWatchListMutationVariables, TContext>(
       'createWatchList',
       (variables?: CreateWatchListMutationVariables) => fetcher<CreateWatchListMutation, CreateWatchListMutationVariables>(client, CreateWatchListDocument, variables, headers)(),
+      options
+    );
+export const TrendingCollectionsDocument = `
+    query trendingCollections {
+  trending {
+    id
+    floor
+    address
+    description
+    imageUrl
+    name
+    symbol
+    twitterUsername
+    changeInFloor5Minutes
+    floorData
+  }
+}
+    `;
+export const useTrendingCollectionsQuery = <
+      TData = TrendingCollectionsQuery,
+      TError = unknown
+    >(
+      client: GraphQLClient,
+      variables?: TrendingCollectionsQueryVariables,
+      options?: UseQueryOptions<TrendingCollectionsQuery, TError, TData>,
+      headers?: RequestInit['headers']
+    ) =>
+    useQuery<TrendingCollectionsQuery, TError, TData>(
+      variables === undefined ? ['trendingCollections'] : ['trendingCollections', variables],
+      fetcher<TrendingCollectionsQuery, TrendingCollectionsQueryVariables>(client, TrendingCollectionsDocument, variables, headers),
       options
     );

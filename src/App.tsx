@@ -40,7 +40,6 @@ function App() {
     }
   }, [isLoading, data, setAppState]);
 
-  console.log({ appState });
   // const { data, isLoading } = useAppStartupQuery(graphqlRequestClient);
 
   // if (isLoading) {

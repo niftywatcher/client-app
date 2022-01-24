@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CollectionList from "../../../components/CollectionList";
 import collectionsData from "../../../collections.json";
 import WatchList from "../../../Shared/Interfaces/WatchList";
+import { useTrendingCollectionsQuery } from "../../../generated";
+import graphqlRequestClient from "../../../lib/graphqlRequestClient";
+import { isNil } from "lodash";
+import { Center, Spinner } from "@chakra-ui/react";
 
 const Trending = () => {
-  const filteredCollections = collectionsData.slice(0, 10);
+  useEffect(() => {}, []);
   const [watchLists, setWatchLists] = useState<{ [id: number]: WatchList }>({
     0: {
       id: 0,
@@ -13,25 +17,36 @@ const Trending = () => {
     },
   });
 
-  /**
-   * problem: how do we fetch a list of trending watch lists?
-   *
-   * 1) fetch all watchLists first then make a fetch for each WL after that
-   * 2) Fetch everything all at once
-   *
-   * option 1)
-   *
-   * 1. Check if we have the things we need in appState
-   * 2. Look for the trending watch List and fetch for that list (for now we can return random data for it)
-   * 3. If we want to add things to it, we can create a mutation, but rn we'll just modify the current list
-   */
+  const { data, isError, isLoading } =
+    useTrendingCollectionsQuery(graphqlRequestClient);
+
+  if (isError) {
+    console.log("is error", isError);
+    return <div>Error</div>;
+  }
+
+  if (!data && !isLoading) {
+    console.log(" no data ", data);
+    return <div>No Data</div>;
+  }
+
+  const trending = data && data.trending ? data.trending : [];
 
   return (
-    <CollectionList
-      collections={filteredCollections}
-      watchLists={watchLists}
-      setWatchLists={setWatchLists}
-    />
+    <>
+      {isLoading && (
+        <Center h="100px">
+          <Spinner />
+        </Center>
+      )}
+      {!isLoading && !isNil(data) && (
+        <CollectionList
+          collections={trending}
+          watchLists={watchLists}
+          setWatchLists={setWatchLists}
+        />
+      )}
+    </>
   );
 };
 
