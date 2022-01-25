@@ -49,7 +49,6 @@
 # }
 
 type User {
-  trending: WatchList @examples(values: { id: "0123", order: 0, name: "Trending Collection", slug: "trending"})
   watchLists: [WatchList]
 }
 

@@ -69,7 +69,6 @@ export type Query = {
 
 export type User = {
   __typename?: 'User';
-  trending?: Maybe<WatchList>;
   watchLists?: Maybe<Array<Maybe<WatchList>>>;
 };
 
@@ -264,7 +263,7 @@ export type Fake__Options = {
 export type AppStartupQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type AppStartupQuery = { __typename?: 'Query', user?: { __typename?: 'User', trending?: { __typename?: 'WatchList', id: string, order: number, name: string, slug: string } | null | undefined, watchLists?: Array<{ __typename?: 'WatchList', id: string, order: number, name: string, slug: string } | null | undefined> | null | undefined } | null | undefined };
+export type AppStartupQuery = { __typename?: 'Query', user?: { __typename?: 'User', watchLists?: Array<{ __typename?: 'WatchList', id: string, order: number, name: string, slug: string } | null | undefined> | null | undefined } | null | undefined };
 
 export type GenerateNonceMutationVariables = Exact<{
   address: Scalars['String'];
@@ -298,12 +297,6 @@ export type TrendingCollectionsQuery = { __typename?: 'Query', trending: Array<{
 export const AppStartupDocument = `
     query appStartup {
   user {
-    trending {
-      id
-      order
-      name
-      slug
-    }
     watchLists {
       id
       order

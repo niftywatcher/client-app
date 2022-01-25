@@ -6,9 +6,13 @@ import { useTrendingCollectionsQuery } from "../../../generated";
 import graphqlRequestClient from "../../../lib/graphqlRequestClient";
 import { isNil } from "lodash";
 import { Center, Spinner } from "@chakra-ui/react";
+import { useAppState } from "../../../app-context";
 
 const Trending = () => {
-  useEffect(() => {}, []);
+  const { state: appState, setState: setAppState } = useAppState();
+
+  console.log({ appState });
+
   const [watchLists, setWatchLists] = useState<{ [id: number]: WatchList }>({
     0: {
       id: 0,

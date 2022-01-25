@@ -22,12 +22,12 @@ function App() {
       setAppState(() => {
         const { user } = data;
 
-        const { trending, watchLists } = user || {};
+        const { watchLists } = user || {};
 
         return {
           loading: false,
           user: {
-            watchLists: [trending].concat(watchLists).reduce((a, b) => {
+            watchLists: (watchLists || []).reduce((a, b) => {
               if (!isNil(b) && b.id) {
                 a[b.id] = b;
               }
@@ -39,33 +39,6 @@ function App() {
       });
     }
   }, [isLoading, data, setAppState]);
-
-  // const { data, isLoading } = useAppStartupQuery(graphqlRequestClient);
-
-  // if (isLoading) {
-  //   setAppState((prevState) => ({ ...prevState, loading: true }));
-  // }
-
-  // if (data && data.user) {
-  //   setAppState(() => {
-  //     const { user } = data;
-
-  //     const { trending, watchLists } = user || {};
-
-  //     return {
-  //       loading: false,
-  //       user: {
-  //         watchLists: [trending].concat(watchLists).reduce((a, b) => {
-  //           if (!isNil(b) && b.id) {
-  //             a[b.id] = b;
-  //           }
-
-  //           return a;
-  //         }, {} as { [id: string]: any }),
-  //       },
-  //     };
-  //   });
-  // }
 
   return (
     <BrowserRouter>
