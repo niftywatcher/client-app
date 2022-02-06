@@ -38,9 +38,8 @@ export type Collection = {
 export type Mutation = {
   __typename?: 'Mutation';
   CreateWatchList: WatchList;
-  GenerateNonce?: Maybe<Scalars['String']>;
-  NoOp?: Maybe<Scalars['Boolean']>;
-  VerifySignature: Scalars['Boolean'];
+  GenerateNonce: Scalars['String'];
+  VerifySignature: Scalars['String'];
 };
 
 
@@ -62,9 +61,16 @@ export type MutationVerifySignatureArgs = {
 
 export type Query = {
   __typename?: 'Query';
-  NoOp?: Maybe<Scalars['Boolean']>;
+  GetAddress: Scalars['String'];
+  GetMockToken: Scalars['String'];
+  Ready: Scalars['Boolean'];
   trending: Array<Collection>;
   user?: Maybe<User>;
+};
+
+
+export type QueryGetMockTokenArgs = {
+  address: Scalars['String'];
 };
 
 export type User = {
@@ -270,7 +276,7 @@ export type GenerateNonceMutationVariables = Exact<{
 }>;
 
 
-export type GenerateNonceMutation = { __typename?: 'Mutation', GenerateNonce?: string | null | undefined };
+export type GenerateNonceMutation = { __typename?: 'Mutation', GenerateNonce: string };
 
 export type VerifySignatureMutationVariables = Exact<{
   address: Scalars['String'];
@@ -278,7 +284,7 @@ export type VerifySignatureMutationVariables = Exact<{
 }>;
 
 
-export type VerifySignatureMutation = { __typename?: 'Mutation', VerifySignature: boolean };
+export type VerifySignatureMutation = { __typename?: 'Mutation', VerifySignature: string };
 
 export type CreateWatchListMutationVariables = Exact<{
   name: Scalars['String'];

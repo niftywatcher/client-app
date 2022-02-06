@@ -10,16 +10,76 @@
 #
 # Developed with ❤️ by APIs.guru | https://github.com/APIs-guru/graphql-faker
 
-extend type Query {
-  pet: Pet
-  pets: [Pet] @listLength(min: 1, max: 10)
-  user: User
-}
+# extend type Query {
+#   pet: Pet
+#   pets: [Pet] @listLength(min: 1, max: 10)
+#   user: User
+# }
 
-type Pet {
-  name: String @fake(type: firstName)
-  image: String @fake(type: imageUrl, options: { imageKeywords: ["cats"] })
-  age: Int
+# type WatchList {
+#   id: String! @fake(type: uuid)
+#   order: Int! @fake(type: number, options: { minNumber: 1 })
+#   name: String! @fake(type: lorem, options: { loremSize: words })
+#   slug: String !@fake(type: lorem, options: { loremSize: word })
+# }
+
+# type User {
+#   trending: WatchList @examples(values: { id: "0123", order: 0, name: "Trending Collection", slug: "trending"})
+#   watchLists: [WatchList]
+# }
+
+# This is sample SDL schema for GraphQL Faker.
+#
+# There are two directives you can use to enhance fake data:
+#   - @fake
+#   - @examples
+# Each directive has autocompletion working so start by typing @
+#
+# Press save or Cmd+Enter to apply the changes and update server. Switch to GraphiQL
+# on the left panel to immediately test your changes.
+# This tool also supports extending existing APIs. Check graphql-faker --help
+#
+# Developed with ❤️ by APIs.guru | https://github.com/APIs-guru/graphql-faker
+
+# type Company {
+#   id: ID
+#   name: String @fake(type: companyName)
+#   industry: String
+#     @examples(values: ["IT", "Manufacturing", "Medicine", "Media"])
+#   employees: [Employee!] @listLength(min: 5, max: 10)
+# }
+
+# type Employee {
+#   id: ID
+#   firstName: String @fake(type: firstName, locale: en_CA)
+#   lastName: String @fake(type: lastName, locale: en_CA)
+#   address: String @fake(type: streetAddress, options: { useFullAddress: true })
+#   subordinates: [Employee!] @listLength(min: 0, max: 3)
+#   company: Company
+# }
+
+# type Query {
+#   employee(id: ID): Employee
+#   company(id: ID): Company
+#   allCompanies: [Company!]
+# }
+
+#
+
+# type Pet {
+#   name: String @fake(type: firstName)
+#   image: String @fake(type: imageUrl, options: { imageKeywords: ["cats"] })
+# }
+
+# type Person {
+#   name: String @fake(type: firstName)
+#   lastName: String @fake(type: lastName)
+#   age: Int
+#   country: String @fake(type: country)
+# }
+
+type User {
+  watchLists: [WatchList]
 }
 
 type WatchList {
@@ -29,7 +89,139 @@ type WatchList {
   slug: String !@fake(type: lorem, options: { loremSize: word })
 }
 
-type User {
-  trending: WatchList @examples(values: { id: "0123", order: 0, name: "Trending Collection", slug: "trending"})
-  watchLists: [WatchList]
+type Collection {
+  id: String!,
+  floor: Float!,
+  address: String!,
+  description: String!,
+  imageUrl: String!,
+  name: String!,
+  symbol: String!,
+  twitterUsername: String!,
+  changeInFloor5Minutes: Float!,
+  floorData: [Float!]!,
+}
+
+extend type Mutation {
+  CreateWatchList(name: String!, 	slug: String!): WatchList!
+}
+
+#
+extend type Query {
+  #
+  user: User
+  trending: [Collection!]! @listLength(min: 8, max: 9) @examples(values: [
+    {
+      id: "31dbafdc-4d0c-4880-878d-cde2615eb3f2",
+      floor: 0.10500000000000001,
+      address: "0x9546eeb89df8f010da4953c2ef456e282b3db25a",
+      description: "Angry Apes United is a high utility NFT collection of 8,888 Angry Apes that allows holders to earn additional crypto assets through blockchain gaming.",
+      imageUrl: "https://lh3.googleusercontent.com/sx-iJ0IM4aRpsk4outt2S7y0Ox94CUiiuas4BQlWOPZ1VPYqrjEs1oCv073t3pYrVObNUs9aSL4yLzjBByOLSwKXuqbdjMbK1ZlpLw=s120",
+      name: "Angry Apes United",
+      symbol: "AAU",
+      twitterUsername: "https://twitter.com/angryapesunited",
+      changeInFloor5Minutes: 0,
+      floorData: [0, 2, 8, 5, 3, 6],
+    },
+    {
+      id: "d63f263a-4363-4c9a-bf9a-1d4c5c9bbaad",
+      floor: 0.22,
+      address: "0xc631164b6cb1340b5123c9162f8558c866de1926",
+      description: "The Official Divine Anarchy Collection. 10,011 Children of Anarchy.",
+      imageUrl: "https://lh3.googleusercontent.com/biG1zY7CZdt9yXuxr1diwn7YVWXyW6pQ0Ro5-E8dY7SDanAxna3AFP0j6RRLmwGIGRyh8jtV7gKw-luDYoVZ0y2__ck1HxESR-qUXQc=s120",
+      name: "Divine Anarchy",
+      symbol: "DA",
+      twitterUsername: "divineanarchy",
+      changeInFloor5Minutes: 0.23,
+      floorData: [0, 2, 8, 5, 3, 6],
+    },
+    {
+      id: "289c10e7-09a3-4f39-b46b-281be7f48c8f",
+      floor: 0.1,
+      address: "0x2f14f1b6c350c41801b2b7ba9445670d7e2ffc70",
+      description: "THE GOAT SOCIETY IS A COLLECTION OF 10,000 UNIQUE NFTS MEANT TO UNITE DIFFERENT COMMUNITIES AND FANS OF THE REAL-LIFE GOATS—THE GREATEST OF ALL TIMES\nTHE COLLECTION INCLUDES 9,000 GENERATIVE GOATS AND 1,000 UNIQUE HAND-DRAWN GOATS. EACH GOAT IS STORED AS ERC-721 TOKENS ON THE ETHEREUM BLOCKCHAIN.\nEACH GOAT GRANTS A MEMBERSHIP TO THE HERD, OUR EXCLUSIVE GROUP OF INVESTORS THAT HAIL FROM A DIVERSE RANGE OF COMMUNITIES. HERD MEMBERS WILL RECEIVE BENEFITS LIKE ACCESS TO MAJOR EVENTS LIKE SPORTS GAMES, ACADEMY AWARDS, MUSIC FESTIVALS, CONFERENCES, AND CONCERTS.",
+      imageUrl:"https://lh3.googleusercontent.com/bDzTcaVCY2GxBBboP511VS27v9ljR93oZy-ZWdOOM1o8R0r5NuDZX0UqlfXiscoy627b--2g5cIVFbeR6tjuXTxfns4mSRGiluUohQk=s120",
+      name: "THE REAL GOAT SOCIETY",
+      symbol: "GS",
+      twitterUsername: "goatsocietynft",
+      changeInFloor5Minutes: 0.098,
+      floorData: [0, 2, 8, 5, 3, 6],
+    },
+    {
+      id: "53ca25bd-40ae-462e-9d7c-6ebabfeca457",
+      floor: 0.017,
+      address: "0x97597002980134bea46250aa0510c9b90d87a587",
+      description: "Chain Runners are Mega City renegades 100% stored and generated on chain.\n\nVisit http://chainrunners.xyz to find out more.",
+      imageUrl:"https://lh3.googleusercontent.com/3vScLGUcTB7yhItRYXuAFcPGFNJ3kgO0mXeUSUfEMBjGkGPKz__smtXyUlRxzZjr1Y5x8hz1QXoBQSEb8wm4oBByeQC_8WOCaDON4Go=s120",
+      name: "Chain Runners",
+      symbol: "RUN",
+      twitterUsername: "chain_runners",
+      changeInFloor5Minutes: 0.04,
+      floorData: [0, 2, 8, 5, 3, 6],
+    },
+    {
+      id: "29e2b104-bc25-42ed-8f03-5d00684a68ba",
+      floor: 0.1,
+      address: "0x09e0df4ae51111ca27d6b85708cfb3f1f7cae982",
+      description: "10,000 Sipher Nekos, making up the 'Sipherian Flash' collection and the 2nd Fleet. They are the second Genesis race, created by the Mad Scientist as surrogates to embark on amazing adventures. Each of these NFT represent a playable 3D character within the game called World of Sipheria.\n\nAll Neko characters belong to one of four special sub-races: \n\n### Felis\n### Synthetic\n### Phasewalker\n### Crystalis\n\nEach sub-race is constructed with different abilities that will suit a variety of play-style and enemy conditions.\n\nThe Sipherian Flash, like those before them, also come with a random mix of rare costumes and weapons, allowing each adventurer to assemble a uniquely rare costume set. Different costumes will grant different attribute buffs, while character with weapons will act as both rare cosmetic skin and early unlock of various tier of weapons. Character with a complete costume set will get special perks unique to that costume set.",
+      imageUrl:"https://lh3.googleusercontent.com/05CzjTR4KwoX_qTY_U68CegfrCVTAYMmY3txcaauGpjJNZBac2-6hFMQtfcnMIx7g1B3BhBqWmta_mzNyunLLtDygyrW0U6n4nhc=s120",
+      name: "Sipherian Flash",
+      symbol: "NEKO",
+      twitterUsername: "SIPHERxyz",
+      changeInFloor5Minutes: 0.138,
+      floorData: [0, 2, 8, 5, 3, 6],
+    },
+    {
+      id: "c000fa2f-6f38-4dec-bc20-4decba3ddc59",
+      floor: 0.09000000000000001,
+      address: "0x96316355c44be69414756d6706c61e61aecbd5f3",
+      description: "1,000 Legendary Animated Ducks  I  8,000 Uniquely Generated Cosmic Ducks\n",
+      imageUrl:"https://lh3.googleusercontent.com/gAaIagdJbMTjsh9skRwqWq_G1TQfPEMY-UNMJNnOqij6rl_EvNuEyv-B2w_dalr9smeOavXIA_DrSUa4vzFQwHBJOwLSU8hWvPS1-Q=s120",
+      name: "Cosmic Labs",
+      symbol: "CLABS",
+      twitterUsername: "cosmiclabsnft2",
+      changeInFloor5Minutes: 0.030000000000000002,
+      floorData: [0, 2, 8, 5, 3, 6],
+    },
+    {
+      id: "f4438f97-9d8b-4e83-be3b-992fbe30a5ad",
+      floor: 0.02,
+      address: "0x540cc373acfacd250a4250d7b26e9800b71f0484",
+      description: "some description goes here",
+      imageUrl: "https://lh3.googleusercontent.com/C_U4OOWI9L4VI8yiFdk4VGkdI8dhMmWhFLy_WO7oUcdKvJOoraPKsFXB5T30m98GHY5Qh1u2jfBtWWFjniIRxD5btw9-avRHwxHJTLU=s120",
+      name: "DD by BUCKET",
+      symbol: "DD",
+      twitterUsername: "dirtydogsnft",
+      changeInFloor5Minutes: 0,
+      floorData: [0, 2, 8, 5, 3, 6],
+    },
+    {
+      id: "d6edf3bc-c568-4ae7-82d1-bbc94273d94a",
+      floor: 0.007,
+      address: "0x76be3b62873462d2142405439777e971754e8e77",
+      description: "Sci-fi collectable card game with NFTs.",
+      imageUrl: "https://lh3.googleusercontent.com/nxaymgd9aJIzLXb0r3oLO0VCMFi0Zex1ubTmEYekEKwOVq1YijOULDeT1qCjk71OTsQW47zmvZ2ZuycXorgu6WA6Wosc6CiOuVnAXGk=s120",
+      name: "Parallel Alpha",
+      symbol: "LL",
+      twitterUsername: "parallelnft",
+      changeInFloor5Minutes: 0.006,
+      floorData: [0, 2, 8, 5, 3, 6],
+    },
+    {
+      id: "036ac106-6d6b-41e4-8272-ce2144c57c78",
+      floor: 0.05,
+      address: "0x36a52262a85bf8fe213267da4ed85e42e1efed82",
+      description: "The Hor1zon project is a collection of 6,999 Troopers forged in the Metaverse and living on the Ethereum Blockchain. \nEach NFT has specific attributes and variables that makes it unique. Holding a trooper grants the owner access to members-only benefits as well as exclusive physical and virtual merch from the Hor1zon Project universe.\n\nVisit https://hor1zonproject.com website to see more. \n\n",
+      imageUrl: "https://lh3.googleusercontent.com/O-4gBG0Ef2F1sTd5dRS3E1xAvoFWzJnligfSITfSCp_1Lmr1T43FFze3DEiIR9E2OW2IZQNkdBvj3lWG1BHZ-3fqk_MBx3tr0ni48LI=s120",
+      name: "Hor1zon Troopers",
+      symbol: "H1Z",
+      twitterUsername: "hor1zon_project",
+      changeInFloor5Minutes: 0.15,
+      floorData: [0, 2, 8, 5, 3, 6],
+    }
+  ])
+  # pet: Pet
+  # pets: [Pet] @listLength(min: 1, max: 10)
+  # person: Person
+  
 }
