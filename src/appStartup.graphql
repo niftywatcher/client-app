@@ -1,11 +1,5 @@
 query appStartup {
   user {
-    trending {
-      id
-      order
-      name
-      slug
-    }
     watchLists {
       id
       order

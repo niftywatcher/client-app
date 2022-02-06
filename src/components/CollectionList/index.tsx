@@ -1,12 +1,12 @@
 import React, { memo } from "react";
 import { VStack } from "@chakra-ui/react";
 import Card from "./Card";
-import Collection from "../../Shared/Interfaces/collection";
 import WatchList from "../../Shared/Interfaces/WatchList";
 import { isEqual } from "lodash";
+import { Collection } from "../../generated";
 
-type CollectionListProps = {
-  collections: Collection[];
+type CollectionListProps<T> = {
+  collections: T[];
   setWatchLists: React.Dispatch<
     React.SetStateAction<{ [id: number]: WatchList }>
   >;
@@ -17,12 +17,13 @@ const CollectionList = ({
   collections,
   setWatchLists,
   watchLists,
-}: CollectionListProps) => {
+}: CollectionListProps<Collection>) => {
   return (
     <VStack align="flex-start" spacing="8" paddingBottom="50px">
-      {collections.map((collection: Collection) => (
+      {collections.map((collection, i) => (
         <Card
-          key={collection.id}
+          // TODO: remove 'i' index as
+          key={collection.id + "" + i}
           address={collection.address}
           collectionId={collection.id}
           name={collection.name}
@@ -30,7 +31,7 @@ const CollectionList = ({
           data={collection.floorData}
           setWatchLists={setWatchLists}
           watchLists={watchLists}
-          deltaFloor={collection.deltaStats.floor}
+          deltaFloor={collection.changeInFloor5Minutes}
         />
       ))}
     </VStack>

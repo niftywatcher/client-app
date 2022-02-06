@@ -21,12 +21,25 @@ export type Scalars = {
   examples__JSON: any;
 };
 
+export type Collection = {
+  __typename?: 'Collection';
+  address: Scalars['String'];
+  changeInFloor5Minutes: Scalars['Float'];
+  description: Scalars['String'];
+  floor: Scalars['Float'];
+  floorData: Array<Scalars['Float']>;
+  id: Scalars['String'];
+  imageUrl: Scalars['String'];
+  name: Scalars['String'];
+  symbol: Scalars['String'];
+  twitterUsername: Scalars['String'];
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
   CreateWatchList: WatchList;
-  GenerateNonce?: Maybe<Scalars['String']>;
-  NoOp?: Maybe<Scalars['Boolean']>;
-  VerifySignature: Scalars['Boolean'];
+  GenerateNonce: Scalars['String'];
+  VerifySignature: Scalars['String'];
 };
 
 
@@ -48,13 +61,20 @@ export type MutationVerifySignatureArgs = {
 
 export type Query = {
   __typename?: 'Query';
-  NoOp?: Maybe<Scalars['Boolean']>;
+  GetAddress: Scalars['String'];
+  GetMockToken: Scalars['String'];
+  Ready: Scalars['Boolean'];
+  trending: Array<Collection>;
   user?: Maybe<User>;
+};
+
+
+export type QueryGetMockTokenArgs = {
+  address: Scalars['String'];
 };
 
 export type User = {
   __typename?: 'User';
-  trending?: Maybe<WatchList>;
   watchLists?: Maybe<Array<Maybe<WatchList>>>;
 };
 
@@ -249,14 +269,14 @@ export type Fake__Options = {
 export type AppStartupQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type AppStartupQuery = { __typename?: 'Query', user?: { __typename?: 'User', trending?: { __typename?: 'WatchList', id: string, order: number, name: string, slug: string } | null | undefined, watchLists?: Array<{ __typename?: 'WatchList', id: string, order: number, name: string, slug: string } | null | undefined> | null | undefined } | null | undefined };
+export type AppStartupQuery = { __typename?: 'Query', user?: { __typename?: 'User', watchLists?: Array<{ __typename?: 'WatchList', id: string, order: number, name: string, slug: string } | null | undefined> | null | undefined } | null | undefined };
 
 export type GenerateNonceMutationVariables = Exact<{
   address: Scalars['String'];
 }>;
 
 
-export type GenerateNonceMutation = { __typename?: 'Mutation', GenerateNonce?: string | null | undefined };
+export type GenerateNonceMutation = { __typename?: 'Mutation', GenerateNonce: string };
 
 export type VerifySignatureMutationVariables = Exact<{
   address: Scalars['String'];
@@ -264,7 +284,7 @@ export type VerifySignatureMutationVariables = Exact<{
 }>;
 
 
-export type VerifySignatureMutation = { __typename?: 'Mutation', VerifySignature: boolean };
+export type VerifySignatureMutation = { __typename?: 'Mutation', VerifySignature: string };
 
 export type CreateWatchListMutationVariables = Exact<{
   name: Scalars['String'];
@@ -274,16 +294,15 @@ export type CreateWatchListMutationVariables = Exact<{
 
 export type CreateWatchListMutation = { __typename?: 'Mutation', CreateWatchList: { __typename?: 'WatchList', id: string, order: number, name: string, slug: string } };
 
+export type TrendingCollectionsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type TrendingCollectionsQuery = { __typename?: 'Query', trending: Array<{ __typename?: 'Collection', id: string, floor: number, address: string, description: string, imageUrl: string, name: string, symbol: string, twitterUsername: string, changeInFloor5Minutes: number, floorData: Array<number> }> };
+
 
 export const AppStartupDocument = `
     query appStartup {
   user {
-    trending {
-      id
-      order
-      name
-      slug
-    }
     watchLists {
       id
       order
@@ -364,5 +383,35 @@ export const useCreateWatchListMutation = <
     useMutation<CreateWatchListMutation, TError, CreateWatchListMutationVariables, TContext>(
       'createWatchList',
       (variables?: CreateWatchListMutationVariables) => fetcher<CreateWatchListMutation, CreateWatchListMutationVariables>(client, CreateWatchListDocument, variables, headers)(),
+      options
+    );
+export const TrendingCollectionsDocument = `
+    query trendingCollections {
+  trending {
+    id
+    floor
+    address
+    description
+    imageUrl
+    name
+    symbol
+    twitterUsername
+    changeInFloor5Minutes
+    floorData
+  }
+}
+    `;
+export const useTrendingCollectionsQuery = <
+      TData = TrendingCollectionsQuery,
+      TError = unknown
+    >(
+      client: GraphQLClient,
+      variables?: TrendingCollectionsQueryVariables,
+      options?: UseQueryOptions<TrendingCollectionsQuery, TError, TData>,
+      headers?: RequestInit['headers']
+    ) =>
+    useQuery<TrendingCollectionsQuery, TError, TData>(
+      variables === undefined ? ['trendingCollections'] : ['trendingCollections', variables],
+      fetcher<TrendingCollectionsQuery, TrendingCollectionsQueryVariables>(client, TrendingCollectionsDocument, variables, headers),
       options
     );

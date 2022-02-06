@@ -1,5 +1,5 @@
 import React, { useState, memo } from "react";
-import { VStack, chakra } from "@chakra-ui/react";
+import { VStack, chakra, Stack, Skeleton } from "@chakra-ui/react";
 import { camelCase, cloneDeep, isEqual } from "lodash";
 import Link from "./Link";
 import { useWeb3React } from "@web3-react/core";
@@ -9,21 +9,24 @@ import { useNavigate } from "react-router-dom";
 import { useCreateWatchListMutation } from "../../generated";
 import graphqlRequestClient from "../../lib/graphqlRequestClient";
 
+const trendingID = "0xTrending";
+
 const Navigation = () => {
   const navigate = useNavigate();
   const [watchListName, setWatchListName] = useState("");
   const { active } = useWeb3React();
   const { state, setState } = useAppState();
+  const { loading } = state;
   const { watchLists } = state.user;
-  const [activeItem, setActiveItem] = useState("0123");
+  const [activeItem, setActiveItem] = useState(trendingID);
   const { mutateAsync, isLoading } =
     useCreateWatchListMutation(graphqlRequestClient);
 
-  if (!watchLists) {
-    return <div>loading</div>;
+  if (!loading && !watchLists) {
+    return <div>No Watch Lists</div>;
   }
 
-  const watchListsSorted = Object.entries(watchLists)
+  const watchListsSorted = Object.entries(watchLists || {})
     .map(([id, wl]) => ({ ...wl, id: "" + id }))
     .sort((a, b) => a.order - b.order);
 
@@ -61,6 +64,24 @@ const Navigation = () => {
         w="100%"
         paddingLeft="92px"
       >
+        {loading && (
+          <Stack width="90%">
+            <Skeleton height="20px" width="100%" color="white" />
+            <Skeleton height="20px" width="100%" color="white" />
+            <Skeleton height="20px" width="100%" color="white" />
+          </Stack>
+        )}
+        {!loading && (
+          <Link
+            name={"Trending Collection"}
+            active={activeItem === trendingID}
+            onClick={() => {
+              setActiveItem(trendingID);
+
+              navigate("/watchLists/trending", { replace: true });
+            }}
+          />
+        )}
         {watchListsSorted.map((item) => {
           return (
             <Link
