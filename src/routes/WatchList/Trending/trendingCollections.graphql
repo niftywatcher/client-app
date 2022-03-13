@@ -1,14 +1,7 @@
-query trendingCollections {
-  trending {
+query Collection($orderBy: CollectionOrder!, $order: Order!, $limit: Int!) {
+  GetCollections(input:{orderBy: $orderBy, order: $order, limit: $limit}) {
     id
-    floor
-    address
-    description
-    imageUrl
     name
-    symbol
-    twitterUsername
-    changeInFloor5Minutes
-    floorData
+    address
   }
 }

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import CollectionList from "../../../components/CollectionList";
 import collectionsData from "../../../collections.json";
 import WatchList from "../../../Shared/Interfaces/WatchList";
-import { useTrendingCollectionsQuery } from "../../../generated";
+// import { useTrendingCollectionsQuery } from "../../../generated";
 import graphqlRequestClient from "../../../lib/graphqlRequestClient";
 import { isNil } from "lodash";
 import { Center, Spinner } from "@chakra-ui/react";
@@ -21,8 +21,12 @@ const Trending = () => {
     },
   });
 
-  const { data, isError, isLoading } =
-    useTrendingCollectionsQuery(graphqlRequestClient);
+  // const { data, isError, isLoading } =
+  //   useTrendingCollectionsQuery(graphqlRequestClient);
+
+  const data: any = {};
+  const isError = false;
+  const isLoading = false;
 
   if (isError) {
     console.log("is error", isError);
@@ -34,7 +38,7 @@ const Trending = () => {
     return <div>No Data</div>;
   }
 
-  const trending = data && data.trending ? data.trending : [];
+  const trending = data && data?.trending ? data?.trending : [];
 
   return (
     <>
