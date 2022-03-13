@@ -24,15 +24,32 @@ export type Scalars = {
 export type Collection = {
   __typename?: 'Collection';
   address: Scalars['String'];
-  changeInFloor5Minutes: Scalars['Float'];
-  description: Scalars['String'];
-  floor: Scalars['Float'];
-  floorData: Array<Scalars['Float']>;
-  id: Scalars['String'];
-  imageUrl: Scalars['String'];
+  description?: Maybe<Scalars['String']>;
+  discordUrl?: Maybe<Scalars['String']>;
+  externalUrl?: Maybe<Scalars['String']>;
+  id: Scalars['ID'];
+  imageUrl?: Maybe<Scalars['String']>;
   name: Scalars['String'];
-  symbol: Scalars['String'];
-  twitterUsername: Scalars['String'];
+};
+
+export enum CollectionOrder {
+  CeilingPrice = 'CEILING_PRICE',
+  FloorPrice = 'FLOOR_PRICE',
+  Name = 'NAME',
+  PriceDelta = 'PRICE_DELTA',
+  TradingVolume = 'TRADING_VOLUME'
+}
+
+export type GetCollectionsInput = {
+  limit?: InputMaybe<Scalars['Int']>;
+  order?: InputMaybe<Order>;
+  orderBy?: InputMaybe<CollectionOrder>;
+};
+
+export type GetSalesInput = {
+  collectionId: Scalars['ID'];
+  endTime?: InputMaybe<Scalars['Time']>;
+  startTime?: InputMaybe<Scalars['Time']>;
 };
 
 export type Mutation = {
@@ -59,18 +76,51 @@ export type MutationVerifySignatureArgs = {
   signature: Scalars['String'];
 };
 
+export enum Order {
+  Ascending = 'ASCENDING',
+  Descending = 'DESCENDING'
+}
+
+export type PricePoint = {
+  __typename?: 'PricePoint';
+  time: Scalars['Time'];
+  value: Scalars['Float'];
+};
+
 export type Query = {
   __typename?: 'Query';
   GetAddress: Scalars['String'];
+  GetCollections: Array<Collection>;
   GetMockToken: Scalars['String'];
+  GetSales: Sales;
   Ready: Scalars['Boolean'];
-  trending: Array<Collection>;
   user?: Maybe<User>;
+};
+
+
+export type QueryGetCollectionsArgs = {
+  input: GetCollectionsInput;
 };
 
 
 export type QueryGetMockTokenArgs = {
   address: Scalars['String'];
+};
+
+
+export type QueryGetSalesArgs = {
+  input: GetSalesInput;
+};
+
+export type Sales = {
+  __typename?: 'Sales';
+  delta: Scalars['Float'];
+  max: Scalars['Float'];
+  mean: Scalars['Float'];
+  median: Scalars['Float'];
+  min: Scalars['Float'];
+  percentageDelta: Scalars['Float'];
+  prices: Array<PricePoint>;
 };
 
 export type User = {
@@ -294,10 +344,14 @@ export type CreateWatchListMutationVariables = Exact<{
 
 export type CreateWatchListMutation = { __typename?: 'Mutation', CreateWatchList: { __typename?: 'WatchList', id: string, order: number, name: string, slug: string } };
 
-export type TrendingCollectionsQueryVariables = Exact<{ [key: string]: never; }>;
+export type CollectionQueryVariables = Exact<{
+  orderBy: CollectionOrder;
+  order: Order;
+  limit: Scalars['Int'];
+}>;
 
 
-export type TrendingCollectionsQuery = { __typename?: 'Query', trending: Array<{ __typename?: 'Collection', id: string, floor: number, address: string, description: string, imageUrl: string, name: string, symbol: string, twitterUsername: string, changeInFloor5Minutes: number, floorData: Array<number> }> };
+export type CollectionQuery = { __typename?: 'Query', GetCollections: Array<{ __typename?: 'Collection', id: string, name: string, address: string }> };
 
 
 export const AppStartupDocument = `
@@ -385,33 +439,26 @@ export const useCreateWatchListMutation = <
       (variables?: CreateWatchListMutationVariables) => fetcher<CreateWatchListMutation, CreateWatchListMutationVariables>(client, CreateWatchListDocument, variables, headers)(),
       options
     );
-export const TrendingCollectionsDocument = `
-    query trendingCollections {
-  trending {
+export const CollectionDocument = `
+    query Collection($orderBy: CollectionOrder!, $order: Order!, $limit: Int!) {
+  GetCollections(input: {orderBy: $orderBy, order: $order, limit: $limit}) {
     id
-    floor
-    address
-    description
-    imageUrl
     name
-    symbol
-    twitterUsername
-    changeInFloor5Minutes
-    floorData
+    address
   }
 }
     `;
-export const useTrendingCollectionsQuery = <
-      TData = TrendingCollectionsQuery,
+export const useCollectionQuery = <
+      TData = CollectionQuery,
       TError = unknown
     >(
       client: GraphQLClient,
-      variables?: TrendingCollectionsQueryVariables,
-      options?: UseQueryOptions<TrendingCollectionsQuery, TError, TData>,
+      variables: CollectionQueryVariables,
+      options?: UseQueryOptions<CollectionQuery, TError, TData>,
       headers?: RequestInit['headers']
     ) =>
-    useQuery<TrendingCollectionsQuery, TError, TData>(
-      variables === undefined ? ['trendingCollections'] : ['trendingCollections', variables],
-      fetcher<TrendingCollectionsQuery, TrendingCollectionsQueryVariables>(client, TrendingCollectionsDocument, variables, headers),
+    useQuery<CollectionQuery, TError, TData>(
+      ['Collection', variables],
+      fetcher<CollectionQuery, CollectionQueryVariables>(client, CollectionDocument, variables, headers),
       options
     );

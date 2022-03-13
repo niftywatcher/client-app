@@ -20,20 +20,21 @@ const CollectionList = ({
 }: CollectionListProps<Collection>) => {
   return (
     <VStack align="flex-start" spacing="8" paddingBottom="50px">
-      {collections.map((collection, i) => (
-        <Card
-          // TODO: remove 'i' index as
-          key={collection.id + "" + i}
-          address={collection.address}
-          collectionId={collection.id}
-          name={collection.name}
-          imageUrl={collection.imageUrl}
-          data={collection.floorData}
-          setWatchLists={setWatchLists}
-          watchLists={watchLists}
-          deltaFloor={collection.changeInFloor5Minutes}
-        />
-      ))}
+      {/* {collections &&
+        collections.map((collection, i) => (
+          <Card
+            // TODO: remove 'i' index as
+            key={collection.id + "" + i}
+            address={collection.address}
+            collectionId={collection.id}
+            name={collection.name}
+            imageUrl={collection?.imageUrl}
+            data={collection?.floorData}
+            setWatchLists={setWatchLists}
+            watchLists={watchLists}
+            deltaFloor={collection?.changeInFloor5Minutes}
+          />
+        ))} */}
     </VStack>
   );
 };
