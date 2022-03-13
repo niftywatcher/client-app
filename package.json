@@ -19,6 +19,7 @@
     "ethers": "^5.4",
     "framer-motion": "^4",
     "graphql": "^16.2.0",
+    "graphql-faker": "^2.0.0-rc.25",
     "highcharts": "^9.3.1",
     "highcharts-react-official": "^3.1.0",
     "history": "5",
